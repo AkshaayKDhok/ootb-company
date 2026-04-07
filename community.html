@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community | OOTB - Out Of The Blue</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error": "#a83836",
+                      "outline": "#737c84",
+                      "on-tertiary": "#fdf7ff",
+                      "outline-variant": "#aab3bc",
+                      "inverse-on-surface": "#9a9da2",
+                      "on-background": "#2b333b",
+                      "background": "#f7f9fe",
+                      "surface-container-highest": "#dae3ed",
+                      "surface-container-low": "#eff4fb",
+                      "on-tertiary-fixed": "#3a2d55",
+                      "surface-container": "#e8eef6",
+                      "primary-fixed": "#9fc2fd",
+                      "surface-dim": "#d2dbe5",
+                      "surface-variant": "#dae3ed",
+                      "on-surface": "#2b333b",
+                      "tertiary": "#655882",
+                      "on-primary-fixed": "#002851",
+                      "on-tertiary-fixed-variant": "#574a73",
+                      "error-dim": "#67040d",
+                      "secondary": "#565f72",
+                      "on-secondary": "#f8f8ff",
+                      "tertiary-dim": "#594c75",
+                      "secondary-dim": "#4a5365",
+                      "error-container": "#fa746f",
+                      "surface-tint": "#3c6094",
+                      "inverse-primary": "#9fc2fd",
+                      "surface-container-high": "#e2e9f1",
+                      "on-error-container": "#6e0a12",
+                      "inverse-surface": "#0a0f12",
+                      "secondary-fixed": "#d9e3f8",
+                      "tertiary-container": "#dbcafb",
+                      "secondary-fixed-dim": "#cbd5ea",
+                      "primary-fixed-dim": "#92b5ee",
+                      "on-surface-variant": "#576068",
+                      "on-secondary-fixed": "#364051",
+                      "on-primary-container": "#133d6f",
+                      "secondary-container": "#d9e3f8",
+                      "on-tertiary-container": "#4d4169",
+                      "on-secondary-container": "#485264",
+                      "primary-container": "#9fc2fd",
+                      "on-secondary-fixed-variant": "#525c6e",
+                      "tertiary-fixed-dim": "#ccbcec",
+                      "tertiary-fixed": "#dbcafb",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#3c6094",
+                      "on-primary": "#f8f8ff",
+                      "on-error": "#fff7f6",
+                      "primary-dim": "#2f5487",
+                      "on-primary-fixed-variant": "#1f4678",
+                      "surface": "#f7f9fe",
+                      "surface-bright": "#f7f9fe"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface dark:bg-slate-900/80 backdrop-blur-xl no-line-rule tonal-shift-boundary">
+  <div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto font-['Manrope'] tracking-tight">
+<!-- LOGO -->
+<a href="index.html" class="flex items-center gap-2">
+  <img src="assets/logo.png" class="h-8 w-auto" />
+</a>
+
+<!-- MENU -->
+<div class="hidden xl:flex gap-6 items-center">
+
+  <a href="about.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">About Us</a>
+
+  <a href="ventures.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Ventures</a>
+
+  <a href="services.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Services</a>
+
+  <a href="studio.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Studio</a>
+
+  <a href="community.html" class="text-primary border-b-2 border-primary font-medium">Community</a>
+
+  <a href="investors.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Investors</a>
+
+  <a href="careers.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Careers</a>
+
+  <a href="contact.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Contact Us</a>
+
+</div>
+
+<!-- CTA BUTTON -->
+<a href="careers.html">
+  <button class="bg-primary hover:bg-primary-dim text-on-primary px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-200 active:scale-95 flex-shrink-0">
+    Work With Us
+  </button>
+</a>
+
+  </div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-40 pb-32 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+<div class="inline-flex items-center px-4 py-2 rounded-full bg-primary-container text-on-primary-container text-xs font-bold tracking-widest uppercase mb-8">
+                The Network Layer
+            </div>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-background mb-8 max-w-4xl leading-[1.1]">
+                A Community of <span class="text-primary italic">Builders</span>, Not Just Members.
+            </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
+                Out Of The Blue is building a focused network for those who execute. We connect vision with craftsmanship through high-intent collaboration.
+            </p>
+</div>
+<!-- Background Accents -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="absolute top-1/2 -left-24 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
+</section>
+<!-- What this community is -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
+<img alt="Community" class="object-cover w-full h-full" data-alt="Modern collaborative workspace with diverse group of focused young professionals discussing ideas around a table in a minimalist glass office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC__rwHQT4a9GkABc6bF_r4-0_qTM0ykm6x2QL-GX0jm9VT9aRZ321uTG1U5fHXHPzM4guP7zlSDqu8-duEkXdAkbmvSOpKBrGQVMoQKrX42YZUnoACRCyMB8037tNUH31PvoKAjSmmDhMjVM3yJ09QiFXMUbznJAXjH7_JatEtKdZSjKM2J-ucA-kDKDKrrlglkDZwJEdywk8cUD7d18XeOMCN-RNo2u3vd1fHAa039BhwCFgWt6jVpO_kQ9OOzPDlXHQ1q8EawP4J"/>
+</div>
+<div>
+<h2 class="text-4xl font-bold mb-8 leading-tight">Controlled, high-intent network.</h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="construction">construction</span>
+</div>
+<div>
+<h3 class="font-bold text-xl mb-2">Builders</h3>
+<p class="text-on-surface-variant">Active engineers and designers shipping real products.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+</div>
+<div>
+<h3 class="font-bold text-xl mb-2">Learners</h3>
+<p class="text-on-surface-variant">High-potential individuals focused on skill acquisition through doing.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+</div>
+<div>
+<h3 class="font-bold text-xl mb-2">Creators</h3>
+<p class="text-on-surface-variant">Storytellers and brand architects defining new narratives.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<div>
+<h3 class="font-bold text-xl mb-2">Entrepreneurs</h3>
+<p class="text-on-surface-variant">Early-stage founders seeking a vetted ecosystem for growth.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- What Happens Inside - 4-box grid -->
+<section class="py-24 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="text-4xl font-bold mb-4">What happens inside</h2>
+<div class="w-20 h-1.5 bg-primary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-lowest p-10 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="groups">groups</span>
+<h3 class="text-2xl font-bold mb-4">Small Group Meetups</h3>
+<p class="text-on-surface-variant leading-relaxed">Hyper-curated gatherings focused on specific challenges. No large crowds, just relevant voices.</p>
+</div>
+<div class="bg-surface-container p-10 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="menu_book">menu_book</span>
+<h3 class="text-2xl font-bold mb-4">Learning Sessions</h3>
+<p class="text-on-surface-variant leading-relaxed">Direct knowledge transfer from practitioners who have built and scaled real ventures.</p>
+</div>
+<div class="bg-surface-container p-10 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="chat">chat</span>
+<h3 class="text-2xl font-bold mb-4">Discussions</h3>
+<p class="text-on-surface-variant leading-relaxed">High-level asynchronous and live debates on markets, tech, and creative strategies.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="terminal">terminal</span>
+<h3 class="text-2xl font-bold mb-4">Execution Interactions</h3>
+<p class="text-on-surface-variant leading-relaxed">Pairing builders with tasks. The community acts as an engine for rapid prototyping.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- What You Get - Asymmetric Bento -->
+<section class="py-24 bg-surface-container-low px-8">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-4xl font-bold mb-16 text-center">The Value Exchange</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Consistent styling for all 4 boxes: surface-container background and differentiated horizontal layout -->
+<div class="md:col-span-6 bg-surface-container rounded-3xl p-10 flex gap-8 group hover:shadow-lg transition-shadow border border-outline-variant/10">
+<div class="shrink-0">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="psychology">psychology</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-4">Like-minded Individuals</h3>
+<p class="text-on-surface-variant leading-relaxed">Find the people who speak your language. A peer group that matches your ambition and pace.</p>
+</div>
+</div>
+<div class="md:col-span-6 bg-surface-container rounded-3xl p-10 flex gap-8 group hover:shadow-lg transition-shadow border border-outline-variant/10">
+<div class="shrink-0">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="handshake">handshake</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-4">Collaboration</h3>
+<p class="text-on-surface-variant leading-relaxed">Instant access to a vetted pool of partners for your next venture or project.</p>
+</div>
+</div>
+<div class="md:col-span-6 bg-surface-container rounded-3xl p-10 flex gap-8 group hover:shadow-lg transition-shadow border border-outline-variant/10">
+<div class="shrink-0">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="terminal">terminal</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-4">Real Execution Environments</h3>
+<p class="text-on-surface-variant leading-relaxed">Move beyond theory. Build on top of existing OOTB frameworks and studio projects.</p>
+</div>
+</div>
+<div class="md:col-span-6 bg-surface-container rounded-3xl p-10 flex gap-8 group hover:shadow-lg transition-shadow border border-outline-variant/10">
+<div class="shrink-0">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="model_training">model_training</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-4">Learning Through Doing</h3>
+<p class="text-on-surface-variant leading-relaxed">The fastest way to learn is by shipping. We provide the rail for your momentum.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Who should join vs who should not -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 items-stretch border-2 border-outline-variant/20 rounded-[2rem] overflow-hidden">
+<div class="p-12 md:p-20 bg-surface-container-lowest">
+<h3 class="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-6">Who Should Join</h3>
+<h4 class="text-4xl font-bold mb-10">Serious about growth.</h4>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-green-600 mt-1" data-icon="check_circle">check_circle</span>
+<p class="text-lg">You have a track record of completing projects.</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-green-600 mt-1" data-icon="check_circle">check_circle</span>
+<p class="text-lg">You actively seek feedback and iterate rapidly.</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-green-600 mt-1" data-icon="check_circle">check_circle</span>
+<p class="text-lg">You value depth and focus over networking noise.</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-green-600 mt-1" data-icon="check_circle">check_circle</span>
+<p class="text-lg">You are ready to contribute your skills to others.</p>
+</li>
+</ul>
+</div>
+<div class="p-12 md:p-20 bg-on-background text-surface">
+<h3 class="text-error-container text-sm font-bold tracking-[0.2em] uppercase mb-6">Who Should Not</h3>
+<h4 class="text-4xl font-bold mb-10">Passive participants.</h4>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-error-container mt-1" data-icon="cancel">cancel</span>
+<p class="text-lg opacity-80">You are looking for a place to just "consume" content.</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-error-container mt-1" data-icon="cancel">cancel</span>
+<p class="text-lg opacity-80">You prioritize vanity metrics over real product value.</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-error-container mt-1" data-icon="cancel">cancel</span>
+<p class="text-lg opacity-80">You want a general-purpose networking social club.</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-error-container mt-1" data-icon="cancel">cancel</span>
+<p class="text-lg opacity-80">You are not ready to put in the work required to build.</p>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- How it works -->
+<section class="py-24 bg-surface-container">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-bold mb-4">How it works</h2>
+<p class="text-on-surface-variant">A streamlined process to maintain quality.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="relative">
+<div class="text-6xl font-black text-outline-variant/20 mb-6">01</div>
+<h3 class="text-xl font-bold mb-2">Application</h3>
+<p class="text-on-surface-variant">Tell us who you are and what you've built. We vet for intent and skill.</p>
+</div>
+<div class="relative">
+<div class="text-6xl font-black text-outline-variant/20 mb-6">02</div>
+<h3 class="text-xl font-bold mb-2">Curated Access</h3>
+<p class="text-on-surface-variant">Onboarding into the platform and initial matching with relevant clusters.</p>
+</div>
+<div class="relative">
+<div class="text-6xl font-black text-outline-variant/20 mb-6">03</div>
+<h3 class="text-xl font-bold mb-2">Small Groups</h3>
+<p class="text-on-surface-variant">Join specific execution pods based on your current focus areas.</p>
+</div>
+<div class="relative">
+<div class="text-6xl font-black text-outline-variant/20 mb-6">04</div>
+<h3 class="text-xl font-bold mb-2">Continuous Interaction</h3>
+<p class="text-on-surface-variant">Ongoing sessions, sprints, and collaboration opportunities.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why this exists -->
+<section class="py-32 px-8 overflow-hidden bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-4xl font-bold mb-8">Why this exists.</h2>
+<div class="space-y-12">
+<div>
+<h4 class="font-bold text-xl mb-4 flex items-center gap-3">
+<span class="w-8 h-[2px] bg-primary"></span> Keeping it selective
+                        </h4>
+<p class="text-on-surface-variant">Most communities die because they scale too fast. We optimize for high density of talent over sheer volume of members.</p>
+</div>
+<div>
+<h4 class="font-bold text-xl mb-4 flex items-center gap-3">
+<span class="w-8 h-[2px] bg-primary"></span> Execution-driven
+                        </h4>
+<p class="text-on-surface-variant">Talk is cheap. We built this space for people who find fulfillment in the actual process of creation and problem-solving.</p>
+</div>
+<div>
+<h4 class="font-bold text-xl mb-4 flex items-center gap-3">
+<span class="w-8 h-[2px] bg-primary"></span> Real interactions
+                        </h4>
+<p class="text-on-surface-variant">Ditch the superficial networking events. We focus on meaningful connections that lead to real-world outcomes.</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-[100px]"></div>
+<img alt="Real Interaction" class="rounded-[2.5rem] shadow-2xl relative z-10 aspect-square object-cover" data-alt="Focused team in a bright modern boardroom working on a large whiteboard with colorful sticky notes and architectural plans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQJVoO2opNRUcdQJJ8X6WIRf9BSQu6RSWlwBP8NrNUoH-UUD8U0G8TtSoi5uQgmJ804WgumoTxoDia6LbfWAUWTwcdgIKa6rnU3d-ihsT49aSD8DBgcRhrkRWOiQbo5A9BzaBIDJTjNwr1kpYL9MYxU78LHbCKveWq-h71lpcaMUuA6TneUHAuy0sv447yIkYEW7b_V08YStWOG0-6v-aM4h4YrFW4oOZZkDXgsISBAcGtqIMbY-ltOfbdXP9Z8ksdedUXQUFzapLk"/>
+</div>
+</div>
+</section>
+<!-- Connection to OOTB -->
+<section class="py-24 bg-surface-container-low px-8 text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-3xl font-bold mb-6">The OOTB Ecosystem Connection</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed">
+                The Community acts as the vital network layer that connects <span class="text-on-background font-bold">Builders</span> to high-value opportunities within our Ventures and Studio, and provides <span class="text-on-background font-bold">Learners</span> with a direct path to real-world execution.
+            </p>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-40 px-8 bg-on-background text-surface text-center">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-4xl md:text-6xl font-bold mb-8">Want to be part of something meaningful?</h2>
+<p class="text-xl opacity-70 mb-16">The OOTB community platform is currently undergoing final refinements to ensure the highest quality experience for our founding members.</p>
+<div class="inline-block px-12 py-8 border border-surface/20 rounded-2xl bg-surface/5 backdrop-blur-md">
+<p class="text-2xl font-headline font-bold text-primary-container tracking-widest uppercase mb-2">Launching Soon</p>
+<p class="opacity-60">Follow our updates and check back shortly for the first cohort opening.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#eff4fb] dark:bg-slate-950 w-full rounded-t-none font-['Inter'] text-sm leading-relaxed tonal-shift-from-surface-to-surface-container-low flat no shadows">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto w-full"><div class="col-span-2 md:col-span-1">
+<div class="text-lg font-bold text-[#3c6094] dark:text-[#eff4fb] mb-6">OOTB</div>
+<p class="text-slate-500 dark:text-slate-500 mb-6">AI-First Venture Studio crafting the next generation of industrial solutions.</p>
+<div class="flex gap-4">
+<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://www.facebook.com/outoftheblue.company/" target="_blank" title="Facebook">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7h-2.54v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"></path></svg>
+</a>
+<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://x.com/ootbcompany" target="_blank" title="X (Twitter)">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"></path></svg>
+</a>
+<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://www.linkedin.com/company/out-of-the-blue-company/" target="_blank" title="LinkedIn">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a2.7 2.7 0 0 0-2.7-2.7c-1.1 0-1.9.6-2.3 1.2V10.5h-2.3v8h2.3v-4.1c0-.6.5-1.1 1.1-1.1s1.1.5 1.1 1.1v4.1h2.3M8.3 18.5v-8H6v8h2.3M7.1 9c.7 0 1.3-.6 1.3-1.3S7.8 6.4 7.1 6.4s-1.3.6-1.3 1.3S6.4 9 7.1 9z"></path></svg>
+</a>
+<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#" title="YouTube">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z"></path></svg>
+</a>
+<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://www.instagram.com/outoftheblue.company/" target="_blank" title="Instagram">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-[#3c6094] dark:text-[#eff4fb] mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="about.html">About Us</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="ventures.html">Ventures</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="services.html">Services</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="studio.html">Studio</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="community.html">Community</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="investors.html">Investors</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#3c6094] dark:text-[#eff4fb] mb-6">Contact</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="contact.html">Contact Us</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="careers.html">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#3c6094] dark:text-[#eff4fb] mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="privacypolicy.html">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="termsofservices.html">Terms of Service</a></li>
+</ul>
+</div></div>
+<div class="border-t border-slate-200/50 dark:border-slate-800/50 max-w-7xl mx-auto px-8 py-8">
+<p class="text-slate-400 text-xs text-center">© 2024 OOTB. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
