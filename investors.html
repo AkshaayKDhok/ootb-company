@@ -3,14 +3,94 @@
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Investors | Out Of The Blue Venture Studio</title>
+<title>OOTB | Out Of The Blue Investors</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary-fixed": "#3a2d55",
+                "on-surface": "#2b333b",
+                "surface-variant": "#dae3ed",
+                "on-surface-variant": "#576068",
+                "on-background": "#2b333b",
+                "primary-fixed": "#9fc2fd",
+                "inverse-on-surface": "#9a9da2",
+                "surface-container-high": "#e2e9f1",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-dim": "#594c75",
+                "secondary-fixed": "#d9e3f8",
+                "secondary-container": "#d9e3f8",
+                "on-tertiary-container": "#4d4169",
+                "inverse-primary": "#9fc2fd",
+                "on-primary-fixed": "#002851",
+                "surface-container-low": "#eff4fb",
+                "surface-tint": "#3c6094",
+                "error": "#a83836",
+                "on-secondary-fixed-variant": "#525c6e",
+                "tertiary-fixed": "#dbcafb",
+                "primary-container": "#9fc2fd",
+                "on-secondary": "#f8f8ff",
+                "secondary-fixed-dim": "#cbd5ea",
+                "on-primary-fixed-variant": "#1f4678",
+                "tertiary-container": "#dbcafb",
+                "tertiary": "#655882",
+                "secondary-dim": "#4a5365",
+                "error-container": "#fa746f",
+                "on-secondary-container": "#485264",
+                "outline-variant": "#aab3bc",
+                "on-tertiary": "#f8f8ff",
+                "inverse-surface": "#0a0f12",
+                "on-error": "#fff7f6",
+                "on-tertiary-fixed-variant": "#574a73",
+                "surface": "#f7f9fe",
+                "surface-bright": "#f7f9fe",
+                "on-error-container": "#6e0a12",
+                "error-dim": "#67040d",
+                "surface-dim": "#d2dbe5",
+                "on-primary-container": "#133d6f",
+                "primary-fixed-dim": "#92b5ee",
+                "secondary": "#565f72",
+                "primary-dim": "#2f5487",
+                "primary": "#3c6094",
+                "on-primary": "#f8f8ff",
+                "tertiary-fixed-dim": "#ccbcec",
+                "surface-container": "#e8eef6",
+                "on-secondary-fixed": "#364051",
+                "surface-container-highest": "#dae3ed",
+                "background": "#f7f9fe",
+                "outline": "#737c84"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+
+      .material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body { font-family: 'Inter', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif;
         }
         .glass-header {
             background: rgba(255, 255, 255, 0.8);
@@ -23,96 +103,50 @@
         .primary-gradient {
             background: linear-gradient(135deg, #3c6094 0%, #2f5487 100%);
         }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fe;
-            color: #2b333b;
-        }
-        h1, h2, h3, .font-headline {
-            font-family: 'Manrope', sans-serif;
-        }
+        .hero h1 {
+  margin-bottom: 1.5rem;
+}
+
+/* ===== SPACING SYSTEM ===== */
+.hero h1 {
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.hero .inline-flex {
+  margin-bottom: 1rem;
+}
+
+
+/* ===== TYPOGRAPHY SYSTEM ===== */
+.hero p {
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: rgba(0,0,0,0.7);
+  max-width: 48rem;
+}
+
+.hero h1 + p {
+  margin-top: 1rem;
+}
+
+.hero p + * {
+  margin-top: 1.5rem;
+}
     </style>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "inverse-primary": "#9fc2fd",
-                    "on-background": "#2b333b",
-                    "primary": "#3c6094",
-                    "secondary-fixed-dim": "#cbd5ea",
-                    "tertiary": "#655882",
-                    "inverse-on-surface": "#9a9da2",
-                    "surface-container-low": "#eff4fb",
-                    "on-error-container": "#6e0a12",
-                    "primary-fixed-dim": "#92b5ee",
-                    "on-tertiary-fixed": "#3a2d55",
-                    "background": "#f7f9fe",
-                    "secondary": "#565f72",
-                    "on-secondary": "#f8f8ff",
-                    "on-tertiary": "#fdf7ff",
-                    "secondary-container": "#d9e3f8",
-                    "surface-bright": "#f7f9fe",
-                    "tertiary-container": "#dbcafb",
-                    "surface-dim": "#d2dbe5",
-                    "primary-container": "#9fc2fd",
-                    "surface-tint": "#3c6094",
-                    "secondary-fixed": "#d9e3f8",
-                    "primary-fixed": "#9fc2fd",
-                    "on-secondary-fixed": "#364051",
-                    "surface-container": "#e8eef6",
-                    "on-surface-variant": "#576068",
-                    "surface-container-lowest": "#ffffff",
-                    "on-primary-container": "#133d6f",
-                    "primary-dim": "#2f5487",
-                    "on-surface": "#2b333b",
-                    "on-secondary-fixed-variant": "#525c6e",
-                    "error-dim": "#67040d",
-                    "error": "#a83836",
-                    "outline-variant": "#aab3bc",
-                    "secondary-dim": "#4a5365",
-                    "surface-container-highest": "#dae3ed",
-                    "surface": "#f7f9fe",
-                    "outline": "#737c84",
-                    "on-error": "#fff7f6",
-                    "on-primary-fixed-variant": "#1f4678",
-                    "inverse-surface": "#0a0f12",
-                    "tertiary-fixed-dim": "#ccbcec",
-                    "on-secondary-container": "#485264",
-                    "on-primary-fixed": "#002851",
-                    "error-container": "#fa746f",
-                    "surface-variant": "#dae3ed",
-                    "tertiary-fixed": "#dbcafb",
-                    "surface-container-high": "#e2e9f1",
-                    "on-tertiary-container": "#4d4169",
-                    "tertiary-dim": "#594c75",
-                    "on-primary": "#f8f8ff",
-                    "on-tertiary-fixed-variant": "#574a73"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": ["Manrope"],
-                    "body": ["Inter"],
-                    "label": ["Inter"]
-            }
-          },
-        },
-      }
-    </script>
 </head>
-<body class="bg-surface text-on-surface">
-<!-- TopNavBar -->
+<body class="bg-surface text-on-surface font-[Inter] antialiased selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface dark:bg-slate-900/80 backdrop-blur-xl no-line-rule tonal-shift-boundary">
   <div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto font-['Manrope'] tracking-tight">
 <!-- LOGO -->
 <a href="index.html" class="flex items-center gap-2">
-  <img src="assets/logo.png" class="h-8 w-auto" />
+  <img src="assets/logo.png" class="h-10 w-auto" />
 </a>
 
 <!-- MENU -->
@@ -145,10 +179,11 @@
 
   </div>
 </nav>
-<main class="pt-24">
+  <main class="pt-28 md:pt-32">
 <!-- Section 1: Hero -->
-<section class="relative min-h-[85vh] flex items-center px-6 md:px-12 py-24 overflow-hidden bg-background">
-<div class="absolute inset-0 z-0 opacity-30">
+<section class="hero min-h-[85vh] flex items-center px-8 max-w-7xl mx-auto">
+      <div class="w-full">
+  <div class="absolute inset-0 z-0 opacity-30">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
 </div>
 <div class="max-w-7xl mx-auto w-full z-10 grid lg:grid-cols-2 gap-16 items-center">
@@ -160,8 +195,8 @@
 </span>
                 Venture Studio 2.0
             </div>
-<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-background leading-[1.1] mb-8 font-headline">
-                Building an <span class="text-primary">AI-First</span> Venture Ecosystem
+<h1 class="font-[Manrope] text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1]">
+                  Building an <span class="text-primary">AI-First</span> Venture Ecosystem
             </h1>
 <p class="text-xl md:text-2xl text-on-surface-variant mb-12 leading-relaxed font-body font-medium">
                 We combine deep research, systematic scaling, and relentless execution to build the next generation of foundational AI companies.
@@ -186,6 +221,7 @@
 <!-- Decorative Elements -->
 <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl z-0"></div>
 <div class="absolute -top-10 -right-10 w-60 h-60 bg-blue-400/10 rounded-full blur-3xl z-0"></div>
+</div>
 </div>
 </div>
 </section>
@@ -422,7 +458,7 @@
 <a href="contact.html" target="_blank">
                 <button class="bg-transparent border-2 border-white/30 text-white px-12 py-5 rounded-2xl font-black text-xl hover:bg-white/10 transition-all active:scale-95">
                             Start a Conversation
-                        </button></a>
+                        </button><
 </div>
 </div>
 </div>

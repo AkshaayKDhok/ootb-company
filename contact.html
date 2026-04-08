@@ -3,100 +3,134 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Contact Us | OOTB</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>OOTB | Out Of The Blue Contact</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "secondary-fixed": "#d9e3f8",
-                        "error-dim": "#67040d",
-                        "on-secondary-fixed": "#364051",
-                        "on-primary-fixed-variant": "#1f4678",
-                        "tertiary-fixed": "#dbcafb",
-                        "surface-container": "#e8eef6",
-                        "surface-container-high": "#e2e9f1",
-                        "on-tertiary": "#fdf7ff",
-                        "tertiary": "#655882",
-                        "on-error": "#fff7f6",
-                        "secondary-container": "#d9e3f8",
-                        "surface-dim": "#d2dbe5",
-                        "on-secondary": "#f8f8ff",
-                        "on-primary-fixed": "#002851",
-                        "primary-fixed-dim": "#92b5ee",
-                        "primary": "#3c6094",
-                        "background": "#f7f9fe",
-                        "tertiary-dim": "#594c75",
-                        "on-primary": "#f8f8ff",
-                        "error-container": "#fa746f",
-                        "on-background": "#2b333b",
-                        "secondary-dim": "#4a5365",
-                        "surface-variant": "#dae3ed",
-                        "on-surface": "#2b333b",
-                        "surface-container-highest": "#dae3ed",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-container-low": "#eff4fb",
-                        "outline-variant": "#aab3bc",
-                        "surface-tint": "#3c6094",
-                        "primary-container": "#9fc2fd",
-                        "surface": "#f7f9fe",
-                        "tertiary-fixed-dim": "#ccbcec",
-                        "secondary-fixed-dim": "#cbd5ea",
-                        "primary-fixed": "#9fc2fd",
-                        "on-tertiary-container": "#4d4169",
-                        "secondary": "#565f72",
-                        "inverse-primary": "#9fc2fd",
-                        "tertiary-container": "#dbcafb",
-                        "outline": "#737c84",
-                        "on-secondary-fixed-variant": "#525c6e",
-                        "primary-dim": "#2f5487",
-                        "on-secondary-container": "#485264",
-                        "inverse-on-surface": "#9a9da2",
-                        "on-tertiary-fixed-variant": "#574a73",
-                        "inverse-surface": "#0a0f12",
-                        "surface-bright": "#f7f9fe",
-                        "error": "#a83836",
-                        "on-primary-container": "#133d6f",
-                        "on-tertiary-fixed": "#3a2d55",
-                        "on-error-container": "#6e0a12",
-                        "on-surface-variant": "#576068"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "fontFamily": {
-                        "headline": ["Manrope"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    }
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary-fixed": "#3a2d55",
+                "on-surface": "#2b333b",
+                "surface-variant": "#dae3ed",
+                "on-surface-variant": "#576068",
+                "on-background": "#2b333b",
+                "primary-fixed": "#9fc2fd",
+                "inverse-on-surface": "#9a9da2",
+                "surface-container-high": "#e2e9f1",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-dim": "#594c75",
+                "secondary-fixed": "#d9e3f8",
+                "secondary-container": "#d9e3f8",
+                "on-tertiary-container": "#4d4169",
+                "inverse-primary": "#9fc2fd",
+                "on-primary-fixed": "#002851",
+                "surface-container-low": "#eff4fb",
+                "surface-tint": "#3c6094",
+                "error": "#a83836",
+                "on-secondary-fixed-variant": "#525c6e",
+                "tertiary-fixed": "#dbcafb",
+                "primary-container": "#9fc2fd",
+                "on-secondary": "#f8f8ff",
+                "secondary-fixed-dim": "#cbd5ea",
+                "on-primary-fixed-variant": "#1f4678",
+                "tertiary-container": "#dbcafb",
+                "tertiary": "#655882",
+                "secondary-dim": "#4a5365",
+                "error-container": "#fa746f",
+                "on-secondary-container": "#485264",
+                "outline-variant": "#aab3bc",
+                "on-tertiary": "#f8f8ff",
+                "inverse-surface": "#0a0f12",
+                "on-error": "#fff7f6",
+                "on-tertiary-fixed-variant": "#574a73",
+                "surface": "#f7f9fe",
+                "surface-bright": "#f7f9fe",
+                "on-error-container": "#6e0a12",
+                "error-dim": "#67040d",
+                "surface-dim": "#d2dbe5",
+                "on-primary-container": "#133d6f",
+                "primary-fixed-dim": "#92b5ee",
+                "secondary": "#565f72",
+                "primary-dim": "#2f5487",
+                "primary": "#3c6094",
+                "on-primary": "#f8f8ff",
+                "tertiary-fixed-dim": "#ccbcec",
+                "surface-container": "#e8eef6",
+                "on-secondary-fixed": "#364051",
+                "surface-container-highest": "#dae3ed",
+                "background": "#f7f9fe",
+                "outline": "#737c84"
             },
-        }
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
     </script>
 <style>
         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body { font-family: 'Inter', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; }
+
+/* ===== SPACING SYSTEM ===== */
+.hero h1 {
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.hero .inline-flex {
+  margin-bottom: 1rem;
+}
+
+
+/* ===== TYPOGRAPHY SYSTEM ===== */
+.hero p {
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: rgba(0,0,0,0.7);
+  max-width: 48rem;
+}
+
+.hero h1 + p {
+  margin-top: 1rem;
+}
+
+.hero p + * {
+  margin-top: 1.5rem;
+}
     </style>
 </head>
-<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar -->
+<body class="bg-surface text-on-surface font-[Inter] antialiased selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface dark:bg-slate-900/80 backdrop-blur-xl no-line-rule tonal-shift-boundary">
   <div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto font-['Manrope'] tracking-tight">
 <!-- LOGO -->
 <a href="index.html" class="flex items-center gap-2">
-  <img src="assets/logo.png" class="h-8 w-auto" />
+  <img src="assets/logo.png" class="h-10 w-auto" />
 </a>
 
 <!-- MENU -->
@@ -129,13 +163,13 @@
 
   </div>
 </nav>
-<main class="pt-32">
+  <main class="pt-28 md:pt-32">
 <!-- Hero Section -->
-<section class="max-w-7xl mx-auto px-8 mb-24">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<section class="hero max-w-7xl mx-auto px-8 py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div>
 <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">Connect with our team</span>
-<h1 class="text-6xl md:text-7xl font-extrabold text-on-surface tracking-tighter leading-none mb-8">
+<h1 class="font-[Manrope] text-6xl md:text-7xl font-extrabold text-on-surface tracking-tighter leading-none mb-8">
                         Get in Touch
                     </h1>
 <p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
@@ -151,7 +185,7 @@
 <!-- What you can reach out for -->
 <section class="bg-surface-container-low py-24 mb-24">
 <div class="max-w-7xl mx-auto px-8">
-<h2 class="text-3xl font-extrabold mb-12 tracking-tight">What you can reach out for</h2>
+<h2 class="font-[Manrope] text-3xl font-extrabold mb-12 tracking-tight">What you can reach out for</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/15 hover:shadow-xl transition-all duration-300">
 <div class="w-12 h-12 bg-primary-container/30 text-primary rounded-full flex items-center justify-center mb-6">
@@ -181,7 +215,7 @@
 <section class="max-w-7xl mx-auto px-8 mb-24">
 <div class="bg-surface-container-lowest p-12 md:p-16 rounded-3xl shadow-sm border border-outline-variant/10">
 <div class="max-w-4xl">
-<h2 class="text-4xl font-extrabold mb-12 tracking-tight">Let's talk details.</h2>
+<h2 class="font-[Manrope] text-4xl font-extrabold mb-12 tracking-tight">Let's talk details.</h2>
 <!-- Emphasized Contact Methods -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
 <div class="group p-8 bg-surface-container-low rounded-2xl hover:bg-primary/5 transition-colors">
@@ -235,7 +269,7 @@
 <section class="max-w-7xl mx-auto px-8 mb-24 text-center">
 <div class="bg-primary-dim text-on-primary p-16 rounded-2xl relative overflow-hidden">
 <div class="relative z-10">
-<h2 class="text-4xl font-extrabold mb-6">Have something in mind? Let’s talk.</h2>
+<h2 class="font-[Manrope] text-4xl font-extrabold mb-6">Have something in mind? Let’s talk.</h2>
 <p class="text-on-primary/80 mb-10 text-lg max-w-2xl mx-auto">
                         Whether it's a seed of an idea or a fully-fledged enterprise plan, we're ready to provide the architectural precision you need.
                     </p>
@@ -262,7 +296,7 @@
 <div class="hidden" data-location="Pune" style=""></div>
 </div>
 <div class="space-y-6">
-<h2 class="text-3xl font-extrabold tracking-tight">Visit our Workspace</h2>
+<h2 class="font-[Manrope] text-3xl font-extrabold tracking-tight">Visit our Workspace</h2>
 <p class="text-on-surface-variant text-lg leading-relaxed">
                         Located in the heart of Pune's business district, our studio is designed to foster collaboration and high-energy creativity.
                     </p>

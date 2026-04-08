@@ -3,101 +3,134 @@
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Community | OOTB - Out Of The Blue</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>OOTB | Out Of The Blue Community</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "error": "#a83836",
-                      "outline": "#737c84",
-                      "on-tertiary": "#fdf7ff",
-                      "outline-variant": "#aab3bc",
-                      "inverse-on-surface": "#9a9da2",
-                      "on-background": "#2b333b",
-                      "background": "#f7f9fe",
-                      "surface-container-highest": "#dae3ed",
-                      "surface-container-low": "#eff4fb",
-                      "on-tertiary-fixed": "#3a2d55",
-                      "surface-container": "#e8eef6",
-                      "primary-fixed": "#9fc2fd",
-                      "surface-dim": "#d2dbe5",
-                      "surface-variant": "#dae3ed",
-                      "on-surface": "#2b333b",
-                      "tertiary": "#655882",
-                      "on-primary-fixed": "#002851",
-                      "on-tertiary-fixed-variant": "#574a73",
-                      "error-dim": "#67040d",
-                      "secondary": "#565f72",
-                      "on-secondary": "#f8f8ff",
-                      "tertiary-dim": "#594c75",
-                      "secondary-dim": "#4a5365",
-                      "error-container": "#fa746f",
-                      "surface-tint": "#3c6094",
-                      "inverse-primary": "#9fc2fd",
-                      "surface-container-high": "#e2e9f1",
-                      "on-error-container": "#6e0a12",
-                      "inverse-surface": "#0a0f12",
-                      "secondary-fixed": "#d9e3f8",
-                      "tertiary-container": "#dbcafb",
-                      "secondary-fixed-dim": "#cbd5ea",
-                      "primary-fixed-dim": "#92b5ee",
-                      "on-surface-variant": "#576068",
-                      "on-secondary-fixed": "#364051",
-                      "on-primary-container": "#133d6f",
-                      "secondary-container": "#d9e3f8",
-                      "on-tertiary-container": "#4d4169",
-                      "on-secondary-container": "#485264",
-                      "primary-container": "#9fc2fd",
-                      "on-secondary-fixed-variant": "#525c6e",
-                      "tertiary-fixed-dim": "#ccbcec",
-                      "tertiary-fixed": "#dbcafb",
-                      "surface-container-lowest": "#ffffff",
-                      "primary": "#3c6094",
-                      "on-primary": "#f8f8ff",
-                      "on-error": "#fff7f6",
-                      "primary-dim": "#2f5487",
-                      "on-primary-fixed-variant": "#1f4678",
-                      "surface": "#f7f9fe",
-                      "surface-bright": "#f7f9fe"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.125rem",
-                      "lg": "0.25rem",
-                      "xl": "0.5rem",
-                      "full": "0.75rem"
-              },
-              "fontFamily": {
-                      "headline": ["Manrope"],
-                      "body": ["Inter"],
-                      "label": ["Inter"]
-              }
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary-fixed": "#3a2d55",
+                "on-surface": "#2b333b",
+                "surface-variant": "#dae3ed",
+                "on-surface-variant": "#576068",
+                "on-background": "#2b333b",
+                "primary-fixed": "#9fc2fd",
+                "inverse-on-surface": "#9a9da2",
+                "surface-container-high": "#e2e9f1",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-dim": "#594c75",
+                "secondary-fixed": "#d9e3f8",
+                "secondary-container": "#d9e3f8",
+                "on-tertiary-container": "#4d4169",
+                "inverse-primary": "#9fc2fd",
+                "on-primary-fixed": "#002851",
+                "surface-container-low": "#eff4fb",
+                "surface-tint": "#3c6094",
+                "error": "#a83836",
+                "on-secondary-fixed-variant": "#525c6e",
+                "tertiary-fixed": "#dbcafb",
+                "primary-container": "#9fc2fd",
+                "on-secondary": "#f8f8ff",
+                "secondary-fixed-dim": "#cbd5ea",
+                "on-primary-fixed-variant": "#1f4678",
+                "tertiary-container": "#dbcafb",
+                "tertiary": "#655882",
+                "secondary-dim": "#4a5365",
+                "error-container": "#fa746f",
+                "on-secondary-container": "#485264",
+                "outline-variant": "#aab3bc",
+                "on-tertiary": "#f8f8ff",
+                "inverse-surface": "#0a0f12",
+                "on-error": "#fff7f6",
+                "on-tertiary-fixed-variant": "#574a73",
+                "surface": "#f7f9fe",
+                "surface-bright": "#f7f9fe",
+                "on-error-container": "#6e0a12",
+                "error-dim": "#67040d",
+                "surface-dim": "#d2dbe5",
+                "on-primary-container": "#133d6f",
+                "primary-fixed-dim": "#92b5ee",
+                "secondary": "#565f72",
+                "primary-dim": "#2f5487",
+                "primary": "#3c6094",
+                "on-primary": "#f8f8ff",
+                "tertiary-fixed-dim": "#ccbcec",
+                "surface-container": "#e8eef6",
+                "on-secondary-fixed": "#364051",
+                "surface-container-highest": "#dae3ed",
+                "background": "#f7f9fe",
+                "outline": "#737c84"
             },
-          }
-        }
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
     </script>
 <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body { font-family: 'Inter', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; }
+
+/* ===== SPACING SYSTEM ===== */
+.hero h1 {
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.hero .inline-flex {
+  margin-bottom: 1rem;
+}
+
+
+/* ===== TYPOGRAPHY SYSTEM ===== */
+.hero p {
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: rgba(0,0,0,0.7);
+  max-width: 48rem;
+}
+
+.hero h1 + p {
+  margin-top: 1rem;
+}
+
+.hero p + * {
+  margin-top: 1.5rem;
+}
     </style>
 </head>
-<body class="bg-surface text-on-surface">
-<!-- TopNavBar -->
+<body class="bg-surface text-on-surface font-[Inter] antialiased selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface dark:bg-slate-900/80 backdrop-blur-xl no-line-rule tonal-shift-boundary">
   <div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto font-['Manrope'] tracking-tight">
 <!-- LOGO -->
 <a href="index.html" class="flex items-center gap-2">
-  <img src="assets/logo.png" class="h-8 w-auto" />
+  <img src="assets/logo.png" class="h-10 w-auto" />
 </a>
 
 <!-- MENU -->
@@ -130,14 +163,16 @@
 
   </div>
 </nav>
+  <main class="pt-28 md:pt-32">
+</main >
 <!-- Hero Section -->
-<section class="relative pt-40 pb-32 px-8 overflow-hidden">
-<div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+<section class="hero relative pb-32 px-8 overflow-hidden">
+  <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
 <div class="inline-flex items-center px-4 py-2 rounded-full bg-primary-container text-on-primary-container text-xs font-bold tracking-widest uppercase mb-8">
                 The Network Layer
             </div>
-<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-background mb-8 max-w-4xl leading-[1.1]">
-                A Community of <span class="text-primary italic">Builders</span>, Not Just Members.
+<h1 class="font-[Manrope] text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1]">
+A Community of <span class="text-primary italic">Builders</span>, Not Just Members.
             </h1>
 <p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
                 Out Of The Blue is building a focused network for those who execute. We connect vision with craftsmanship through high-intent collaboration.

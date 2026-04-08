@@ -82,23 +82,60 @@
     </script>
 <style>
         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body { font-family: 'Inter', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; }
         .no-line-rule { border: none !important; }
         .tonal-shift-boundary { background-color: rgba(247, 249, 254, 0.8); }
         .glass-panel {
             backdrop-filter: blur(16px);
             background: rgba(255, 255, 255, 0.05);
         }
+/* ===== SPACING SYSTEM ===== */
+.hero h1 {
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.hero .inline-flex {
+  margin-bottom: 1rem;
+}
+
+
+/* ===== TYPOGRAPHY SYSTEM ===== */
+.hero p {
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: rgba(0,0,0,0.7);
+  max-width: 48rem;
+}
+
+.hero h1 + p {
+  margin-top: 1rem;
+}
+
+.hero p + * {
+  margin-top: 1.5rem;
+}
     </style>
 </head>
-<body class="bg-surface text-on-surface font-body selection:bg-primary/20">
-<!-- Top Navigation Bar -->
+<body class="bg-surface text-on-surface font-[Inter] antialiased selection:bg-primary-container selection:text-on-primary-container">
+  <!-- Top Navigation Bar -->
 <nav class="fixed top-0 w-full z-50 bg-surface dark:bg-slate-900/80 backdrop-blur-xl no-line-rule tonal-shift-boundary">
   <div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto font-['Manrope'] tracking-tight">
 <!-- LOGO -->
 <a href="index.html" class="flex items-center gap-2">
-  <img src="assets/logo.png" class="h-8 w-auto" />
+  <img src="assets/logo.png" class="h-10 w-auto" />
 </a>
 
 <!-- MENU -->
@@ -131,16 +168,16 @@
 
   </div>
 </nav>
-<main class="pt-24 overflow-hidden">
-<!-- Hero Section -->
-<section class="relative min-h-[921px] flex items-center px-8 max-w-7xl mx-auto">
-<div class="w-full lg:w-2/3 z-10">
+<main class="pt-28 md:pt-32 overflow-hidden">
+  <!-- Hero Section -->
+<section class="hero min-h-[85vh] flex items-center px-8 max-w-7xl mx-auto">
+  <div class="w-full lg:w-2/3 z-10">
 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold mb-8">
 <span class="material-symbols-outlined text-[14px]">bolt</span>
                     BUILDING THE FUTURE
                 </div>
-<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface mb-8 leading-[1.1]">
-                    AI-First Venture Studio Building <span class="text-primary italic">Real-World</span> Solutions
+<h1 class="font-[Manrope] text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1]">
+                      AI-First Venture Studio Building <span class="text-primary italic">Real-World</span> Solutions
                 </h1>
 <p class="text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
                     At Out Of The Blue, we bridge the gap between abstract research and tangible systems. We engineer end-to-end AI solutions that solve fragmented industrial problems.

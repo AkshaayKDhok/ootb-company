@@ -3,98 +3,124 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Ventures | Out Of The Blue (OOTB)</title>
+<title>OOTB | Out Of The Blue Ventures</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "surface-container-lowest": "#ffffff",
-                      "background": "#f7f9fe",
-                      "primary-dim": "#2f5487",
-                      "on-primary-container": "#133d6f",
-                      "outline": "#737c84",
-                      "surface-container-highest": "#dae3ed",
-                      "error-container": "#fa746f",
-                      "on-secondary-container": "#485264",
-                      "inverse-surface": "#0a0f12",
-                      "on-secondary": "#f8f8ff",
-                      "primary-fixed-dim": "#92b5ee",
-                      "tertiary": "#655882",
-                      "surface-container": "#e8eef6",
-                      "error-dim": "#67040d",
-                      "on-surface-variant": "#576068",
-                      "inverse-primary": "#9fc2fd",
-                      "tertiary-fixed-dim": "#ccbcec",
-                      "surface-variant": "#dae3ed",
-                      "secondary": "#565f72",
-                      "surface-container-high": "#e2e9f1",
-                      "on-error": "#fff7f6",
-                      "secondary-fixed-dim": "#cbd5ea",
-                      "on-surface": "#2b333b",
-                      "surface-container-low": "#eff4fb",
-                      "tertiary-container": "#dbcafb",
-                      "tertiary-dim": "#594c75",
-                      "on-secondary-fixed": "#364051",
-                      "primary-fixed": "#9fc2fd",
-                      "primary-container": "#9fc2fd",
-                      "surface-bright": "#f7f9fe",
-                      "on-secondary-fixed-variant": "#525c6e",
-                      "secondary-fixed": "#d9e3f8",
-                      "secondary-dim": "#4a5365",
-                      "primary": "#3c6094",
-                      "on-tertiary-fixed-variant": "#574a73",
-                      "surface-tint": "#3c6094",
-                      "secondary-container": "#d9e3f8",
-                      "on-tertiary-container": "#4d4169",
-                      "on-tertiary": "#fdf7ff",
-                      "tertiary-fixed": "#dbcafb",
-                      "outline-variant": "#aab3bc",
-                      "on-primary": "#f8f8ff",
-                      "on-primary-fixed": "#002851",
-                      "inverse-on-surface": "#9a9da2",
-                      "surface-dim": "#d2dbe5",
-                      "error": "#a83836",
-                      "on-tertiary-fixed": "#3a2d55",
-                      "on-error-container": "#6e0a12",
-                      "surface": "#f7f9fe",
-                      "on-primary-fixed-variant": "#1f4678",
-                      "on-background": "#2b333b"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.125rem",
-                      "lg": "0.25rem",
-                      "xl": "0.5rem",
-                      "full": "0.75rem"
-              },
-              "fontFamily": {
-                      "headline": ["Manrope"],
-                      "body": ["Inter"],
-                      "label": ["Inter"]
-              }
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary-fixed": "#3a2d55",
+                "on-surface": "#2b333b",
+                "surface-variant": "#dae3ed",
+                "on-surface-variant": "#576068",
+                "on-background": "#2b333b",
+                "primary-fixed": "#9fc2fd",
+                "inverse-on-surface": "#9a9da2",
+                "surface-container-high": "#e2e9f1",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-dim": "#594c75",
+                "secondary-fixed": "#d9e3f8",
+                "secondary-container": "#d9e3f8",
+                "on-tertiary-container": "#4d4169",
+                "inverse-primary": "#9fc2fd",
+                "on-primary-fixed": "#002851",
+                "surface-container-low": "#eff4fb",
+                "surface-tint": "#3c6094",
+                "error": "#a83836",
+                "on-secondary-fixed-variant": "#525c6e",
+                "tertiary-fixed": "#dbcafb",
+                "primary-container": "#9fc2fd",
+                "on-secondary": "#f8f8ff",
+                "secondary-fixed-dim": "#cbd5ea",
+                "on-primary-fixed-variant": "#1f4678",
+                "tertiary-container": "#dbcafb",
+                "tertiary": "#655882",
+                "secondary-dim": "#4a5365",
+                "error-container": "#fa746f",
+                "on-secondary-container": "#485264",
+                "outline-variant": "#aab3bc",
+                "on-tertiary": "#f8f8ff",
+                "inverse-surface": "#0a0f12",
+                "on-error": "#fff7f6",
+                "on-tertiary-fixed-variant": "#574a73",
+                "surface": "#f7f9fe",
+                "surface-bright": "#f7f9fe",
+                "on-error-container": "#6e0a12",
+                "error-dim": "#67040d",
+                "surface-dim": "#d2dbe5",
+                "on-primary-container": "#133d6f",
+                "primary-fixed-dim": "#92b5ee",
+                "secondary": "#565f72",
+                "primary-dim": "#2f5487",
+                "primary": "#3c6094",
+                "on-primary": "#f8f8ff",
+                "tertiary-fixed-dim": "#ccbcec",
+                "surface-container": "#e8eef6",
+                "on-secondary-fixed": "#364051",
+                "surface-container-highest": "#dae3ed",
+                "background": "#f7f9fe",
+                "outline": "#737c84"
             },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
           },
-        }
+        },
+      }
     </script>
 <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f7f9fe; }
+       .material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body { font-family: 'Inter', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; } 
         .font-headline { font-family: 'Manrope', sans-serif; }
         .glass-nav { backdrop-filter: blur(16px); background-color: rgba(247, 249, 254, 0.8); }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    
+         .hero h1 {
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 + p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: var(--on-surface-variant);
+  max-width: 48rem;
+}
+.hero p {
+  margin-bottom: 2rem;
+}
+
+.hero .inline-flex {
+  margin-bottom: 1rem;
+}
+    
     </style>
 </head>
-<body class="text-on-surface selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar -->
+<body class="bg-surface text-on-surface font-[Inter] antialiased selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface dark:bg-slate-900/80 backdrop-blur-xl no-line-rule tonal-shift-boundary">
   <div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto font-['Manrope'] tracking-tight">
 <!-- LOGO -->
 <a href="index.html" class="flex items-center gap-2">
-  <img src="assets/logo.png" class="h-8 w-auto" />
+  <img src="assets/logo.png" class="h-10 w-auto" />
 </a>
 
 <!-- MENU -->
@@ -128,13 +154,16 @@
 
   </div>
 </nav>
+<main class="pt-28 md:pt-32">
+
+</main>
 <!-- Hero Section -->
-<header class="relative pt-40 pb-24 px-8 overflow-hidden">
-<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<header class="hero relative pb-24 px-8 overflow-hidden">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 <div class="z-10">
 <span class="inline-block px-4 py-1.5 rounded-full bg-surface-container-high text-primary font-semibold text-xs tracking-wider uppercase mb-6">Our Venture Portfolio</span>
-<h1 class="font-headline text-5xl md:text-6xl font-extrabold text-on-surface leading-[1.1] mb-8 tracking-tight">
-                    Building AI-Powered Ventures That <span class="text-primary">Solve Real Problems</span>
+<h1 class="font-[Manrope] text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1]">
+                      Building AI-Powered Ventures That <span class="text-primary">Solve Real Problems</span>
 </h1>
 <p class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-xl font-light">
                     Out Of The Blue builds, operates, and scales focused ventures across industries using research, systems, and execution.
@@ -152,12 +181,22 @@
 <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl rotate-3 bg-surface-container-low">
 <img class="w-full h-full object-cover opacity-90 mix-blend-multiply" data-alt="Modern collaborative workspace with clean lines, soft natural lighting, and team members working on digital architectural designs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_goh6pI-VgDlgMvX6Xp9OpdbGrDfko4Nn8M7jTA_QTLq0H7CDJyM-G-MtwsEfnNDuu6PeNlf0-w0udHpTtSTzC0dDVrhpz6qbJCQxSIPVRlSJbGarTm2oljlwqcIAF7BYX9Xh13tqeeFNHs3Spo7i6JxjwOQvvxfGODD_JFuLPxTvjSJIkX_PdN97096zs0Q05IH_3uxypOVlfG7lv4JOhzgvFKe-DFqxD6AYALwEp0cB3TMlUDk2JFocCZlLg8cxyXVYGyOjClF-"/>
 </div>
-<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-2xl shadow-xl max-w-[240px]">
-<div class="flex items-center gap-3 mb-2">
-<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
-<span class="font-bold text-sm">AI-Driven Framework</span>
-</div>
-<p class="text-xs text-on-surface-variant">Proprietary systems built to scale vertical operations automatically.</p>
+<div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-6 rounded-xl shadow-2xl border border-outline-variant/15 max-w-xs transform -rotate-3">
+  
+  <div class="flex items-center gap-4 mb-4">
+    
+    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+      <span class="material-symbols-outlined">auto_awesome</span>
+    </div>
+    
+    <span class="font-bold">AI-Driven Framework</span>
+  
+  </div>
+
+  <p class="text-sm text-on-surface-variant">
+    Proprietary systems built to scale vertical operations automatically.
+  </p>
+
 </div>
 </div>
 </div>
