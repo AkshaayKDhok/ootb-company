@@ -141,10 +141,41 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; }
 <!-- MENU -->
 <div class="hidden xl:flex gap-6 items-center">
 
-  <a href="about.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">About Us</a>
+  <!-- About -->
+  <a href="about.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">
+    About Us
+  </a>
 
-  <a href="ventures.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Ventures</a>
+  <!-- Ventures Dropdown -->
+  <div class="relative group">
 
+    <!-- Parent Link -->
+    <a href="ventures.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">
+      Ventures
+      <span class="material-symbols-outlined text-sm">expand_more</span>
+    </a>
+
+    <!-- Dropdown -->
+    <div class="absolute left-0 top-full mt-3 w-64 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100 overflow-hidden">
+
+  <!-- Doctors -->
+  <a href="indiandoctorsnetwork.html" class="block px-4 py-3 hover:bg-gray-100 text-slate-700">
+    Indian Doctors Network
+  </a>
+
+  <!-- Dental -->
+  <a href="indiandentalnetwork.html" class="block px-4 py-3 hover:bg-gray-100 text-slate-700 font-medium">
+    Indian Dental Network
+  </a>
+
+  <!-- Orators -->
+  <a href="oratorssociety.html" class="block px-4 py-3 hover:bg-gray-100 text-slate-700">
+    Orators Society
+  </a>
+
+    </div>
+
+  </div>
   <a href="services.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Services</a>
 
   <a href="studio.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Studio</a>
@@ -162,7 +193,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; }
 <!-- CTA BUTTON -->
 <a href="contact.html" target="_blank">
   <button class="bg-primary hover:bg-primary-dim text-on-primary px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-200 active:scale-95 flex-shrink-0">
-    Work With Us
+    Work with us
   </button>
 </a>
 

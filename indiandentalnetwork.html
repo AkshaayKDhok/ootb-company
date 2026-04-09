@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OOTB | Venturs | Indian Dental Network</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary-fixed": "#3a2d55",
+                "on-surface": "#2b333b",
+                "surface-variant": "#dae3ed",
+                "on-surface-variant": "#576068",
+                "on-background": "#2b333b",
+                "primary-fixed": "#9fc2fd",
+                "inverse-on-surface": "#9a9da2",
+                "surface-container-high": "#e2e9f1",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-dim": "#594c75",
+                "secondary-fixed": "#d9e3f8",
+                "secondary-container": "#d9e3f8",
+                "on-tertiary-container": "#4d4169",
+                "inverse-primary": "#9fc2fd",
+                "on-primary-fixed": "#002851",
+                "surface-container-low": "#eff4fb",
+                "surface-tint": "#3c6094",
+                "error": "#a83836",
+                "on-secondary-fixed-variant": "#525c6e",
+                "tertiary-fixed": "#dbcafb",
+                "primary-container": "#9fc2fd",
+                "on-secondary": "#f8f8ff",
+                "secondary-fixed-dim": "#cbd5ea",
+                "on-primary-fixed-variant": "#1f4678",
+                "tertiary-container": "#dbcafb",
+                "tertiary": "#655882",
+                "secondary-dim": "#4a5365",
+                "error-container": "#fa746f",
+                "on-secondary-container": "#485264",
+                "outline-variant": "#aab3bc",
+                "on-tertiary": "#f8f8ff",
+                "inverse-surface": "#0a0f12",
+                "on-error": "#fff7f6",
+                "on-tertiary-fixed-variant": "#574a73",
+                "surface": "#f7f9fe",
+                "surface-bright": "#f7f9fe",
+                "on-error-container": "#6e0a12",
+                "error-dim": "#67040d",
+                "surface-dim": "#d2dbe5",
+                "on-primary-container": "#133d6f",
+                "primary-fixed-dim": "#92b5ee",
+                "secondary": "#565f72",
+                "primary-dim": "#2f5487",
+                "primary": "#3c6094",
+                "on-primary": "#f8f8ff",
+                "tertiary-fixed-dim": "#ccbcec",
+                "surface-container": "#e8eef6",
+                "on-secondary-fixed": "#364051",
+                "surface-container-highest": "#dae3ed",
+                "background": "#f7f9fe",
+                "outline": "#737c84"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+
+<style>
+         .material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body { font-family: 'Inter', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; }
+        .no-line-rule { border: none !important; }
+        .tonal-shift-boundary { background-color: rgba(247, 249, 254, 0.8); }
+        .glass-panel {
+            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+/* ===== SPACING SYSTEM ===== */
+.hero h1 {
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.hero .inline-flex {
+  margin-bottom: 1rem;
+}
+
+
+/* ===== TYPOGRAPHY SYSTEM ===== */
+.hero p {
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: rgba(0,0,0,0.7);
+  max-width: 48rem;
+}
+
+.hero h1 + p {
+  margin-top: 1rem;
+}
+
+.hero p + * {
+  margin-top: 1.5rem;
+}
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #3c6094 0%, #2f5487 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-[Inter] antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface dark:bg-slate-900/80 backdrop-blur-xl no-line-rule tonal-shift-boundary">
+  <div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto font-['Manrope'] tracking-tight">
+<!-- LOGO -->
+<a href="index.html" class="flex items-center gap-2">
+  <img src="assets/logo.png" class="h-10 w-auto" />
+</a>
+
+<!-- MENU -->
+<div class="hidden xl:flex gap-6 items-center">
+
+  <!-- About -->
+  <a href="about.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">
+    About Us
+  </a>
+
+  <!-- Ventures Dropdown -->
+  <div class="relative group">
+
+    <!-- Parent Link -->
+    <a href="ventures.html" class="flex items-center gap-1 text-primary border-b-2 border-primary font-medium">
+      Ventures
+      <span class="material-symbols-outlined text-sm">expand_more</span>
+    </a>
+
+    <!-- Dropdown -->
+    <div class="absolute left-0 top-full mt-3 w-64 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100 overflow-hidden">
+
+  <!-- Doctors -->
+  <a href="indiandoctorsnetwork.html" class="block px-4 py-3 hover:bg-gray-100 text-slate-700">
+    Indian Doctors Network
+  </a>
+
+  <!-- Dental -->
+  <a href="indiandentalnetwork.html" class="block px-4 py-3 hover:bg-gray-100 text-slate-700 font-medium">
+    Indian Dental Network
+  </a>
+
+  <!-- Orators -->
+  <a href="oratorssociety.html" class="block px-4 py-3 hover:bg-gray-100 text-slate-700">
+    Orators Society
+  </a>
+
+    </div>
+
+  </div>
+
+  <!-- Rest -->
+  <a href="services.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Services</a>
+
+  <a href="studio.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Studio</a>
+
+  <a href="community.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Community</a>
+
+  <a href="investors.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Investors</a>
+
+  <a href="careers.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Careers</a>
+
+  <a href="contact.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Contact Us</a>
+
+</div>
+<!-- CTA BUTTON -->
+<a href="ventures.html" target="_blank">
+  <button class="bg-primary hover:bg-primary-dim text-on-primary px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-200 active:scale-95 flex-shrink-0">
+Explore More  </button>
+</a>
+
+  </div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-24 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<span class="inline-block bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full text-xs font-bold tracking-wider mb-6 uppercase">OOTB Ecosystem Project</span>
+<h1 class="text-6xl md:text-7xl font-headline font-extrabold text-on-surface leading-[1.1] tracking-tighter mb-8">
+                    Indian Dental <br/><span class="text-primary italic">Network</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+India’s Focused Network for Dentists to Collaborate, Learn, and Grow Together. A modern professional ecosystem built for the evolving dental landscape.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a href="#" target="_blank">
+    <button class="hero-gradient text-on-primary px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:translate-y-[-2px] transition-all duration-300">Coming Soon</button>
+</a>
+<a href="contact.html"  target="_blank">
+    <button class="bg-surface-container-lowest text-primary outline outline-1 outline-outline-variant/15 px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-high transition-all duration-300">Get Updates</button>
+</a>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-[2rem] blur-3xl group-hover:bg-primary/10 transition-colors duration-500"></div>
+<div class="relative bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+<img class="w-full h-[500px] object-cover opacity-90" data-alt="high-end editorial photography of a professional medical environment with soft blue tones and elegant architectural shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBcD45kwARS8wLaJ9XuxY7r-EXAD_nueEa_ThDfnUTlx64kt07-EsavHdeefKPEjCSJJHg37hoCeXcMgZNqv1XEaKOIfjEGma3ZwRZEbmQvMeXrMB_KubOOPo15n-RvZjndjVzrM0K92p1mDCb_369y__P5Hz8lPVbJgAnFYTZJsjoM6aMeJV_UMQ509VLIQRNVo0aQ0NKuMnvPDrVUpauPl4eES7MDu-XRZskeuN4n_rNXGYCKR02UQjTFLGLVd2E9m_BQh6A-OYh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</header>
+<!-- Clarity Block (Bento Grid) -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="text-4xl font-headline font-bold text-on-surface mb-4">Precision Collaboration</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl">A curated ecosystem designed to elevate clinical excellence and professional growth for dentists.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+<div class="md:col-span-3 bg-surface-container-lowest p-10 rounded-[2rem] shadow-sm flex flex-col justify-between hover:shadow-lg transition-shadow">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="groups">groups</span>
+<h3 class="text-2xl font-headline font-bold mb-4">Collaborate with Peers</h3>
+<p class="text-on-surface-variant">Connect with dentists across specialties in a verified, high-trust environment.</p>
+</div>
+</div>
+<div class="md:col-span-3 bg-primary-container p-10 rounded-[2rem] shadow-sm flex flex-col justify-between text-on-primary-container hover:shadow-lg transition-shadow">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6" data-icon="forum" style="font-variation-settings: 'FILL' 1;">forum</span>
+<h3 class="text-2xl font-headline font-bold mb-4">Discuss Cases</h3>
+<p class="opacity-80">Exchange insights on complex dental cases with peer-backed and AI-assisted inputs.</p>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-[2rem] shadow-sm hover:shadow-lg transition-shadow">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="quiz">quiz</span>
+<h3 class="text-xl font-headline font-bold mb-4">Share Quizzes</h3>
+<p class="text-on-surface-variant">Stay sharp with curated clinical content, techniques, and evolving best practices.</p>
+</div>
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-[2rem] shadow-sm hover:shadow-lg transition-shadow">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="rocket_launch">rocket_launch</span>
+<h3 class="text-xl font-headline font-bold mb-4">Discover Opportunities</h3>
+<p class="text-on-surface-variant">Access curated roles, clinic partnerships, and growth opportunities in dentistry.</p>
+</div>
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-[2rem] shadow-sm hover:shadow-lg transition-shadow">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="notifications_active">notifications_active</span>
+<h3 class="text-xl font-headline font-bold mb-4">Stay Updated</h3>
+<p class="text-on-surface-variant">Real-time updates on dental innovations, materials, and global advancements.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Problem/Solution Section -->
+<section class="py-32 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-24 items-center">
+<div class="order-2 lg:order-1">
+<div class="space-y-12">
+<div class="group">
+<h4 class="text-outline uppercase text-xs font-bold tracking-[0.2em] mb-4">The Challenge</h4>
+<p class="text-2xl font-headline font-light leading-relaxed text-on-surface-variant">
+Dental professionals often lack a focused platform for structured collaboration, case discussions, and continuous learning beyond isolated clinical practice.
+</p>                            </p>
+</div>
+<div class="h-px w-full bg-surface-container-highest"></div>
+<div class="group">
+<h4 class="text-primary uppercase text-xs font-bold tracking-[0.2em] mb-4">The OOTB Solution</h4>
+<p class="text-3xl font-headline font-bold text-on-surface mb-8">
+A high-signal, AI-first dental knowledge ecosystem.
+</p>
+<ul class="space-y-6">
+<li class="flex gap-4 items-start">
+<div class="bg-primary-container p-1 rounded-full"><span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span></div>
+<div>
+<p class="font-bold">Peer Network Layer</p>
+<p class="text-on-surface-variant text-sm">Specialty-focused dentist communities with verified profiles.
+</p>
+</div>
+</li>
+<li class="flex gap-4 items-start">
+<div class="bg-primary-container p-1 rounded-full"><span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span></div>
+<div>
+<p class="font-bold">Knowledge Layer</p>
+<p class="text-on-surface-variant text-sm">Curated dental research, case studies, and treatment innovations.
+</p>
+</div>
+</li>
+<li class="flex gap-4 items-start">
+<div class="bg-primary-container p-1 rounded-full"><span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span></div>
+<div>
+<p class="font-bold">Opportunity Layer</p>
+<p class="text-on-surface-variant text-sm">Access to premium roles, partnerships, and practice growth pathways.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 relative">
+<div class="aspect-square bg-surface-container-high rounded-full absolute -top-12 -right-12 w-full blur-3xl opacity-30"></div>
+<div class="relative bg-white p-4 rounded-[2.5rem] shadow-2xl">
+<img class="rounded-[2rem] w-full h-full object-cover" data-alt="clean futuristic interface representation with microscopic organic textures and glowing blue data nodes representing knowledge neural network" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnr49jbUGhdjA456SK0oH0evb5FMRZ06geG22IEv79YszYLsYRBorsEeki2E7Y3NUdgrXnicGWfJj9h_shMFROyPrqV5PwHgmr4j6vTxmfOng7ZZFvYv4bc-BXCdVweaLyZF0biNRBDuy_tWF89UrLwV4WeRBfQqflbAIrdvHzsEc1BXswcOvIqgxQkgyCJKfIT2gWXYlGS7IoR4Cudg6zbA5Ul0VMEvsuG7Rt2V_3e4DyegBUCAbzhAIyl43P_AD33ENyrvvZvP8r"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Features Horizontal Scroll -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-7xl mx-auto overflow-x-auto pb-12 hide-scrollbar">
+    <div class="flex justify-between items-end mb-16">
+<h2 class="text-4xl font-black tracking-tight">Ecosystem Primitives</h2>
+<p class="hidden md:block text-on-surface-variant max-w-sm text-right">Built with a focus on clinical precision, patient outcomes, and professional growth.</p>
+</div>
+<div class="flex gap-8 min-w-[1200px]">
+<div class="w-80 flex-shrink-0 bg-surface-container-lowest p-8 rounded-[2rem] outline outline-1 outline-outline-variant/10">
+<span class="material-symbols-outlined text-primary-dim mb-6" data-icon="clinical_notes">clinical_notes</span>
+<h5 class="font-headline font-bold text-lg mb-2">Case Discussions</h5>
+<p class="text-sm text-on-surface-variant">Structured, peer-reviewed discussions on dental cases and treatment approaches.
+</p>
+</div>
+<div class="w-80 flex-shrink-0 bg-surface-container-lowest p-8 rounded-[2rem] outline outline-1 outline-outline-variant/10">
+<span class="material-symbols-outlined text-primary-dim mb-6" data-icon="hub">hub</span>
+<h5 class="font-headline font-bold text-lg mb-2">Peer Networking</h5>
+<p class="text-sm text-on-surface-variant">Connect across specialties for referrals and collaborative care.
+</p>
+</div>
+<div class="w-80 flex-shrink-0 bg-surface-container-lowest p-8 rounded-[2rem] outline outline-1 outline-outline-variant/10">
+<span class="material-symbols-outlined text-primary-dim mb-6" data-icon="work_history">work_history</span>
+<h5 class="font-headline font-bold text-lg mb-2">Job Discovery</h5>
+<p class="text-sm text-on-surface-variant">Find high-quality roles in clinics, hospitals, and emerging dental ventures.
+</p>
+</div>
+<div class="w-80 flex-shrink-0 bg-surface-container-lowest p-8 rounded-[2rem] outline outline-1 outline-outline-variant/10">
+<span class="material-symbols-outlined text-primary-dim mb-6" data-icon="event_note">event_note</span>
+<h5 class="font-headline font-bold text-lg mb-2">Conference Updates</h5>
+<p class="text-sm text-on-surface-variant">Stay informed on dental conferences, workshops, and global events.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works -->
+<section class="py-24 px-8 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto text-center">
+<h2 class="text-4xl font-headline font-bold mb-20">Your Journey to Clinical Excellence</h2>
+<div class="grid md:grid-cols-4 gap-8 relative">
+<div class="absolute top-1/2 left-0 w-full h-px bg-surface-container-highest hidden md:block"></div>
+<div class="relative bg-surface p-6">
+<div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold relative z-10">1</div>
+<h6 class="font-bold mb-2">Join Network</h6>
+<p class="text-sm text-on-surface-variant">Get verified and enter a trusted dental ecosystem.
+
+</p>
+</div>
+<div class="relative bg-surface p-6">
+<div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold relative z-10">2</div>
+<h6 class="font-bold mb-2">Connect</h6>
+<p class="text-sm text-on-surface-variant">Build relationships with dentists across specialties.
+</p>
+</div>
+<div class="relative bg-surface p-6">
+<div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold relative z-10">3</div>
+<h6 class="font-bold mb-2">Share</h6>
+<p class="text-sm text-on-surface-variant">Contribute cases, learnings, and clinical insights.
+</p>
+</div>
+<div class="relative bg-surface p-6">
+<div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold relative z-10">4</div>
+<h6 class="font-bold mb-2">Learn &amp; Grow</h6>
+<p class="text-sm text-on-surface-variant">Access tools, opportunities, and continuous learning pathways.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Status Section -->
+<section class="py-24 px-8 bg-surface-container-low text-center">
+<div class="max-w-3xl mx-auto">
+<div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full mb-8 shadow-sm">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-widest">Platform Status: Rebuilding</span>
+</div>
+<h2 class="text-3xl font-headline font-bold mb-6">Currently being rebuilt with a stronger, AI-first foundation.</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+We are redesigning the platform to deliver a more structured and high-quality experience. The new Indian Dental Network is coming soon with advanced collaboration tools.            </p>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 px-8 bg-surface-container-highest">
+<div class="max-w-7xl mx-auto rounded-[3rem] hero-gradient p-16 text-center text-on-primary overflow-hidden relative">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="subtle organic abstract geometric pattern of interconnected nodes representing network connectivity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgwVyNCyG24CPZRMsJ2Q1IsDLbSJs9BELTMZf6npUpzEB4mdA3GsHesJlwPl4TPVSV4F8WoWtSmSUYD9Qt30YlnVoMVh8bsiZ6oh8jdu6UO3N-22ZwqEhDoHJqpRM2Do09NWEK5iC4FEKDqbdj6aytmO0LB5_riWtfd0duLzcfuqwWPz46eBwAjgWJoJVnn6Yx2Vf5x59hl5Xfo8a_Bgx966FkUV_1hzBPkT42cH033b2Q4vMVL91pzx_rRO92WHB1h_8tfd21h8Tz"/>
+</div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-8">Be part of the future of dentistry.
+</h2>
+<div class="flex flex-wrap justify-center gap-6">
+<a href="contact.html"  target="_blank">
+    <button class="bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-surface transition-all">Join the Waitlist</button>
+</a>
+<a class="bg-transparent text-white outline outline-2 outline-white/30 px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all" href="ventures.html" target="_blank">Stay Updated</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#eff4fb] dark:bg-slate-950 w-full rounded-t-none font-['Inter'] text-sm leading-relaxed tonal-shift-from-surface-to-surface-container-low flat no shadows">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto w-full"><div class="col-span-2 md:col-span-1">
+<div class="text-lg font-bold text-[#2b333b] dark:text-white mb-4">Indian Dental Network</div>
+<p class="text-slate-600 dark:text-slate-400 mb-6 max-w-sm">
+Connecting India’s dental professionals through structured collaboration, knowledge sharing, and clinical excellence.
+                </p>
+<div class="font-bold text-[#3c6094]">Powered by OOTB - An AI-first venture studio.</div><br/>
+<div class="flex gap-4">
+<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://www.facebook.com/outoftheblue.company/" target="_blank" title="Facebook">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7h-2.54v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"></path></svg>
+</a>
+<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://x.com/ootbcompany" target="_blank" title="X (Twitter)">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"></path></svg>
+</a>
+<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://www.linkedin.com/company/out-of-the-blue-company/" target="_blank" title="LinkedIn">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a2.7 2.7 0 0 0-2.7-2.7c-1.1 0-1.9.6-2.3 1.2V10.5h-2.3v8h2.3v-4.1c0-.6.5-1.1 1.1-1.1s1.1.5 1.1 1.1v4.1h2.3M8.3 18.5v-8H6v8h2.3M7.1 9c.7 0 1.3-.6 1.3-1.3S7.8 6.4 7.1 6.4s-1.3.6-1.3 1.3S6.4 9 7.1 9z"></path></svg>
+</a>
+<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#" title="YouTube">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z"></path></svg>
+</a>
+<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://www.instagram.com/outoftheblue.company/" target="_blank" title="Instagram">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-[#3c6094] dark:text-[#eff4fb] mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="about.html">About Us</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="ventures.html">Ventures</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="services.html">Services</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="studio.html">Studio</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="community.html">Community</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="investors.html">Investors</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#3c6094] dark:text-[#eff4fb] mb-6">Ventures</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="indiandoctorsnetwork.html">Indian Doctors Network</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="indiandentalnetwork.html">Indian Dental Network</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="oratorssociety.html">Orators Society</a></li>
+
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#3c6094] dark:text-[#eff4fb] mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="privacypolicy.html">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="termsofservices.html">Terms of Service</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="contact.html">Contact Us</a></li>
+</ul>
+</div></div>
+<div class="border-t border-slate-200/50 dark:border-slate-800/50 max-w-7xl mx-auto px-8 py-8">
+<p class="text-slate-400 text-xs text-center">© 2026 Indian Dental Network by OOTB Ecosystem. All rights reserved.</p>
+</div>
+</footer>
+
+
+</body></html>
