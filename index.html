@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en"><head>
+<html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>OOTB | AI-First Venture Studio</title>
@@ -113,8 +113,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; }
 
 /* ===== TYPOGRAPHY SYSTEM ===== */
 .hero p {
-  font-size: 1.125rem; /* text-lg */
-  line-height: 1.75rem;
+  font-size:1.05rem; /* text-lg */
+  line-height:1.8;
   font-weight: 400;
   color: rgba(0,0,0,0.7);
   max-width: 48rem;
@@ -127,22 +127,518 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; }
 .hero p + * {
   margin-top: 1.5rem;
 }
+/* ---------- Scroll Reveal ---------- */
+
+.reveal{
+
+opacity:0;
+
+transform:translate3d(0,50px,0) scale(.985);
+
+filter:blur(6px);
+
+transition:
+
+opacity .9s ease,
+
+transform .9s cubic-bezier(.22,1,.36,1),
+
+filter .9s ease;
+
+will-change:transform,opacity;
+
+}
+
+.reveal.show{
+
+opacity:1;
+
+transform:translate3d(0,0,0) scale(1);
+
+filter:blur(0);
+
+transition-delay:var(--delay,0ms);
+
+}
+
+.floating{
+
+animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* ==========================================
+   MAGNETIC BUTTONS
+========================================== */
+
+button{
+
+position:relative;
+
+transition:
+transform .18s ease-out,
+box-shadow .30s ease,
+background-color .30s ease,
+color .30s ease,
+border-color .30s ease;
+
+will-change:transform;
+
+}
+
+button:hover{
+
+box-shadow:
+0 18px 36px rgba(30,64,175,.16);
+
+}
+
+button:active{
+
+transform:scale(.98);
+
+}
+
+.hero-image:hover{
+
+transform:scale(1.04);
+
+filter:brightness(1.04);
+
+}
+
+.spotlight{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.spotlight::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(
+
+600px circle at var(--x) var(--y),
+
+rgba(62,103,167,.12),
+
+transparent 45%
+
+);
+
+opacity:0;
+
+transition:opacity .35s;
+
+pointer-events:none;
+
+}
+
+.spotlight:hover::before{
+
+opacity:1;
+
+}
+/* ==========================================
+   PREMIUM CARD HOVER
+========================================== */
+
+.hover-card{
+
+transition:
+
+transform .35s ease,
+
+box-shadow .35s ease,
+
+border-color .35s ease,
+
+background-color .35s ease;
+
+}
+
+.hover-card:hover{
+
+transform:translateY(-8px);
+
+border-color:rgba(62,103,167,.30);
+
+box-shadow:var(--shadow);
+
+}
+
+/* ---------- Hero Image ---------- */
+
+.hero-image{
+
+transition:
+transform .8s ease,
+filter .8s ease;
+
+animation:
+heroFloat 8s ease-in-out infinite;
+
+}
+
+/* ============================
+AI NETWORK HERO
+============================ */
+
+#hero-network{
+
+position:relative;
+
+cursor:default;
+
+transform-style:preserve-3d;
+
+transition:transform .35s ease;
+
+will-change:transform;
+
+}
+
+#networkCanvas{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+z-index:5;
+
+mix-blend-mode:screen;
+
+opacity:.9;
+
+}
+#hero-network::after{
+
+content:"";
+
+position:absolute;
+
+top:-20%;
+
+left:-120%;
+
+width:60%;
+
+height:140%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.15),
+rgba(110,180,255,.25),
+transparent
+);
+
+transform:skewX(-22deg);
+
+animation:scan 8s linear infinite;
+
+pointer-events:none;
+
+}
+
+@keyframes scan{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:160%;
+
+}
+
+}
+
+@keyframes heroFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+#timeline-progress{
+
+background:linear-gradient(
+
+90deg,
+
+#3E67A7,
+
+#72B4FF,
+
+#3E67A7
+
+);
+
+background-size:200%;
+
+animation:flow 3s linear infinite;
+
+box-shadow:0 0 20px rgba(62,103,167,.45);
+
+}
+
+@keyframes flow{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:200%;
+
+}
+
+}
+
+/* ==========================================
+   GLOBAL TYPOGRAPHY SYSTEM
+========================================== */
+
+:root{
+
+--section-width:80rem;
+
+--radius:26px;
+
+--shadow:0 18px 40px rgba(15,23,42,.08);
+
+--primary:#3E67A7;
+
+--text:#182133;
+
+--muted:#5D687A;
+
+}
+.section-container{
+
+max-width:var(--section-width);
+
+margin:auto;
+
+}
+
+/* Hero */
+
+.hero h1{
+
+font-size:clamp(2.9rem,4vw,3.7rem);
+
+line-height:.99;
+
+letter-spacing:-.04em;
+
+font-weight:800;
+
+}
+
+/* Section Labels */
+
+.section-label{
+
+font-size:.75rem;
+
+font-weight:600;
+
+letter-spacing:.30em;
+
+text-transform:uppercase;
+
+color:var(--primary);
+
+}
+
+/* Main Section Titles */
+
+.section-title{
+
+font-family:'Manrope',sans-serif;
+
+font-size:clamp(2.35rem,3vw,2.9rem);
+
+line-height:1.18;
+
+letter-spacing:-.03em;
+
+font-weight:800;
+
+color:var(--text);
+
+}
+
+/* Section Paragraph */
+
+.section-copy{
+
+font-size:1.08rem;
+
+line-height:1.8;
+
+color:var(--muted);
+
+max-width:760px;
+
+}
+
+/* Card Title */
+.card{
+
+background:#fff;
+
+border:1px solid rgba(15,23,42,.08);
+
+border-radius:var(--radius);
+
+padding:1.75rem;
+
+transition:
+transform .35s ease,
+box-shadow .35s ease,
+border-color .35s ease;
+
+}
+
+.card-title{
+
+font-family:'Manrope',sans-serif;
+
+font-size:1.95rem;
+
+font-weight:700;
+
+line-height:1.15;
+
+letter-spacing:-.02em;
+
+}
+
+/* Card Body */
+
+.card-copy{
+
+font-size:.98rem;
+
+line-height:1.65;
+
+color:var(--muted);
+
+}
+
+/* Small Labels */
+
+.eyebrow{
+
+font-size:.74rem;
+
+font-weight:700;
+
+letter-spacing:.25em;
+
+text-transform:uppercase;
+
+color:var(--primary);
+
+}
+
+.card-heading{
+
+font-family:'Manrope',sans-serif;
+
+font-size:1.55rem;
+
+font-weight:700;
+
+line-height:1.2;
+
+letter-spacing:-.02em;
+
+color:#182133;
+
+}
     </style>
 </head>
 <body class="bg-surface text-on-surface font-[Inter] antialiased selection:bg-primary-container selection:text-on-primary-container">
   <!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 bg-surface dark:bg-slate-900/80 backdrop-blur-xl no-line-rule tonal-shift-boundary">
-  <div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto font-['Manrope'] tracking-tight">
-<!-- LOGO -->
+<nav
+id="mainNav"
+class="fixed top-0 left-0 right-0 z-50
+bg-white/85
+backdrop-blur-xl
+border-b border-slate-200/70
+transition-all duration-300"> 
+<div class="max-w-7xl mx-auto h-20 px-8 flex items-center justify-between">
+  <!-- LOGO -->
 <a href="index.html" class="flex items-center gap-2">
-  <img src="assets/logo.png" class="h-10 w-auto" />
+  <img
+src="assets/logo.png"
+class="h-14 w-auto transition-all duration-500 hover:scale-110">
 </a>
 
 <!-- MENU -->
-<div class="hidden xl:flex gap-6 items-center">
+<div class="hidden xl:flex items-center gap-10">
 
   <!-- About -->
-  <a href="about.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">
+  <a href="about.html" class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
     About Us
   </a>
 
@@ -150,13 +646,13 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; }
   <div class="relative group">
 
     <!-- Parent Link -->
-    <a href="ventures.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">
+    <a href="ventures.html" class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
       Ventures
       <span class="material-symbols-outlined text-sm">expand_more</span>
     </a>
 
     <!-- Dropdown -->
-    <div class="absolute left-0 top-full mt-3 w-64 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100 overflow-hidden">
+    <div class="absolute left-0 top-full mt-3 w-64 bg-white shadow-[0_24px_60px_rgba(15,23,42,0.18)] rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100 overflow-hidden">
 
   <!-- Doctors -->
   <a href="indiandoctorsnetwork.html" class="block px-4 py-3 hover:bg-gray-100 text-slate-700">
@@ -164,7 +660,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; }
   </a>
 
   <!-- Dental -->
-  <a href="indiandentalnetwork.html" class="block px-4 py-3 hover:bg-gray-100 text-slate-700 font-medium">
+  <a href="indiandentalnetwork.html" class="block px-4 py-3 hover:bg-gray-100 text-slate-700">
     Indian Dental Network
   </a>
 
@@ -176,359 +672,1958 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; }
     </div>
 
   </div>
-  <a href="services.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Services</a>
+  <a href="services.html" class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Services</a>
 
-  <a href="studio.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Studio</a>
+  <a href="studio.html" class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Studio</a>
 
-  <a href="community.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Community</a>
+  <a href="community.html" class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Community</a>
 
-  <a href="investors.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Investors</a>
+  <a href="investors.html" class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Investors</a>
 
-  <a href="careers.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Careers</a>
+  <a href="careers.html" class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Careers</a>
 
-  <a href="contact.html" class="hover:text-[#3c6094] transition-colors text-slate-600 font-medium">Contact Us</a>
+  <a href="contact.html" class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Contact Us</a>
 
 </div>
 
 <!-- CTA BUTTON -->
 <a href="contact.html" target="_blank">
-  <button class="bg-primary hover:bg-primary-dim text-on-primary px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-200 active:scale-95 flex-shrink-0">
+  <button class="group spotlight
+bg-primary
+text-white
+px-7
+py-3
+rounded-xl
+font-semibold
+shadow-[0_12px_28px_rgba(59,96,165,.28)]
+hover:-translate-y-1
+hover:scale-[1.02]
+hover:shadow-[0_18px_40px_rgba(59,96,165,.40)]
+transition-all duration-300">
     Work with us
   </button>
 </a>
 
   </div>
 </nav>
-<main class="pt-28 md:pt-32 overflow-hidden">
+<main class="pt-20 md:pt-24 overflow-hidden">
   <!-- Hero Section -->
-<section class="hero min-h-[85vh] flex items-center px-8 max-w-7xl mx-auto">
-  <div class="w-full lg:w-2/3 z-10">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold mb-8">
-<span class="material-symbols-outlined text-[14px]">bolt</span>
-                    BUILDING THE FUTURE
-                </div>
-<h1 class="font-[Manrope] text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1]">
-                      AI-First Venture Studio Building <span class="text-primary italic">Real-World</span> Solutions
-                </h1>
-<p class="text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
-                    At Out Of The Blue, we bridge the gap between abstract research and tangible systems. We engineer end-to-end AI solutions that solve fragmented industrial problems.
-                </p>
-<div class="flex flex-wrap gap-4">
-  
-<a href="careers.html" target="_blank">
-<button class="px-8 py-4 bg-surface-container-high text-on-surface rounded-xl font-bold transition-all hover:bg-surface-container-highest">Join OOTB</button>
-</a>
-</div>
-</div>
-<!-- Decorative Element -->
-<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-[600px] bg-gradient-to-br from-primary/10 to-transparent blur-3xl rounded-full -z-10"></div>
-</section>
-<!-- About Section -->
-<section class="py-24 px-8 bg-surface-container-low" id="what-we-do">
-<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+<section class="hero reveal relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white pt-4 pb-28">
+    <div class="absolute top-20 right-0 w-[700px] h-[700px] bg-primary/10 blur-[140px] rounded-full -z-10"></div>
+
+<div class="absolute left-0 bottom-0 w-[400px] h-[400px] bg-blue-100 blur-[120px] rounded-full -z-10 opacity-70"></div>
+  <div class="section-container px-8 w-full grid lg:grid-cols-2 gap-20 items-center relative z-10">
 <div>
-<h2 class="font-headline text-4xl font-bold mb-6">What is Out Of The Blue</h2>
-<p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
-                        We are not just a studio; we are an execution engine. We focus on the intersection of research, systematic workflows, and clinical execution to build ventures that actually matter.
-                    </p>
-<div class="space-y-6">
-<div class="flex gap-4 items-start">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-<span class="material-symbols-outlined">biotech</span>
+
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-[0.2em]">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+Building The Future
 </div>
-<div>
-<h4 class="font-bold">Research-driven approach</h4>
-<p class="text-sm text-on-surface-variant">Synthesizing deep industry insights before writing a single line of code.</p>
-</div>
-</div>
-<div class="flex gap-4 items-start">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-<span class="material-symbols-outlined">memory</span>
-</div>
-<div>
-<h4 class="font-bold">AI-powered execution</h4>
-<p class="text-sm text-on-surface-variant">Leveraging the latest in generative and predictive systems for speed.</p>
-</div>
-</div>
-<div class="flex gap-4 items-start">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-<span class="material-symbols-outlined">precision_manufacturing</span>
-</div>
-<div>
-<h4 class="font-bold">End-to-end problem solving</h4>
-<p class="text-sm text-on-surface-variant">We own the entire stack, from ideation to final market execution.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="relative rounded-2xl overflow-hidden aspect-square">
-<img alt="Research Atmosphere" class="w-full h-full object-cover" data-alt="clean high-end workspace with a minimalist desk, modern workstation, and soft atmospheric natural light through a large window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDarHDI_x-nxqGUAningG67SXJHCso4XXgLcqoWT1kxwSfJaQxPCmzwmRjLU2jYiUuxBou6XSXoDuJhG-mhDHjVpUguT7DSHpc_CT78XWYYYEKx_KLQu2_nVD1lBJGFVp-VlP2OgCofYQqMLx9PUNCMjMzc4Pd_1Ek1TkDJSApO7kTCMR9S-1zhRX4CFjJAx8jRBSAAq9bTwa86PM7VK8o_bOkSatSeVvCew_Y_bz5es2mOmuGsk0xwBsVCmOzQIDOI7Iqd4-a72itt"/>
-</div>
-</div>
-</section>
-<!-- Ventures (Split Grid) -->
-<section class="py-24 px-8 max-w-7xl mx-auto" id="ventures">
-<div class="mb-16 text-center max-w-2xl mx-auto">
-<h2 class="font-headline text-4xl font-bold mb-4">What we are building</h2>
-<p class="text-on-surface-variant">An integrated ecosystem focused on transforming traditional industries through AI integration.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Indian Doctors Network -->
-<div class="bg-surface-container rounded-3xl p-10 flex flex-col justify-between hover:bg-surface-container-high transition-colors min-h-[320px]">
-<div>
-<span class="material-symbols-outlined text-primary mb-4">medical_services</span>
-<div class="text-xs font-bold text-primary tracking-widest uppercase mb-4">Health Ecosystem</div>
-<h3 class="text-3xl font-bold mb-6"><a href="indiandoctorsnetwork.html" target="_blank">Indian Doctors Network</a></h3>
-<p class="text-on-surface-variant">Revolutionizing medical collaboration and patient management systems across the subcontinent.</p>
-</div>
-</div>
-<!-- Indian Dental Network -->
-<div class="bg-surface-container rounded-3xl p-10 flex flex-col justify-between hover:bg-surface-container-high transition-colors min-h-[320px]">
-<div>
-<span class="material-symbols-outlined text-primary mb-4">dentistry</span>
-<div class="text-xs font-bold text-primary tracking-widest uppercase mb-4">Health Ecosystem</div>
-<h3 class="text-3xl font-bold mb-6"><a href="indiandentalnetwork.html" target="_blank">Indian Dental Network</a></h3>
-<p class="text-on-surface-variant">Specialized AI-driven platforms for dental practice optimization and collaborative care.</p>
-</div>
-</div>
-<!-- Orators Society -->
-<div class="bg-surface-container rounded-3xl p-10 flex flex-col justify-between hover:bg-surface-container-high transition-colors min-h-[320px]">
-<div>
-<span class="material-symbols-outlined text-primary mb-4">school</span>
-<div class="text-xs font-bold text-primary tracking-widest uppercase mb-4">Education</div>
-<h3 class="text-3xl font-bold mb-6"><a href="oratorssociety.html" target="_blank">Orators Society</a></h3>
-<p class="text-on-surface-variant">Mastering communication and soft-skills through AI-driven coaching.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Capabilities (Asymmetric) -->
-<section class="py-24 px-8 bg-surface-container-low">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16">
-<div class="md:w-1/3">
-<h2 class="font-headline text-4xl font-bold mb-6">What we do</h2>
-<p class="text-on-surface-variant mb-8">Our studio capabilities span the entire digital lifecycle, ensuring every venture we build is world-class.</p>
-<a href="ventures.html" target="_blank">
-<button class="text-primary font-bold inline-flex items-center gap-2 group">
-                        Explore Our Stack <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+
+<h1 class="font-[Manrope] tracking-[-0.03em] font-extrabold leading-[0.95] text-slate-900">
+We Build 
+<br>
+<span class="text-primary">AI-First</span>
+<br>
+Companies That
+
+<br>
+
+Solve Real Problems.
+
+</h1>
+
+<p class="section-copy mt-6">
+
+Out Of The Blue identifies overlooked industry problems, builds AI-powered ventures around them, and scales them through research, systems, automation, and disciplined execution.</p>
+
+<div class="mt-10 flex flex-wrap gap-4">
+
+<a href="contact.html">
+
+<button class="group px-8 py-4 rounded-xl bg-primary text-white font-bold shadow-lg shadow-primary/20 hover:-translate-y-1 hover:shadow-2xl transition duration-300">
+
+Partner With Us
+
 </button>
+
 </a>
+
+<a href="ventures.html">
+
+<button class="group px-8 py-4 rounded-xl bg-white border border-slate-200 font-semibold hover:bg-slate-50 transition">
+
+Explore Our Ventures
+
+</button>
+
+</a>
+
 </div>
-<div class="md:w-2/3 grid grid-cols-2 gap-4">
-<div class="p-8 bg-surface-container-lowest rounded-xl shadow-sm">
-<span class="material-symbols-outlined text-primary mb-4">trending_up</span>
-<h4 class="font-bold mb-2">Digital Marketing</h4>
-<p class="text-sm text-on-surface-variant">Growth loops engineered for organic dominance.</p>
+
+<div class="flex flex-wrap gap-3 mt-8 max-w-xl">
+
+    <span class="px-4 py-2 rounded-full bg-white border border-slate-200 text-sm font-medium shadow-md">
+        Healthcare
+    </span>
+
+    <span class="px-4 py-2 rounded-full bg-white border border-slate-200 text-sm font-medium shadow-md">
+        Education
+    </span>
+
+    <span class="px-4 py-2 rounded-full bg-white border border-slate-200 text-sm font-medium shadow-md">
+        Professional Communities
+    </span>
+
+    <span class="px-4 py-2 rounded-full bg-white border border-slate-200 text-sm font-medium shadow-md">
+        AI Systems
+    </span>
+
 </div>
-<div class="p-8 bg-surface-container-lowest rounded-xl shadow-sm">
-<span class="material-symbols-outlined text-primary mb-4">movie</span>
-<h4 class="font-bold mb-2">Content Production</h4>
-<p class="text-sm text-on-surface-variant">High-fidelity storytelling for the AI era.</p>
+
 </div>
-<div class="p-8 bg-surface-container-lowest rounded-xl shadow-sm">
-<span class="material-symbols-outlined text-primary mb-4">design_services</span>
-<h4 class="font-bold mb-2">Design</h4>
-<p class="text-sm text-on-surface-variant">Minimalist interfaces with maximum precision.</p>
+<div class="relative">
+
+<div id="hero-network"
+     class="relative rounded-[36px] overflow-hidden shadow-2xl border border-white/30 transition-transform duration-300">
+
+<img
+src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop"
+class="hero-image w-full h-[620px] object-cover">
+
+<canvas
+id="networkCanvas"
+class="absolute inset-0 w-full h-full pointer-events-none">
+</canvas>
+
 </div>
-<div class="p-8 bg-surface-container-lowest rounded-xl shadow-sm">
-<span class="material-symbols-outlined text-primary mb-4">settings_account_box</span>
-<h4 class="font-bold mb-2">AI Workflows</h4>
-<p class="text-sm text-on-surface-variant">Automating the mundane to focus on the creative.</p>
+
+<div class="absolute -bottom-8 -left-8 bg-white/80 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/40 floating">
+<div class="text-sm uppercase tracking-widest text-primary font-bold">
+
+Execution Layer
+
+</div>
+
+<div class="mt-2 text-3xl font-extrabold">
+
+12+
+
+</div>
+
+<div class="text-slate-600">
+
+AI Products & Systems Designed
+
+</div>
+
+</div>
+
+<div class="absolute -top-6 -right-6 w-44 h-44 bg-primary/15 blur-[90px] rounded-full"></div>
+
+<div class="absolute -bottom-10 right-12 w-36 h-36 bg-blue-300/20 blur-[80px] rounded-full"></div>
+
+</div>
+</div>
+<div class="absolute inset-0 -z-10">
+
+<div class="absolute top-0 left-0 w-[700px] h-[700px] bg-primary/5 blur-[140px] rounded-full"></div>
+
+<div class="absolute right-0 bottom-0 w-[500px] h-[500px] bg-blue-300/10 blur-[120px] rounded-full"></div>
+
+</div>
+<!-- Soft transition to next section -->
+<div class="absolute bottom-0 left-0 w-full h-20 pointer-events-none">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-[#eef4fb]"></div>
+</div>
+
+</section>
+
+<!-- About Section -->
+<section
+id="what-we-do"
+class="reveal pt-16 pb-24 px-8"
+style="background:linear-gradient(180deg,#f8fbff 0%,#eef4fb 100%);">
+<div class="section-container grid md:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="section-title">Why Companies Build With OOTB</h2>
+<p class="section-copy mt-6">
+We are more than a venture studio.
+<br>
+We identify overlooked opportunities, validate them through research, build AI-powered systems, and execute relentlessly until they become scalable businesses.                    </p>
+<div class="space-y-8 mt-12">
+
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12
+rounded-3xl
+bg-white
+border border-slate-200/80
+shadow-[0_8px_24px_rgba(15,23,42,0.08)]
+flex items-center justify-center
+flex-shrink-0
+transition-all duration-300
+hover:-translate-y-1
+hover:shadow-[0_12px_30px_rgba(15,23,42,0.12)]">
+<span class="material-symbols-outlined text-primary text-[28px]">search</span>
+</div>
+
+<div>
+<h3 class="font-semibold text-xl tracking-tight">Research Before Execution</h3>
+<p class="section-copy mt-6">
+Every venture begins with deep industry research, user insights and market validation not assumptions.
+</p>
+</div>
+</div>
+
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12
+rounded-3xl
+bg-white
+border border-slate-200/80
+shadow-[0_8px_24px_rgba(15,23,42,0.08)]
+flex items-center justify-center
+flex-shrink-0
+transition-all duration-300
+hover:-translate-y-1
+hover:shadow-[0_12px_30px_rgba(15,23,42,0.12)]">
+<span class="material-symbols-outlined text-primary text-[28px]">neurology</span>
+</div>
+
+<div>
+<h3 class="font-semibold text-xl tracking-tight">AI Embedded Into Operations</h3>
+<p class="section-copy mt-6">
+We don't simply use AI we design systems where AI continuously improves productivity and decision-making.
+</p>
+</div>
+</div>
+
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12
+rounded-3xl
+bg-white
+border border-slate-200/80
+shadow-[0_8px_24px_rgba(15,23,42,0.08)]
+flex items-center justify-center
+flex-shrink-0
+transition-all duration-300
+hover:-translate-y-1
+hover:shadow-[0_12px_30px_rgba(15,23,42,0.12)]">
+<span class="material-symbols-outlined text-primary text-[28px]">rocket_launch</span>
+</div>
+
+<div>
+<h3 class="font-semibold text-xl tracking-tight">Execution That Scales</h3>
+<p class="section-copy mt-6">
+From branding to technology, hiring and operations, we build companies not isolated products.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="relative rounded-3xl overflow-hidden max-w-[520px] shadow-2xl">
+<img alt="Research Atmosphere" class="w-full h-full object-cover
+transition-all
+duration-700
+hover:scale-[1.03]
+hover:brightness-105" data-alt="clean high-end workspace with a minimalist desk, modern workstation, and soft atmospheric natural light through a large window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDarHDI_x-nxqGUAningG67SXJHCso4XXgLcqoWT1kxwSfJaQxPCmzwmRjLU2jYiUuxBou6XSXoDuJhG-mhDHjVpUguT7DSHpc_CT78XWYYYEKx_KLQu2_nVD1lBJGFVp-VlP2OgCofYQqMLx9PUNCMjMzc4Pd_1Ek1TkDJSApO7kTCMR9S-1zhRX4CFjJAx8jRBSAAq9bTwa86PM7VK8o_bOkSatSeVvCew_Y_bz5es2mOmuGsk0xwBsVCmOzQIDOI7Iqd4-a72itt"/>
+<div class="absolute inset-0 rounded-3xl ring-1 ring-white/10 pointer-events-none"></div>
+<div class="absolute bottom-6 left-6
+bg-white/80 backdrop-blur-xl
+rounded-3xl
+shadow-[0_24px_60px_rgba(15,23,42,0.18)]
+border border-white/60
+px-5 py-4
+max-w-[250px]">
+
+<p class="section-label">
+Execution Framework
+</p>
+
+<h3 class="text-base font-bold mt-2">
+Research → Build → Scale
+</h3>
+
+<p class="section-copy mt-6">
+Every venture follows the same operating system before launch.
+</p>
+
+</div>
+</div>
+
+</div>
+</section>
+<!-- Ventures -->
+<section class="reveal py-24 px-8 bg-[#f8fbff]">
+
+<div class="section-container">
+
+<!-- Heading -->
+
+<div class="max-w-3xl mx-auto text-center mb-20">
+
+<p class="section-label mb-5">
+  OUR VENTURES
+</p>
+
+<h2 class="section-title">
+Building AI-First Companies
+</h2>
+
+<p class="section-copy mt-6">
+Each venture solves a real industry problem using research, systems, automation and artificial intelligence.
+</p>
+
+</div>
+
+<!-- Cards -->
+
+<div class="grid lg:grid-cols-3 gap-8">
+<div class="group spotlight rounded-[30px] bg-white border border-slate-200 shadow-sm p-6 transition-all duration-500 hover:-translate-y-2 hover:border-primary/30 hover:shadow-[0_35px_90px_rgba(15,23,42,0.12)] flex flex-col">
+
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
+
+<span class="material-symbols-outlined text-primary text-3xl">
+medical_services
+</span>
+
+</div>
+
+<div class="tracking-[0.25em] uppercase font-semibold text-[11px] text-primary mb-4">
+HEALTH ECOSYSTEM
+</div>
+
+<h3 class="text-[1.75rem] font-bold tracking-tight leading-tight mb-3">
+Indian Doctors Network
+</h3>
+
+<p class="card-copy mt-3 mb-3">
+Revolutionizing medical collaboration, patient management and healthcare operations across India.
+</p>
+
+<a href="indiandoctorsnetwork.html" target="_blank" class="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
+
+View Venture
+
+<span class="material-symbols-outlined text-[18px]">
+arrow_forward
+</span>
+
+</a>
+
+</div>
+<div class="group spotlight rounded-[30px] bg-white border border-slate-200 shadow-sm p-6 transition-all duration-500 hover:-translate-y-2 hover:border-primary/30 hover:shadow-[0_35px_90px_rgba(15,23,42,0.12)] flex flex-col">
+
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
+
+<span class="material-symbols-outlined text-primary text-3xl">
+dentistry
+</span>
+
+</div>
+
+<div class="tracking-[0.25em] uppercase font-semibold text-[11px] text-primary mb-4">
+HEALTH ECOSYSTEM
+</div>
+
+<h3 class="text-[1.75rem] font-bold tracking-tight leading-tight mb-3">
+Indian Dental Network
+</h3>
+
+<p class="card-copy mt-3 mb-3">
+AI-powered platforms helping dental professionals optimize workflows and collaborative care.
+</p>
+
+<a href="indiandentalnetwork.html" target="_blank" class="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
+
+View Venture
+
+<span class="material-symbols-outlined text-[18px]">
+arrow_forward
+</span>
+
+</a>
+
+</div>
+<div class="group spotlight rounded-[30px] bg-white border border-slate-200 shadow-sm p-6 transition-all duration-500 hover:-translate-y-2 hover:border-primary/30 hover:shadow-[0_35px_90px_rgba(15,23,42,0.12)] flex flex-col">
+
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
+
+<span class="material-symbols-outlined text-primary text-3xl">
+school
+</span>
+
+</div>
+
+<div class="tracking-[0.25em] uppercase font-semibold text-[11px] text-primary mb-4">
+EDUCATION
+</div>
+
+<h3 class="text-[1.75rem] font-bold tracking-tight leading-tight mb-3">
+Orators Society
+</h3>
+
+<p class="card-copy mt-3 mb-3">
+Building confident communicators through AI-powered coaching, structured learning and practical execution.
+</p>
+
+<a href="oratorssociety.html" target="_blank" class="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
+
+View Venture
+
+<span class="material-symbols-outlined text-[18px]">
+arrow_forward
+</span>
+
+</a>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Capabilities -->
+<section class="reveal py-24 px-8 bg-[#f5f8fc]">
+  <div class="section-container">
+
+    <!-- Heading -->
+    <div class="max-w-3xl mb-20">
+
+      <p class="section-label mb-5">
+        OUR CAPABILITIES
+      </p>
+
+      <h2 class="section-title">
+        Everything Required
+        <br>
+        To Build AI Companies.
+      </h2>
+
+      <p class="section-copy mt-6">
+        Strategy, product, AI, hiring, growth and operations work together under one operating system—allowing every venture to launch faster and scale smarter.
+      </p>
+
+    </div>
+
+    <!-- Cards -->
+
+    <!-- Capability Cards -->
+
+<div class="grid md:grid-cols-2 gap-6">
+
+  <!-- Product -->
+
+  <a href="services.html"
+     class="group spotlight relative bg-white rounded-[28px] border border-slate-200 p-8 overflow-hidden
+     hover:-translate-y-2
+     hover:border-primary/40
+     hover:shadow-[0_24px_60px_rgba(15,23,42,.08)]
+     transition-all duration-300">
+
+      <div class="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+      <div class="relative z-10 flex justify-between items-start mb-10">
+
+          <span class="tracking-[0.25em] uppercase text-[11px] font-semibold text-primary">
+              PRODUCT
+          </span>
+
+          <span class="material-symbols-outlined text-slate-400 group-hover:text-primary group-hover:translate-x-1 transition">
+              north_east
+          </span>
+
+      </div>
+
+      <div class="relative z-10">
+
+          <h3 class="text-3xl font-bold tracking-tight mb-4">
+              Product & AI
+          </h3>
+
+          <p class="card-copy mb-10">
+              Building AI products, internal tools, automation systems and digital platforms from idea to launch.
+          </p>
+
+      </div>
+
+      <div class="relative z-10 flex justify-between items-center pt-6 border-t border-slate-100">
+
+          <span class="font-semibold text-primary">
+              Learn More
+          </span>
+
+          <span class="text-5xl font-bold text-slate-100 group-hover:text-primary/10 transition">
+              01
+          </span>
+
+      </div>
+
+  </a>
+
+  <!-- Growth -->
+
+  <a href="services.html"
+     class="group spotlight relative bg-white rounded-[28px] border border-slate-200 p-8 overflow-hidden hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_24px_60px_rgba(15,23,42,.08)] transition-all duration-300">
+
+      <div class="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+      <div class="relative z-10 flex justify-between items-start mb-10">
+
+          <span class="tracking-[0.25em] uppercase text-[11px] font-semibold text-primary">
+              GROWTH
+          </span>
+
+          <span class="material-symbols-outlined text-slate-400 group-hover:text-primary group-hover:translate-x-1 transition">
+              north_east
+          </span>
+
+      </div>
+
+      <h3 class="text-3xl font-bold tracking-tight mb-4">
+          Growth Engine
+      </h3>
+
+      <p class="card-copy mb-10">
+          Organic marketing, SEO, content systems and scalable growth loops that compound over time.
+      </p>
+
+      <div class="flex justify-between items-center pt-6 border-t border-slate-100">
+
+          <span class="font-semibold text-primary">
+              Learn More
+          </span>
+
+          <span class="text-5xl font-bold text-slate-100 group-hover:text-primary/10 transition">
+              02
+          </span>
+
+      </div>
+
+  </a>
+
+  <!-- Creative -->
+
+  <a href="services.html"
+     class="group spotlight relative bg-white rounded-[28px] border border-slate-200 p-8 overflow-hidden hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_24px_60px_rgba(15,23,42,.08)] transition-all duration-300">
+
+      <div class="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+      <div class="relative z-10 flex justify-between items-start mb-10">
+
+          <span class="tracking-[0.25em] uppercase text-[11px] font-semibold text-primary">
+              CREATIVE
+          </span>
+
+          <span class="material-symbols-outlined text-slate-400 group-hover:text-primary group-hover:translate-x-1 transition">
+              north_east
+          </span>
+
+      </div>
+
+      <h3 class="text-3xl font-bold tracking-tight mb-4">
+          Brand & Creative
+      </h3>
+
+      <p class="card-copy mb-10">
+          Brand systems, UI/UX, content production and storytelling designed for modern AI companies.
+      </p>
+
+      <div class="flex justify-between items-center pt-6 border-t border-slate-100">
+
+          <span class="font-semibold text-primary">
+              Learn More
+          </span>
+
+          <span class="text-5xl font-bold text-slate-100 group-hover:text-primary/10 transition">
+              03
+          </span>
+
+      </div>
+
+  </a>
+
+  <!-- Operations -->
+
+  <a href="services.html"
+     class="group spotlight relative bg-white rounded-[28px] border border-slate-200 p-8 overflow-hidden hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_24px_60px_rgba(15,23,42,.08)] transition-all duration-300">
+
+      <div class="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+      <div class="relative z-10 flex justify-between items-start mb-8">
+
+          <span class="tracking-[0.25em] uppercase text-[11px] font-semibold text-primary">
+              OPERATIONS
+          </span>
+
+          <span class="material-symbols-outlined text-slate-400 group-hover:text-primary group-hover:translate-x-1 transition">
+              north_east
+          </span>
+
+      </div>
+
+      <h3 class="text-3xl font-bold tracking-tight mb-4">
+          Studio Operations
+      </h3>
+
+      <p class="card-copy mb-10">
+          Hiring systems, SOPs, documentation, AI workflows and execution frameworks that keep ventures moving.
+      </p>
+
+      <div class="flex justify-between items-center pt-6 border-t border-slate-100">
+
+          <span class="font-semibold text-primary">
+              Learn More
+          </span>
+
+          <span class="text-5xl font-bold text-slate-100 group-hover:text-primary/10 transition">
+              04
+          </span>
+
+      </div>
+
+  </a>
+
+</div>
+
+  </div>
+</section>
+<!-- COMMUNITY -->
+
+<section class="reveal pt-16 pb-24 px-8">
+
+<div class="section-container">
+
+<div class="relative overflow-hidden rounded-[40px] bg-[#0c1118] border border-slate-800 shadow-[0_35px_90px_rgba(15,23,42,0.30)] ring-1 ring-white/5">
+<!-- Background Glow -->
+
+<div class="absolute inset-0">
+
+<div class="absolute -top-24 right-0 w-[520px] h-[520px] rounded-full bg-primary/15 blur-[140px]"></div>
+
+<div class="absolute bottom-0 left-0 w-[420px] h-[420px] rounded-full bg-blue-400/10 blur-[120px]"></div>
+
+</div>
+
+<div class="relative z-10 px-12 lg:px-20 py-20">
+
+<p class="section-label mb-5">
+COMMUNITY
+
+</p>
+
+<h2 class="section-title text-white max-w-xl">
+
+Built By People.<br>
+
+Powered By Community.
+
+</h2>
+
+<p class="card-copy mt-4 text-slate-300 max-w-2xl">
+
+Out Of The Blue is more than a venture studio. It's a growing network of founders, operators, creators, researchers and industry experts building AI-first companies together.
+
+</p>
+
+<!-- STATS -->
+
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-16">
+
+<div class="bg-white/5 rounded-2xl border border-white/20 p-6
+hover:-translate-y-1
+hover:border-primary/40
+hover:bg-white/10
+transition-all duration-300">
+
+<div class="text-4xl font-black text-white">
+
+500+
+
+</div>
+
+<div class="text-slate-500 mt-2">
+
+Builders & Experts
+
+</div>
+
+</div>
+
+<div class="bg-white/5 rounded-2xl border border-white/20 p-6
+hover:-translate-y-1
+hover:border-primary/40
+hover:bg-white/10
+transition-all duration-300">
+
+<div class="text-4xl font-black text-white">
+
+40+
+
+</div>
+
+<div class="text-slate-500 mt-2">
+
+Industry Mentors
+
+</div>
+
+</div>
+
+<div class="bg-white/5 rounded-2xl border border-white/20 p-6
+hover:-translate-y-1
+hover:border-primary/40
+hover:bg-white/10
+transition-all duration-300">
+
+<div class="text-4xl font-black text-white">
+
+12+
+
+</div>
+
+<div class="text-slate-500 mt-2">
+
+Products & Ventures
+
+</div>
+
+</div>
+
+<div class="bg-white/5 rounded-2xl border border-white/20 p-6
+hover:-translate-y-1
+hover:border-primary/40
+hover:bg-white/10
+transition-all duration-300">
+
+<div class="text-4xl font-black text-white">
+
+100K+
+
+</div>
+
+<div class="text-slate-500 mt-2">
+
+Community Reach
+
+</div>
+
+</div>
+
+</div>
+
+<!-- AVATARS -->
+
+<div class="flex items-center justify-between flex-wrap gap-8 mt-16">
+
+<div class="flex -space-x-4">
+
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6lZiNMCg-Ch5ccGCrlrRFGGUYGyKKk9hbtFV0XltkcaWQM_IQTmeXwpgOsQ2wVno_1BMIXSXIubAi52m1yCP6qBxmprScKhjAjgSC5kdAyje0W1z4NU7bYPXpaG2Np1ZWxAn7GR6vGp23IZ7aR9LxTIyVXXtsPxIII7RtPf5hGp4g79QVzt2b8wxDUEDFlZtSSqyzRdfaOtSbPozHKLVVYeZ0ZR1FNivlquVlUpC2JA1mrbf2HT1iwrAngohAsb8g60KthWwTy0u6" class="w-16 h-16 rounded-full border-4 border-[#0c1118]">
+
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwXCk-wVWalpvc-W4zKTxEBb_GE9Y2WzrqHEvN8oSjqTYUYuWtjPbgFyPy2gHg5t7CcDljzmByGcUsm1MVF_WCLGlwlsfx4KVuPnwge24XFK4Woyk1JyCzQvQuUvLunQGfQWdFB75ygfVgx7Ygf_uksZqAiX65gJL403icho_enPlOYbg81v62eVMHGbxpDlpInclSviOjxkydSq7A_a5NTX1KiCQa6mRPSaon8wtvE_TkFTTxegAafNuqV7ZN48DOuiq-OeI3Nrq2" class="w-16 h-16 rounded-full border-4 border-[#0c1118]">
+
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPEyc1J2uHBOW1pnnCB6w5aM1Qhh30GZSsYJC-t8NIz5sOZnvKeiPFI-QSy8z1uOLksJ_J73wcGD6SzRcUMFJj6mgOpXP3W1vSL3VGpIvEU6zxrHD-9Kxnqm_t0En0Op-xfu6KcbJAxC6e-OVlhFnB059h4IKeAUgM_7S_OBFY80NDrO4sClSKANVOhEWnCqIPzEwkj68dFBEtASiFaFOXgdafsrcgrPWE0ZjZp7cP-thf2KyoVCR92WZU9EM7OcsA9sSBEKGP42-L" class="w-16 h-16 rounded-full border-4 border-[#0c1118]">
+
+<div class="w-16 h-16 rounded-full border-4 border-[#0c1118] bg-primary flex items-center justify-center text-white font-bold">
+
++497
+
+</div>
+
+</div>
+
+<a href="community.html">
+
+<button class="group px-9 py-4 rounded-xl bg-white text-slate-900 font-semibold hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1">
+
+Explore Our Community
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= HOW WE WORK ================= -->
+
+<section class="reveal py-24 px-8 bg-white relative overflow-hidden">
+
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-primary/5 blur-[120px] rounded-full"></div>
+</div>
+
+<div class="section-container relative z-10">
+
+<div class="max-w-2xl mb-20">
+
+<p class="section-label mb-5">OUR OPERATING SYSTEM
+</p>
+
+<h2 class="section-title">
+How We Build Every Venture
+</h2>
+
+<p class="section-copy mt-6">
+Every company follows the same operating system from identifying overlooked opportunities to scaling businesses through systems, AI, and disciplined execution.
+</p>
+
+</div>
+
+
+<div class="relative">
+
+<div class="hidden lg:block absolute left-0 right-0 top-10 h-[2px] bg-slate-200 rounded-full overflow-hidden">
+
+<div id="timeline-progress"
+class="h-full bg-primary w-0 transition-all duration-1000">
+</div>
+
+</div>
+
+<div class="grid lg:grid-cols-4 gap-8 relative z-10">
+
+
+<!-- CARD 1 -->
+
+<div id="step1" class="group spotlight relative bg-white rounded-3xl border border-slate-100 p-6 shadow-sm hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(15,23,42,0.12)] transition-all duration-500">
+<div class="flex items-center justify-between mb-5">
+
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+
+<span class="material-symbols-outlined text-primary text-2xl">
+travel_explore
+</span>
+
+</div>
+
+<div class="text-5xl font-black text-slate-200 group-hover:text-primary/10 transition">
+01
+</div>
+
+</div>
+
+<h3 class="text-[1.5rem] font-bold tracking-tight mb-3">
+Identify
+</h3>
+
+<p class="card-copy mt-3">
+Discover fragmented industries, operational bottlenecks, and high-impact opportunities where AI can create unfair advantages.
+</p>
+
+</div>
+
+
+
+<!-- CARD 2 -->
+
+<div id="step2" class="group spotlight relative bg-white rounded-3xl border border-slate-100 p-6 shadow-sm hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(15,23,42,0.12)] transition-all duration-500">
+<div class="flex items-center justify-between mb-5">
+
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+
+<span class="material-symbols-outlined text-primary text-2xl">
+analytics
+</span>
+
+</div>
+
+<div class="text-5xl font-black text-slate-200 group-hover:text-primary/10 transition">
+02
+</div>
+
+</div>
+
+<h3 class="text-[1.5rem] font-bold tracking-tight mb-3">
+Research
+</h3>
+
+<p class="card-copy mt-3">
+Validate ideas through market research, customer conversations, workflow mapping and operational analysis before execution.
+</p>
+
+</div>
+
+
+
+<!-- CARD 3 -->
+
+<div id="step3" class="group spotlight relative bg-white rounded-3xl border border-slate-100 p-6 shadow-sm hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(15,23,42,0.12)] transition-all duration-500">
+<div class="flex items-center justify-between mb-5">
+
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+
+<span class="material-symbols-outlined text-primary text-2xl">
+deployed_code
+</span>
+
+</div>
+
+<div class="text-5xl font-black text-slate-200 group-hover:text-primary/10 transition">
+03
+</div>
+
+</div>
+
+<h3 class="text-[1.5rem] font-bold tracking-tight mb-3">
+Build
+</h3>
+
+<p class="card-copy mt-3">
+Design products, AI systems, branding, hiring processes and scalable operating frameworks from day one.
+</p>
+
+</div>
+
+
+
+<!-- CARD 4 -->
+<div id="step4" class="group spotlight relative bg-white rounded-3xl border border-slate-100 p-6 shadow-sm hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(15,23,42,0.12)] transition-all duration-500">
+
+<div class="flex items-center justify-between mb-5">
+
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+
+<span class="material-symbols-outlined text-primary text-2xl">
+rocket_launch
+</span>
+
+</div>
+
+<div class="text-5xl font-black text-slate-200 group-hover:text-primary/10 transition">
+04
+</div>
+
+</div>
+
+<h3 class="text-[1.5rem] font-bold tracking-tight mb-3">
+Scale
+</h3>
+
+<p class="card-copy mt-3">
+Launch, optimize, automate and continuously improve the company through execution, AI and operational excellence.
+</p>
+
+</div>
+
 </div>
 </div>
 </div>
 </section>
-<!-- Community Snapshot -->
-<section class="py-24 px-8 max-w-7xl mx-auto" id="community">
-<div class="relative rounded-[40px] bg-inverse-surface p-12 md:p-24 overflow-hidden">
-<div class="relative z-10 text-center">
-<h2 class="font-headline text-4xl md:text-5xl font-bold text-white mb-6">Community Snapshot</h2>
-<p class="text-slate-400 text-lg max-w-2xl mx-auto mb-12">
-                        OOTB is more than a company—it's a high-performance network of 500+ builders, creators, and subject matter experts collaborating in real-time.
-                    </p>
-<div class="flex justify-center -space-x-4 mb-10">
-<img alt="community member" class="w-16 h-16 rounded-full border-4 border-inverse-surface" data-alt="portrait of a confident female entrepreneur in professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6lZiNMCg-Ch5ccGCrlrRFGGUYGyKKk9hbtFV0XltkcaWQM_IQTmeXwpgOsQ2wVno_1BMIXSXIubAi52m1yCP6qBxmprScKhjAjgSC5kdAyje0W1z4NU7bYPXpaG2Np1ZWxAn7GR6vGp23IZ7aR9LxTIyVXXtsPxIII7RtPf5hGp4g79QVzt2b8wxDUEDFlZtSSqyzRdfaOtSbPozHKLVVYeZ0ZR1FNivlquVlUpC2JA1mrbf2HT1iwrAngohAsb8g60KthWwTy0u6"/>
-<img alt="community member" class="w-16 h-16 rounded-full border-4 border-inverse-surface" data-alt="portrait of a young male creative professional in a bright studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwXCk-wVWalpvc-W4zKTxEBb_GE9Y2WzrqHEvN8oSjqTYUYuWtjPbgFyPy2gHg5t7CcDljzmByGcUsm1MVF_WCLGlwlsfx4KVuPnwge24XFK4Woyk1JyCzQvQuUvLunQGfQWdFB75ygfVgx7Ygf_uksZqAiX65gJL403icho_enPlOYbg81v62eVMHGbxpDlpInclSviOjxkydSq7A_a5NTX1KiCQa6mRPSaon8wtvE_TkFTTxegAafNuqV7ZN48DOuiq-OeI3Nrq2"/>
-<img alt="community member" class="w-16 h-16 rounded-full border-4 border-inverse-surface" data-alt="portrait of a smiling woman in a tech-focused setting with soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPEyc1J2uHBOW1pnnCB6w5aM1Qhh30GZSsYJC-t8NIz5sOZnvKeiPFI-QSy8z1uOLksJ_J73wcGD6SzRcUMFJj6mgOpXP3W1vSL3VGpIvEU6zxrHD-9Kxnqm_t0En0Op-xfu6KcbJAxC6e-OVlhFnB059h4IKeAUgM_7S_OBFY80NDrO4sClSKANVOhEWnCqIPzEwkj68dFBEtASiFaFOXgdafsrcgrPWE0ZjZp7cP-thf2KyoVCR92WZU9EM7OcsA9sSBEKGP42-L"/>
-<div class="w-16 h-16 rounded-full border-4 border-inverse-surface bg-primary flex items-center justify-center text-white font-bold text-xs">+497</div>
+
+
+<!-- Careers / Hiring -->
+
+<section class="reveal py-24 px-8 bg-[#f6f9fd]">
+
+<div class="section-container">
+
+<div class="rounded-[36px] bg-white border border-slate-200 shadow-[0_20px_60px_rgba(15,23,42,0.06)] overflow-hidden">
+
+<div class="grid lg:grid-cols-[1fr_1.25fr]">
+
+<!-- LEFT -->
+
+<div class="p-12 lg:p-14 border-b lg:border-b-0 lg:border-r border-slate-200">
+
+<p class="section-label mb-5">
+CAREERS
+</p>
+
+<h2 class="section-title">
+Build Companies.<br>
+Build Yourself.
+</h2>
+
+<p class="section-copy mt-6 mb-6">
+Join operators, creators and builders who enjoy solving difficult problems, launching ventures and shaping AI-first businesses from the ground up.
+</p>
+
+<div class="flex items-center gap-4 mb-10">
+
+<div class="px-5 py-3 rounded-xl bg-primary text-white font-semibold">
+12 Open Roles
 </div>
-<a href="community.html" target="_blank">
-<button class="bg-white text-inverse-surface px-10 py-4 rounded-xl font-bold hover:bg-slate-100 transition-all">Explore More</button></a>
+
+<div class="text-slate-500 text-sm">
+Across Operations, Marketing & Product
 </div>
-<!-- Abstract visual behind community -->
-<div class="absolute inset-0 opacity-20 pointer-events-none">
-<div class="absolute top-0 right-0 w-96 h-96 bg-primary blur-[120px] rounded-full"></div>
-<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary-container blur-[100px] rounded-full"></div>
+
 </div>
+
+<a href="careers.html">
+
+<button class="px-8 py-4 rounded-xl border border-slate-300 font-semibold hover:border-primary hover:text-primary transition-all duration-300">
+
+View All Careers →
+
+</button>
+
+</a>
+
 </div>
+
+<!-- RIGHT -->
+
+<div class="p-10 lg:p-12 grid gap-5">
+
+<a href="frontofficeoperations.html" target="_blank"
+class="group spotlight flex justify-between items-center rounded-2xl border border-slate-200 p-6 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+
+<div>
+
+<h3 class="font-semibold text-lg">
+Front Office & Operations
+</h3>
+
+<p class="text-sm text-slate-500 mt-1">
+Full-Time · Pune
+</p>
+
+</div>
+
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-all">
+arrow_forward
+</span>
+
+</a>
+
+<a href="scriptwriter.html" target="_blank"
+class="group spotlight flex justify-between items-center rounded-2xl border border-slate-200 p-6 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+
+<div>
+
+<h3 class="font-semibold text-lg">
+Script Writer
+</h3>
+
+<p class="text-sm text-slate-500 mt-1">
+Full-Time
+</p>
+
+</div>
+
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-all">
+arrow_forward
+</span>
+
+</a>
+
+<a href="audiovideoeditor.html" target="_blank"
+class="group spotlight flex justify-between items-center rounded-2xl border border-slate-200 p-6 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+
+<div>
+
+<h3 class="font-semibold text-lg">
+Audio & Video Editor
+</h3>
+
+<p class="text-sm text-slate-500 mt-1">
+Creative Team
+</p>
+
+</div>
+
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-all">
+arrow_forward
+</span>
+
+</a>
+
+<a href="digitalmarketer.html" target="_blank"
+class="group spotlight flex justify-between items-center rounded-2xl border border-slate-200 p-6 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+
+<div>
+
+<h3 class="font-semibold text-lg">
+Digital Marketer
+</h3>
+
+<p class="text-sm text-slate-500 mt-1">
+Growth Team
+</p>
+
+</div>
+
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-all">
+arrow_forward
+</span>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
-<!-- Process Section -->
-<section class="py-24 px-8 bg-surface">
-<div class="max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-<div class="max-w-xl">
-<h2 class="font-headline text-4xl font-bold mb-4">How we work</h2>
-<p class="text-on-surface-variant">We move with speed and precision. No fluff. Just execution.</p>
+<!-- WHO WE BUILD WITH -->
+<section class="reveal py-24 px-8 bg-[#f5f8fc]">
+
+<div class="section-container">
+
+<div class="grid lg:grid-cols-2 gap-8">
+
+<!-- LEFT CARD -->
+
+<div class="bg-white rounded-[30px] border border-slate-200 p-10 hover:-translate-y-1 hover:border-primary/40 hover:bg-white/5 transition-all duration-300">
+
+<p class="section-label">
+WHO WE WORK WITH
+</p>
+
+<h2 class="section-title">
+Built for ambitious builders.
+</h2>
+
+<p class="section-copy mt-6 mb-6">
+We partner with people solving meaningful problems—not companies chasing trends.
+</p>
+
+<div class="space-y-5">
+
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">
+check
+</span>
 </div>
-<div class="text-6xl font-black text-surface-container-high hidden md:block">01-04</div>
+
+<div>
+<div class="font-semibold">
+Founders
 </div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-<div class="p-8 border-l-2 border-primary/20 hover:border-primary transition-all">
-<div class="text-primary font-bold mb-4">01. Identify</div>
-<p class="text-sm text-on-surface-variant">Spotting fragmented industries with massive AI potential.</p>
+
+<div class="text-slate-500 text-sm">
+Building AI-first companies.
 </div>
-<div class="p-8 border-l-2 border-primary/20 hover:border-primary transition-all">
-<div class="text-primary font-bold mb-4">02. Research</div>
-<p class="text-sm text-on-surface-variant">Deep-diving into workflows, bottlenecks, and user friction.</p>
-</div>
-<div class="p-8 border-l-2 border-primary/20 hover:border-primary transition-all">
-<div class="text-primary font-bold mb-4">03. Build</div>
-<p class="text-sm text-on-surface-variant">Developing the AI engine and the core platform infrastructure.</p>
-</div>
-<div class="p-8 border-l-2 border-primary/20 hover:border-primary transition-all">
-<div class="text-primary font-bold mb-4">04. Execute</div>
-<p class="text-sm text-on-surface-variant">Deploying, iterating, and scaling the solution globally.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Careers/Hiring -->
-<section class="py-24 px-8 max-w-7xl mx-auto" id="careers">
-<div class="bg-surface-container-high rounded-3xl p-12">
-<div class="flex flex-col md:flex-row justify-between items-start gap-12">
-<div class="md:w-1/3">
-<h2 class="font-headline text-4xl font-bold mb-4">What's happening right now</h2>
-<p class="text-on-surface-variant mb-6">We are actively expanding our core studio team.</p>
-<div class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-lg text-sm font-bold">12 Open Roles</div>
-</div>
-<div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-<div class="flex justify-between items-center p-6 bg-surface-container-lowest rounded-xl hover:shadow-md transition-shadow group cursor-pointer">
-<span class="font-semibold">Front Office & Operations</span>
-<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform"><a href="frontofficeoperations.html" target="_blank">chevron_right</a></span>
-</div>
-<div class="flex justify-between items-center p-6 bg-surface-container-lowest rounded-xl hover:shadow-md transition-shadow group cursor-pointer">
-<span class="font-semibold">Script Writer</span>
-<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform"><a href="" target="_blank">chevron_right</a></span>
-</div>
-<div class="flex justify-between items-center p-6 bg-surface-container-lowest rounded-xl hover:shadow-md transition-shadow group cursor-pointer">
-<span class="font-semibold">Audio & Video Editor</span>
-<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform"><a href="audiovideoeditor.html" target="_blank">chevron_right</a></span>
-</div>
-<div class="flex justify-between items-center p-6 bg-surface-container-lowest rounded-xl hover:shadow-md transition-shadow group cursor-pointer">
-<span class="font-semibold">Digital Marketer</span>
-<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform"><a href="digitalmarketer.html" target="_blank">chevron_right</a></span>
+
 </div>
 </div>
+
+
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">
+check
+</span>
+</div>
+
+<div>
+<div class="font-semibold">
+Growing Businesses
+</div>
+
+<div class="text-slate-500 text-sm">
+Looking to transform operations using AI.
+</div>
+
 </div>
 </div>
-</section>
-<!-- Audience/Differentiator -->
-<section class="py-24 px-8 bg-surface-container-low">
-<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-<div class="bg-surface-container-lowest p-12 rounded-3xl">
-<h3 class="font-headline text-2xl font-bold mb-8">Who this is for</h3>
-<ul class="space-y-4">
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
-<span class="font-medium text-on-surface-variant">Forward-thinking Businesses</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
-<span class="font-medium text-on-surface-variant">Serial Entrepreneurs</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
-<span class="font-medium text-on-surface-variant">Visionary Creators</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
-<span class="font-medium text-on-surface-variant">Ambitious Students</span>
-</li>
-</ul>
+
+
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">
+check
+</span>
 </div>
-<div class="bg-primary text-on-primary p-12 rounded-3xl">
-<h3 class="font-headline text-2xl font-bold mb-8">Why Out Of The Blue</h3>
-<ul class="space-y-6">
-<li>
-<div class="font-bold text-lg mb-1">Solutions over Tools</div>
-<p class="text-sm opacity-80">We don't just sell software; we solve problems.</p>
-</li>
-<li>
-<div class="font-bold text-lg mb-1">Execution over Talk</div>
-<p class="text-sm opacity-80">Shipping real products beats whitepapers every time.</p>
-</li>
-<li>
-<div class="font-bold text-lg mb-1">Integrated over Fragmented</div>
-<p class="text-sm opacity-80">Connected ecosystems create exponential value.</p>
-</li>
-</ul>
+
+<div>
+<div class="font-semibold">
+Creators & Experts
+</div>
+
+<div class="text-slate-500 text-sm">
+Turning knowledge into scalable ventures.
+</div>
+
 </div>
 </div>
+
+</div>
+
+</div>
+
+
+
+<!-- RIGHT CARD -->
+
+<div class="rounded-[30px] bg-gradient-to-br from-[#3C6094] to-[#243F68] p-10 text-white hover:-translate-y-1 transition-all duration-300">
+
+<p class="section-label text-blue-100">
+WHY OOTB
+</p>
+
+<h2 class="section-title text-white mb-6">
+How we're different.
+</h2>
+
+<div class="space-y-8">
+
+<div>
+
+<h3 class="font-semibold text-xl mb-2">
+We build companies, not projects.
+</h3>
+
+<p class="card-copy mt-4 text-slate-200">
+Everything we create is designed for long-term execution, scale and ownership.
+</p>
+
+</div>
+
+
+<div>
+
+<h3 class="font-semibold text-xl mb-2">
+Execution before presentations.
+</h3>
+
+<p class="card-copy mt-4 text-slate-200">
+Research matters only when it becomes products, systems and measurable outcomes.
+</p>
+
+</div>
+
+
+<div>
+
+<h3 class="font-semibold text-xl mb-2">
+AI woven into every layer.
+</h3>
+
+<p class="card-copy mt-4 text-slate-200">
+Strategy, operations, hiring, growth and technology operate as one integrated system.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 <!-- Final CTA -->
-<section class="py-32 px-8 text-center max-w-4xl mx-auto">
-<h2 class="font-headline text-5xl font-bold mb-8">Want to build something real?</h2>
-<p class="text-xl text-on-surface-variant mb-12">Whether you're a founder looking for a studio partner or a builder ready for your next mission, we should talk.</p>
-<div class="flex flex-col sm:flex-row justify-center gap-6">
-<a href="contact.html" target="_blank">
-<button class="px-12 py-5 bg-primary text-on-primary rounded-xl font-bold text-lg hover:shadow-xl hover:shadow-primary/30 transition-all">Work with us</button>
-</a>
-<a href="careers.html" target="_blank">
-<button class="px-12 py-5 bg-surface-container-high text-on-surface rounded-xl font-bold text-lg hover:bg-surface-container-highest transition-all">Join our team</button>
-</a>
-</div>
+<section class="relative pt-24 pb-12 overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-[#eef4fb]"></div>
+
+    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+    w-[700px] h-[700px]
+    rounded-full
+    bg-primary/10
+    blur-[140px]"></div>
+
+    <div class="relative max-w-6xl mx-auto px-8">
+
+        <div class="rounded-[36px]
+        bg-white/80
+        backdrop-blur-xl
+        border border-white/60
+        shadow-[0_30px_80px_rgba(15,23,42,0.12)]
+        px-16
+        py-16
+        text-center">
+
+            <span class="inline-flex items-center gap-2
+            px-5 py-2
+            rounded-full
+            bg-primary/10
+            text-primary
+            font-semibold
+            text-sm
+            tracking-[0.18em]
+            uppercase mb-6">
+
+                Ready To Build?
+
+            </span>
+
+            <h2 class="section-title mb-6">
+
+                Want to build something real?
+
+            </h2>
+
+           <p class="section-copy mt-6 mx-auto text-center">
+
+                Whether you're a founder searching for an execution partner,
+                an enterprise exploring AI transformation,
+                or a builder looking for your next challenge,
+                we'd love to build with you.
+
+            </p>
+
+            <div class="mt-12 flex flex-wrap justify-center gap-5">
+
+                <a href="contact.html">
+
+                    <button class="group px-10 py-5
+                    rounded-xl
+                    bg-primary
+                    text-white
+                    font-semibold
+                    shadow-lg
+                    shadow-primary/20
+                    hover:-translate-y-1
+                    hover:scale-[1.03]
+                    transition-all duration-300">
+
+                        Work With Us
+
+                    </button>
+
+                </a>
+
+                <a href="careers.html">
+
+                    <button class="group px-10 py-5
+                    rounded-xl
+                    bg-white
+                    border
+                    border-slate-200
+                    font-semibold
+                    hover:bg-slate-50
+                    hover:-translate-y-1
+                    transition-all duration-300">
+
+                        Join Our Team
+
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-[#eff4fb] dark:bg-slate-950 w-full rounded-t-none font-['Inter'] text-sm leading-relaxed tonal-shift-from-surface-to-surface-container-low flat no shadows">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto w-full"><div class="col-span-2 md:col-span-1">
-<div class="text-lg font-bold text-[#3c6094] dark:text-[#eff4fb] mb-6">OOTB</div>
-<p class="text-slate-500 dark:text-slate-500 mb-6">AI-First Venture Studio crafting the next generation of industrial solutions.</p>
-<div class="flex gap-4">
-<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://www.facebook.com/outoftheblue.company/" target="_blank" title="Facebook">
-<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7h-2.54v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"></path></svg>
+
+<footer class="relative -mt-8 overflow-hidden bg-[#eef4fb] border-t border-white/40">
+
+    <!-- Background Glow -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-primary/10 blur-[160px] rounded-full"></div>
+
+    <div class="relative section-container px-8">
+
+        <!-- Top -->
+        <div class="grid lg:grid-cols-[1.6fr_1fr_1fr_1fr] gap-16 py-16">
+
+            <!-- LEFT -->
+            <div>
+
+                <img
+                src="assets/logo.png"
+                class="h-16 w-auto">
+
+                <h3 class="mt-6 text-[28px] font-extrabold tracking-tight leading-tight text-slate-900">
+
+                    Building AI-First
+                    <br>
+                    Companies That Matter.
+
+                </h3>
+
+                <p class="text-slate-600 leading-7 mt-5 max-w-sm">
+
+                    Out Of The Blue is an AI-first venture studio building
+                    scalable companies through research,
+                    execution and technology.
+
+                </p>
+
+                <div class="flex gap-5 mt-6">
+                  <a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://www.facebook.com/outoftheblue.company/" target="_blank" title="Facebook"> 
+                    <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                      <path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7h-2.54v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z">
+
+                      </path>
+                    </svg> 
+                  </a> 
+                  <a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://x.com/ootbcompany" target="_blank" title="X (Twitter)"> 
+                    <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z">
+
+                      </path>
+                    </svg> 
+                  </a> 
+                  <a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://www.linkedin.com/company/out-of-the-blue-company/" target="_blank" title="LinkedIn"> 
+                    <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a2.7 2.7 0 0 0-2.7-2.7c-1.1 0-1.9.6-2.3 1.2V10.5h-2.3v8h2.3v-4.1c0-.6.5-1.1 1.1-1.1s1.1.5 1.1 1.1v4.1h2.3M8.3 18.5v-8H6v8h2.3M7.1 9c.7 0 1.3-.6 1.3-1.3S7.8 6.4 7.1 6.4s-1.3.6-1.3 1.3S6.4 9 7.1 9z">
+
+                      </path>
+                    </svg> 
+                  </a> 
+                  <a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#" title="YouTube"> <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                    <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z">
+
+                    </path>
+                  </svg> 
+                </a> 
+                <a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://www.instagram.com/outoftheblue.company/" target="_blank" title="Instagram"> 
+                  <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                    <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z">
+
+                </path>
+              </svg> 
+            </a> 
+          </div>
+
+            </div>
+
+            <!-- COMPANY -->
+
+            <div>
+
+                <h4 class="section-label mb-6">
+
+                    Company
+
+                </h4>
+
+                <div class="space-y-5 text-[15px] text-slate-600">
+
+                    <a href="about.html" class="block hover:text-primary transition">About Us</a>
+
+<a href="studio.html" class="block hover:text-primary transition">Studio</a>
+
+<a href="community.html" class="block hover:text-primary transition">Community</a>
+
+<a href="investors.html" class="block hover:text-primary transition">Investors</a>
+
+<a href="careers.html" class="block hover:text-primary transition">Careers</a>
+                </div>
+
+            </div>
+
+            <!-- EXPLORE -->
+
+            <div>
+
+               <h4 class="section-label mb-6">
+
+                    Explore
+
+                </h4>
+
+                <div class="space-y-5 text-[15px] text-slate-600">
+
+                    <a href="ventures.html" class="block hover:text-primary transition">
+Ventures
 </a>
-<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://x.com/ootbcompany" target="_blank" title="X (Twitter)">
-<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"></path></svg>
+
+<a href="services.html" class="block hover:text-primary transition">
+Services
 </a>
-<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://www.linkedin.com/company/out-of-the-blue-company/" target="_blank" title="LinkedIn">
-<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a2.7 2.7 0 0 0-2.7-2.7c-1.1 0-1.9.6-2.3 1.2V10.5h-2.3v8h2.3v-4.1c0-.6.5-1.1 1.1-1.1s1.1.5 1.1 1.1v4.1h2.3M8.3 18.5v-8H6v8h2.3M7.1 9c.7 0 1.3-.6 1.3-1.3S7.8 6.4 7.1 6.4s-1.3.6-1.3 1.3S6.4 9 7.1 9z"></path></svg>
+
+<a href="indiandoctorsnetwork.html" class="block hover:text-primary transition">
+Indian Doctors Network
 </a>
-<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#" title="YouTube">
-<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3L10 15z"></path></svg>
+
+<a href="indiandentalnetwork.html" class="block hover:text-primary transition">
+Indian Dental Network
 </a>
-<a class="text-slate-500 cursor-pointer hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="https://www.instagram.com/outoftheblue.company/" target="_blank" title="Instagram">
-<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+
+<a href="oratorssociety.html" class="block hover:text-primary transition">
+Orators Society
 </a>
-</div>
-</div>
-<div>
-<h4 class="font-bold text-[#3c6094] dark:text-[#eff4fb] mb-6">Company</h4>
-<ul class="space-y-4">
-<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="about.html">About Us</a></li>
-<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="ventures.html">Ventures</a></li>
-<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="services.html">Services</a></li>
-<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="studio.html">Studio</a></li>
-<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="community.html">Community</a></li>
-<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="investors.html">Investors</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-[#3c6094] dark:text-[#eff4fb] mb-6">Contact</h4>
-<ul class="space-y-4">
-<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="contact.html">Contact Us</a></li>
-<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="careers.html">Careers</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-[#3c6094] dark:text-[#eff4fb] mb-6">Legal</h4>
-<ul class="space-y-4">
-<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="privacypolicy.html">Privacy Policy</a></li>
-<li><a class="text-slate-500 dark:text-slate-500 hover:text-[#3c6094] hover:underline underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="termsofservices.html">Terms of Service</a></li>
-</ul>
-</div></div>
-<div class="border-t border-slate-200/50 dark:border-slate-800/50 max-w-7xl mx-auto px-8 py-8">
-<p class="text-slate-400 text-xs text-center">© 2024 OOTB. All rights reserved.</p>
-</div>
+
+                </div>
+
+            </div>
+
+            <!-- CONTACT -->
+
+            <div>
+
+                <h4 class="section-label mb-6">
+
+                    Connect
+
+                </h4>
+
+                <div class="space-y-5 text-[15px] text-slate-600">
+
+                    <a href="contact.html" class="block hover:text-primary transition">
+Contact Us
+</a>
+
+<a href="mailto:hello@outoftheblue.in" class="block hover:text-primary transition">
+hello@outoftheblue.in
+</a>
+
+<a href="careers.html" class="block hover:text-primary transition">
+Join Our Team
+</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Divider -->
+
+        <div class="border-t border-slate-200"></div>
+
+        <!-- Bottom -->
+
+        <div class="py-8 flex flex-col md:flex-row items-center justify-between gap-5">
+
+            <p class="text-slate-500 text-sm">
+
+                © 2026 Out Of The Blue. All rights reserved.
+
+            </p>
+
+            <div class="flex gap-8 text-sm text-slate-500">
+
+                <a href="privacypolicy.html" class="hover:text-primary transition">
+
+                    Privacy Policy
+
+                </a>
+
+                <a href="termsofservices.html" class="hover:text-primary transition">
+
+                    Terms of Service
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </footer>
+<script>
+
+const nav = document.getElementById("mainNav");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 50) {
+
+        nav.classList.add(
+            "shadow-lg",
+            "shadow-slate-200/50"
+        );
+
+    } else {
+
+        nav.classList.remove(
+            "shadow-lg",
+            "shadow-slate-200/50"
+        );
+
+    }
+
+});
+
+</script>
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const revealItems = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+                const children = entry.target.querySelectorAll(".stagger");
+
+                children.forEach((child, index) => {
+
+                    child.style.transitionDelay = `${index * 100}ms`;
+
+                    child.classList.add("show");
+
+                });
+
+            }
+
+        });
+
+    }, {
+
+        threshold: 0.12,
+        rootMargin: "0px 0px -60px 0px"
+
+    });
+
+revealItems.forEach((item,index)=>{
+
+    item.style.setProperty("--delay",`${index*90}ms`);
+
+    observer.observe(item);
+
+});
+});
+
+</script>
+<script>
+
+const canvas = document.getElementById("networkCanvas");
+const wrapper = document.getElementById("hero-network");
+const ctx = canvas.getContext("2d");
+
+let w, h;
+
+let mouse = {
+    x: -999,
+    y: -999
+};
+
+const NODE_COUNT = 90;
+const CONNECT_DISTANCE = 80;
+const MOUSE_RADIUS = 170;
+
+let nodes = [];
+
+function resize(){
+
+    w = wrapper.offsetWidth;
+    h = wrapper.offsetHeight;
+
+    canvas.width = w;
+    canvas.height = h;
+
+}
+
+resize();
+
+window.addEventListener("resize",resize);
+
+function random(min,max){
+
+    return Math.random()*(max-min)+min;
+
+}
+
+function createNodes(){
+
+    nodes=[];
+
+    for(let i=0;i<NODE_COUNT;i++){
+
+        nodes.push({
+
+            x:Math.random()*w,
+            y:Math.random()*h,
+
+            ox:0,
+            oy:0,
+
+            vx:random(-0.15,0.15),
+            vy:random(-0.15,0.15),
+
+            r:random(.5,1.3)
+
+        });
+
+    }
+
+}
+
+createNodes();
+
+wrapper.addEventListener("mousemove",(e)=>{
+
+    const rect=wrapper.getBoundingClientRect();
+
+    mouse.x=e.clientX-rect.left;
+    mouse.y=e.clientY-rect.top;
+
+});
+
+wrapper.addEventListener("mouseleave",()=>{
+
+    mouse.x=-999;
+    mouse.y=-999;
+
+});
+
+function animate(){
+
+    ctx.clearRect(0,0,w,h);
+
+    nodes.forEach(n=>{
+
+        n.x+=n.vx;
+        n.y+=n.vy;
+
+        if(n.x<0||n.x>w)n.vx*=-1;
+        if(n.y<0||n.y>h)n.vy*=-1;
+
+    });
+
+    // NETWORK
+
+    for(let i=0;i<nodes.length;i++){
+
+        for(let j=i+1;j<nodes.length;j++){
+
+            const dx=nodes[i].x-nodes[j].x;
+            const dy=nodes[i].y-nodes[j].y;
+
+            const dist=Math.sqrt(dx*dx+dy*dy);
+
+            if(dist<CONNECT_DISTANCE){
+
+                const alpha=(1-dist/CONNECT_DISTANCE)*0.22;
+
+                ctx.beginPath();
+
+                ctx.strokeStyle=`rgba(255,255,255,${alpha})`;
+
+                ctx.lineWidth=.35;
+
+                ctx.moveTo(nodes[i].x,nodes[i].y);
+                ctx.lineTo(nodes[j].x,nodes[j].y);
+
+                ctx.stroke();
+
+            }
+
+        } 
+
+    }
+
+    // MOUSE GLOW
+
+    nodes.forEach(n=>{
+
+        const dx=n.x-mouse.x;
+        const dy=n.y-mouse.y;
+
+        const dist=Math.sqrt(dx*dx+dy*dy);
+
+        if(dist<MOUSE_RADIUS){
+
+            const alpha=(1-dist/MOUSE_RADIUS);
+
+            ctx.beginPath();
+
+            ctx.strokeStyle=`rgba(110,180,255,${alpha*.9})`;
+
+            ctx.lineWidth=.6;
+
+            ctx.moveTo(n.x,n.y);
+            ctx.lineTo(mouse.x,mouse.y);
+
+            ctx.stroke();
+
+            ctx.beginPath();
+
+            ctx.fillStyle=`rgba(130,200,255,${alpha})`;
+
+            ctx.arc(n.x,n.y,n.r+2.2,0,Math.PI*2);
+
+            ctx.fill();
+
+        }
+
+        // OUTER GLOW
+
+        ctx.beginPath();
+
+        ctx.fillStyle="rgba(110,180,255,.08)";
+
+       ctx.arc(n.x,n.y,n.r+1.6,0,Math.PI*2);
+
+        ctx.fill();
+
+        // NODE
+
+        ctx.beginPath();
+
+        ctx.fillStyle="rgba(255,255,255,.8)";
+
+        ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
+
+        ctx.fill();
+
+    });
+
+    requestAnimationFrame(animate);
+
+}
+
+animate();
+
+</script>
+
+<!-- ADD THIS NEW SCRIPT -->
+
+<script>
+
+const hero=document.getElementById("hero-network");
+
+hero.addEventListener("mousemove",(e)=>{
+
+    const r=hero.getBoundingClientRect();
+
+    const x=e.clientX-r.left;
+    const y=e.clientY-r.top;
+
+    const rotateY=((x/r.width)-0.5)*8;
+    const rotateX=((y/r.height)-0.5)*-8;
+
+    hero.style.transform=
+    `perspective(1200px)
+    rotateX(${rotateX}deg)
+    rotateY(${rotateY}deg)
+    scale(1.02)`;
+
+});
+
+hero.addEventListener("mouseleave",()=>{
+
+    hero.style.transform=
+    "perspective(1200px) rotateX(0deg) rotateY(0deg) scale(1)";
+
+});
+</script>
+
+<script>
+
+document.querySelectorAll(".spotlight").forEach(card=>{
+
+card.addEventListener("mousemove",(e)=>{
+
+const rect=card.getBoundingClientRect();
+
+card.style.setProperty(
+
+"--x",
+
+`${e.clientX-rect.left}px`
+
+);
+
+card.style.setProperty(
+
+"--y",
+
+`${e.clientY-rect.top}px`
+
+);
+
+});
+
+});
+
+</script>
+<script>
+
+document.querySelectorAll("button").forEach(button=>{
+
+button.addEventListener("mousemove",(e)=>{
+
+const rect=button.getBoundingClientRect();
+
+const x=e.clientX-rect.left;
+const y=e.clientY-rect.top;
+
+const moveX=(x-rect.width/2)/8;
+const moveY=(y-rect.height/2)/8;
+
+button.style.transform=
+`translate(${moveX}px,${moveY}px)`;
+
+});
+
+button.addEventListener("mouseleave",()=>{
+
+button.style.transform="translate(0,0)";
+
+});
+
+});
+
+</script>
+ <script>
+
+const timeline = document.getElementById("timeline-progress");
+
+const cards = [
+document.getElementById("step1"),
+document.getElementById("step2"),
+document.getElementById("step3"),
+document.getElementById("step4")
+];
+
+function animateTimeline(){
+
+const first = cards[0].getBoundingClientRect();
+
+const viewport = window.innerHeight;
+
+let progress = (viewport - first.top) / (viewport * 0.9);
+
+progress = Math.max(0, Math.min(progress,1));
+
+timeline.style.width = `${progress*100}%`;
+
+cards.forEach((card,index)=>{
+
+const trigger = index * 0.22;
+
+if(progress > trigger){
+
+card.style.transform = "translateY(-12px)";
+
+card.style.boxShadow =
+"0 30px 60px rgba(62,103,167,.12)";
+
+card.style.borderColor =
+"rgba(62,103,167,.35)";
+
+}else{
+
+card.style.transform = "";
+
+card.style.boxShadow = "";
+
+card.style.borderColor = "";
+
+}
+
+});
+
+requestAnimationFrame(animateTimeline);
+
+}
+
+animateTimeline();
+
+</script>
+</body>
 </body></html>

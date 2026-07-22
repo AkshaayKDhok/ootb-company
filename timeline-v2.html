@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<style>
+  /* ==========================================
+   OOTB OPERATING SYSTEM V2
+========================================== */
+
+:root{
+
+--primary:#3E67A7;
+
+--surface:#F8FAFD;
+
+--card:#FFFFFF;
+
+--text:#172033;
+
+--muted:#64748B;
+
+--line:#D8E3F2;
+
+--radius:28px;
+
+}
+
+body{
+
+background:var(--surface);
+
+font-family:'Inter',sans-serif;
+
+color:var(--text);
+
+overflow-x:hidden;
+
+}
+
+.os-section{
+
+position:relative;
+
+padding:140px 32px;
+
+overflow:hidden;
+
+}
+
+.os-container{
+
+max-width:1200px;
+
+margin:auto;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.os-label{
+
+font-size:.8rem;
+
+letter-spacing:.28em;
+
+text-transform:uppercase;
+
+font-weight:700;
+
+color:var(--primary);
+
+margin-bottom:20px;
+
+}
+
+.os-title{
+
+font-family:'Manrope',sans-serif;
+
+font-size:clamp(2.8rem,4vw,4.2rem);
+
+font-weight:800;
+
+line-height:1.05;
+
+letter-spacing:-.04em;
+
+margin-bottom:26px;
+
+}
+
+.os-copy{
+
+font-size:1.1rem;
+
+line-height:1.9;
+
+max-width:760px;
+
+color:var(--muted);
+
+}  
+
+.os-node.active{
+
+border-color:#3E67A7;
+
+box-shadow:
+
+0 0 30px rgba(62,103,167,.35);
+
+}
+.os-stage{
+
+position:relative;
+
+background:white;
+
+padding:42px;
+
+border-radius:28px;
+
+margin-bottom:60px;
+
+border:1px solid rgba(62,103,167,.10);
+
+overflow:hidden;
+
+transition:.45s;
+
+box-shadow:
+
+0 18px 50px rgba(15,23,42,.06);
+
+}
+
+.os-stage:hover{
+
+transform:
+
+translateY(-10px)
+
+scale(1.015);
+
+border-color:#3E67A7;
+
+box-shadow:
+
+0 35px 80px rgba(62,103,167,.16);
+
+}
+
+.os-stage h2{
+
+font-family:'Manrope';
+
+font-size:2rem;
+
+font-weight:800;
+
+margin-bottom:18px;
+
+}
+
+.os-stage p{
+
+font-size:1rem;
+
+line-height:1.8;
+
+color:#64748B;
+
+}
+.os-system{
+
+display:grid;
+
+grid-template-columns:100px 1fr;
+
+gap:70px;
+
+margin-top:90px;
+
+align-items:start;
+
+}
+.os-network{
+
+position:sticky;
+
+top:140px;
+
+height:700px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:space-between;
+
+}
+
+.network-line{
+
+position:absolute;
+
+top:28px;
+
+bottom:28px;
+
+width:3px;
+
+background:#DCE8F8;
+
+border-radius:100px;
+
+overflow:hidden;
+
+}
+.network-progress{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:0%;
+
+background:linear-gradient(
+
+180deg,
+
+#3E67A7,
+
+#66A8FF,
+
+#3E67A7
+
+);
+
+border-radius:100px;
+
+box-shadow:
+
+0 0 25px rgba(62,103,167,.35);
+
+transition:height .25s linear;
+
+}
+
+.network-node{
+
+width:58px;
+
+height:58px;
+
+border-radius:50%;
+
+background:white;
+
+border:3px solid #DCE8F8;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:700;
+
+font-size:.95rem;
+
+color:#9CAFCF;
+
+position:relative;
+
+z-index:5;
+
+transition:.45s;
+
+box-shadow:
+
+0 15px 35px rgba(15,23,42,.06);
+
+}
+
+.network-node.active{
+
+background:white;
+
+border-color:#3E67A7;
+
+color:#3E67A7;
+
+transform:scale(1.08);
+
+box-shadow:
+
+0 0 0 8px rgba(62,103,167,.08),
+
+0 0 40px rgba(62,103,167,.28);
+
+}
+.os-panels{
+
+display:flex;
+
+flex-direction:column;
+
+gap:80px;
+
+}
+/* ==========================================
+HEADER
+========================================== */
+
+.os-header{
+
+max-width:760px;
+
+margin-bottom:30px;
+
+}
+
+.os-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:12px 18px;
+
+border-radius:999px;
+
+background:white;
+
+border:1px solid rgba(62,103,167,.12);
+
+box-shadow:
+
+0 10px 30px rgba(15,23,42,.05);
+
+font-size:.78rem;
+
+font-weight:700;
+
+letter-spacing:.18em;
+
+color:#3E67A7;
+
+margin-bottom:28px;
+
+text-transform:uppercase;
+
+}
+
+.os-badge .material-symbols-outlined{
+
+font-size:18px;
+
+}
+
+/*===============================
+MODULE HEADER
+================================*/
+
+.os-panel{
+
+background:white;
+
+padding:55px;
+
+border-radius:32px;
+
+border:1px solid rgba(62,103,167,.08);
+
+box-shadow:
+
+0 20px 60px rgba(15,23,42,.06);
+
+transition:.45s;
+
+min-height:280px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+.panel-tag{
+
+font-size:.72rem;
+
+letter-spacing:.24em;
+
+font-weight:700;
+
+color:#3E67A7;
+
+margin-bottom:24px;
+
+}
+.os-panel h3{
+
+font-family:'Manrope';
+
+font-size:2.2rem;
+
+font-weight:800;
+
+line-height:1.15;
+
+margin-bottom:20px;
+
+}
+.os-panel p{
+
+font-size:1.08rem;
+
+line-height:1.9;
+
+max-width:650px;
+
+color:#64748B;
+
+}
+
+.os-panel:hover{
+
+transform:translateY(-8px);
+
+border-color:#3E67A7;
+
+box-shadow:
+
+0 40px 90px rgba(62,103,167,.12);
+
+}
+
+.os-number{
+
+font-size:3rem;
+
+font-weight:800;
+
+font-family:'Manrope';
+
+color:#E7EEF9;
+
+line-height:1;
+
+}
+
+.os-status{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+font-size:.72rem;
+
+font-weight:700;
+
+letter-spacing:.18em;
+
+color:#3E67A7;
+
+}
+
+.os-status-dot{
+
+width:8px;
+
+height:8px;
+
+border-radius:50%;
+
+background:#4ADE80;
+
+box-shadow:
+
+0 0 15px #4ADE80;
+
+animation:pulse 2s infinite;
+
+}
+
+.os-stage-sub{
+
+margin-top:8px;
+
+margin-bottom:28px;
+
+font-size:1rem;
+
+color:#64748B;
+
+}
+
+.os-flow{
+
+display:grid;
+
+grid-template-columns:1fr auto 1fr auto 1fr;
+
+align-items:center;
+
+gap:20px;
+
+padding-top:22px;
+
+border-top:1px solid rgba(62,103,167,.10);
+
+}
+
+.os-label-small{
+
+display:block;
+
+font-size:.68rem;
+
+letter-spacing:.18em;
+
+font-weight:700;
+
+color:#3E67A7;
+
+margin-bottom:10px;
+
+}
+
+.os-arrow{
+
+font-size:28px;
+
+color:#3E67A7;
+
+font-weight:bold;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+opacity:.4;
+
+transform:scale(.8);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+100%{
+
+opacity:.4;
+
+transform:scale(.8);
+
+}
+
+}
+/*==============================
+AI ENGINE
+==============================*/
+
+.engine-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:30px;
+
+}
+
+.engine-number{
+
+font-size:70px;
+
+font-weight:800;
+
+font-family:'Manrope';
+
+color:#E8F0FC;
+
+line-height:1;
+
+}
+
+.engine-status{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:.72rem;
+
+font-weight:700;
+
+letter-spacing:.18em;
+
+color:#3E67A7;
+
+}
+
+.status-dot{
+
+width:10px;
+
+height:10px;
+
+border-radius:50%;
+
+background:#34D399;
+
+box-shadow:
+
+0 0 18px #34D399;
+
+animation:pulse 2s infinite;
+
+}
+
+.engine-title{
+
+font-family:'Manrope';
+
+font-size:2.1rem;
+
+font-weight:800;
+
+margin-bottom:18px;
+
+}
+
+.engine-copy{
+
+font-size:1.05rem;
+
+line-height:1.8;
+
+margin-bottom:40px;
+
+color:#64748B;
+
+max-width:720px;
+
+}
+
+.engine-grid{
+
+display:grid;
+
+grid-template-columns:1fr auto 1fr auto 1fr;
+
+gap:22px;
+
+align-items:center;
+
+padding-top:28px;
+
+border-top:1px solid rgba(62,103,167,.10);
+
+}
+
+.engine-box{
+
+padding:22px;
+
+border-radius:18px;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#FBFDFF,
+
+#F2F7FD
+
+);
+
+border:1px solid rgba(62,103,167,.10);
+
+transition:.35s;
+
+}
+
+.engine-box:hover{
+
+transform:translateY(-4px);
+
+border-color:#3E67A7;
+
+box-shadow:
+
+0 20px 40px rgba(62,103,167,.12);
+
+}
+
+.engine-label{
+
+display:block;
+
+font-size:.68rem;
+
+letter-spacing:.22em;
+
+font-weight:700;
+
+margin-bottom:12px;
+
+color:#3E67A7;
+
+}
+
+.engine-box strong{
+
+font-size:1rem;
+
+font-weight:700;
+
+color:#172033;
+
+}
+
+.engine-arrow{
+
+font-size:34px;
+
+font-weight:700;
+
+color:#3E67A7;
+
+animation:dataFlow 2s infinite;
+
+}
+</style>
+</head>
+
+<body class="bg-[#F8FAFD]">
+
+<div class="os-container">
+
+    <div class="os-header">
+
+        <div class="os-pill">
+
+            THE OOTB OPERATING SYSTEM
+
+        </div>
+
+        <h2 class="os-title">
+
+            Every Great Venture
+            <br>
+            Runs On The Same System.
+
+        </h2>
+
+        <p class="os-copy">
+
+            Every company inside Out Of The Blue follows one execution system.
+            From identifying overlooked industries to building AI-first businesses,
+            every venture moves through the same operating framework.
+
+        </p>
+
+    </div>
+
+
+    <div class="os-system">
+
+        <!-- LEFT SIDE -->
+
+        <div class="os-network">
+
+            <div class="network-line">
+
+    <div class="network-progress"></div>
+
+</div>
+
+            <div class="network-node active">
+
+                <span>01</span>
+
+            </div>
+
+            <div class="network-node">
+
+                <span>02</span>
+
+            </div>
+
+            <div class="network-node">
+
+                <span>03</span>
+
+            </div>
+
+            <div class="network-node">
+
+                <span>04</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="os-panels">
+
+            <div class="engine-header">
+
+    <div class="engine-number">
+
+        01
+
+    </div>
+
+    <div class="engine-status">
+
+        <span class="status-dot"></span>
+
+        LIVE ENGINE
+
+    </div>
+
+</div>
+
+<div class="engine-title">
+
+    Identify Engine
+
+</div>
+
+<p class="engine-copy">
+
+    Scan fragmented industries and detect opportunities before the market notices them.
+
+</p>
+
+<div class="engine-grid">
+
+    <div class="engine-box">
+
+        <span class="engine-label">
+
+            INPUT
+
+        </span>
+
+        <strong>
+
+            Industry Signals
+
+        </strong>
+
+    </div>
+
+    <div class="engine-arrow">
+
+        →
+
+    </div>
+
+    <div class="engine-box">
+
+        <span class="engine-label">
+
+            AI ENGINE
+
+        </span>
+
+        <strong>
+
+            Pattern Detection
+
+        </strong>
+
+    </div>
+
+    <div class="engine-arrow">
+
+        →
+
+    </div>
+
+    <div class="engine-box">
+
+        <span class="engine-label">
+
+            OUTPUT
+
+        </span>
+
+        <strong>
+
+            Opportunity Score
+
+        </strong>
+
+    </div>
+
+</div>
+
+            <div class="os-panel">
+
+                <div class="panel-tag">
+
+                    RESEARCH ENGINE
+
+                </div>
+
+                <h3>
+
+                    Validate Before Building.
+
+                </h3>
+
+                <p>
+
+                    Market validation, workflow mapping,
+                    customer interviews and AI-assisted research.
+
+                </p>
+
+            </div>
+
+            <div class="os-panel">
+
+                <div class="panel-tag">
+
+                    BUILD ENGINE
+
+                </div>
+
+                <h3>
+
+                    Launch Faster.
+
+                </h3>
+
+                <p>
+
+                    Products, AI, branding,
+                    hiring and operations move together.
+
+                </p>
+
+            </div>
+
+            <div class="os-panel">
+
+                <div class="panel-tag">
+
+                    SCALE ENGINE
+
+                </div>
+
+                <h3>
+
+                    Compound Growth.
+
+                </h3>
+
+                <p>
+
+                    Systems, automation,
+                    community and execution become the growth engine.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+
+const panels=document.querySelectorAll(".os-panel");
+
+const nodes=document.querySelectorAll(".network-node");
+
+const progress=document.querySelector(".network-progress");
+
+function updateTimeline(){
+
+let active=0;
+
+panels.forEach((panel,index)=>{
+
+const rect=panel.getBoundingClientRect();
+
+if(rect.top<window.innerHeight*0.45){
+
+active=index;
+
+}
+
+});
+
+nodes.forEach((node,i)=>{
+
+node.classList.toggle("active",i<=active);
+
+});
+
+const percent=(active)/(nodes.length-1);
+
+progress.style.height=(percent*100)+"%";
+
+}
+
+window.addEventListener("scroll",updateTimeline);
+
+updateTimeline();
+
+</script>
+
+
+</body>
+
+</html>
