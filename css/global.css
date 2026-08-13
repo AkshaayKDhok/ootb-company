@@ -1,0 +1,2075 @@
+/* =========================================================
+   OOTB GLOBAL DESIGN SYSTEM
+   Shared across all pages
+========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES / DESIGN TOKENS
+   OOTB shared visual language
+========================================================= */
+
+:root {
+
+    /* =======================================================
+     BRAND COLORS
+  ======================================================= */
+
+    --color-primary: #3E67A7;
+    --color-primary-light: #5B8FE6;
+
+    --color-primary-dark: #2F5487;
+
+
+    /* =======================================================
+     TEXT COLORS
+  ======================================================= */
+
+    --color-text: #182133;
+    --color-text-muted: #5D687A;
+    --color-text-light: rgba(24, 33, 51, .70);
+
+    --color-white: #FFFFFF;
+
+
+    /* =======================================================
+     SURFACE / BACKGROUND COLORS
+  ======================================================= */
+
+    --color-bg: #FFFFFF;
+    --color-bg-soft: #F7FAFD;
+    --color-bg-muted: #F8FAFC;
+
+    --color-surface: #FFFFFF;
+
+
+    /* =======================================================
+     BORDER COLORS
+  ======================================================= */
+
+    --color-border: rgba(15, 23, 42, .08);
+    --color-border-strong: #E2E8F0;
+
+
+    /* =======================================================
+     BRAND TRANSPARENCY
+  ======================================================= */
+
+    --color-primary-soft: rgba(62, 103, 167, .08);
+    --color-primary-glow: rgba(62, 103, 167, .18);
+
+
+    /* =======================================================
+     CONTAINER / LAYOUT
+  ======================================================= */
+
+    --container-width: 90rem;
+    --container-padding: 4rem;
+
+    --section-width: 72rem;
+    --section-gap: 7rem;
+
+
+    /* =======================================================
+     SECTION SPACING
+  ======================================================= */
+
+    --space-section: 7rem;
+    --space-section-lg: 8rem;
+
+
+    /* =======================================================
+     BORDER RADIUS
+  ======================================================= */
+
+    --radius-sm: 18px;
+    --radius-md: 24px;
+    --radius-lg: 28px;
+    --radius-xl: 40px;
+
+
+    /* =======================================================
+     COMPONENT RADIUS
+  ======================================================= */
+
+    --radius-button: 16px;
+    --radius-card: 30px;
+    --radius-pill: 999px;
+
+
+    /* =======================================================
+     SHADOWS
+  ======================================================= */
+
+    --shadow-sm:
+        0 12px 30px rgba(15, 23, 42, .06);
+
+    --shadow-md:
+        0 18px 45px rgba(15, 23, 42, .08);
+
+    --shadow-lg:
+        0 35px 90px rgba(15, 23, 42, .12);
+
+
+    /* =======================================================
+     MOTION
+  ======================================================= */
+
+    --transition-fast: .18s ease-out;
+    --transition-base: .30s ease;
+    --transition-smooth: .35s ease;
+    --transition-slow: .80s ease;
+
+
+    /* =======================================================
+     Z-INDEX
+  ======================================================= */
+
+    --z-base: 1;
+    --z-dropdown: 100;
+    --z-overlay: 500;
+    --z-modal: 1000;
+    --z-tooltip: 1100;
+
+
+    /* =======================================================
+     LEGACY ALIASES
+     Keep existing names working while pages are migrated.
+  ======================================================= */
+
+    --primary: var(--color-primary);
+    --primary-light: var(--color-primary-light);
+
+    --text: var(--color-text);
+    --muted: var(--color-text-muted);
+
+    --border: var(--color-border);
+
+}
+
+/* =========================================================
+   GLOBAL TYPOGRAPHY
+========================================================= */
+
+:root {
+
+    /* Font families */
+    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Manrope', sans-serif;
+
+    /* Font weights */
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+    --weight-extrabold: 800;
+
+}
+
+
+/* =========================================================
+   GLOBAL BASE / RESET
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: var(--weight-regular);
+    line-height: 1.6;
+
+    color: var(--color-text);
+    background: var(--color-bg);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================================
+   BOX SIZING
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MEDIA BASELINE
+========================================================= */
+
+img,
+svg,
+video,
+canvas {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   BUTTON / FORM INHERIT
+========================================================= */
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* =========================================================
+   BUTTON RESET
+========================================================= */
+
+button {
+    margin: 0;
+    padding: 0;
+
+    background: none;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY FOCUS
+========================================================= */
+
+:focus-visible {
+    outline: 3px solid rgba(91, 143, 230, .55);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   SKIP LINK
+========================================================= */
+
+.skip-link {
+    position: fixed;
+
+    top: 1rem;
+    left: 1rem;
+
+    z-index: var(--z-tooltip);
+
+    padding: .75rem 1rem;
+
+    border-radius: 10px;
+
+    background: var(--color-text);
+    color: var(--color-white);
+
+    font-family: var(--font-body);
+    font-size: .875rem;
+    font-weight: var(--weight-semibold);
+
+    transform: translateY(-150%);
+
+    transition: transform var(--transition-fast);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+/* =========================================================
+   GLOBAL TYPOGRAPHY SYSTEM
+   One typography hierarchy for the entire website.
+   Pages and sections must not redefine these values.
+========================================================= */
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-weight: var(--weight-extrabold);
+
+    color: var(--color-text);
+}
+
+
+/* =========================================================
+   H1 — PRIMARY PAGE HEADING
+========================================================= */
+
+h1 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: var(--weight-extrabold);
+    line-height: 1.05;
+    letter-spacing: -.045em;
+}
+
+
+/* =========================================================
+   H2 — SECTION HEADING
+========================================================= */
+
+h2 {
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    font-weight: var(--weight-extrabold);
+    line-height: 1.08;
+    letter-spacing: -.04em;
+}
+
+
+/* =========================================================
+   H3 — COMPONENT / FEATURE HEADING
+========================================================= */
+
+h3 {
+    font-size: 1.35rem;
+    font-weight: var(--weight-bold);
+    line-height: 1.25;
+    letter-spacing: -.025em;
+}
+
+
+/* =========================================================
+   H4
+========================================================= */
+
+h4 {
+    font-size: 1.15rem;
+    font-weight: var(--weight-bold);
+    line-height: 1.3;
+    letter-spacing: -.02em;
+}
+
+
+/* =========================================================
+   H5
+========================================================= */
+
+h5 {
+    font-size: 1rem;
+    font-weight: var(--weight-semibold);
+    line-height: 1.4;
+    letter-spacing: -.01em;
+}
+
+
+/* =========================================================
+   H6
+========================================================= */
+
+h6 {
+    font-size: .875rem;
+    font-weight: var(--weight-semibold);
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   BODY PARAGRAPH
+========================================================= */
+
+p {
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: var(--weight-regular);
+    line-height: 1.7;
+    letter-spacing: 0;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   LARGE DESCRIPTIVE COPY
+   Used for hero and major section introductions.
+========================================================= */
+
+.hero-copy,
+.section-copy {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: var(--weight-regular);
+    line-height: 1.75;
+    letter-spacing: 0;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   SMALL TEXT
+========================================================= */
+
+small {
+    font-family: var(--font-body);
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   LABELS / EYEBROWS
+========================================================= */
+
+.text-label,
+.eyebrow,
+.label {
+    font-family: var(--font-body);
+    font-size: .75rem;
+    font-weight: var(--weight-bold);
+    line-height: 1.2;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+    font-family: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   STRONG / EMPHASIS
+========================================================= */
+
+strong,
+b {
+    font-weight: var(--weight-bold);
+}
+
+
+/* =========================================================
+   RESPONSIVE TYPOGRAPHY
+========================================================= */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2.75rem;
+        line-height: 1.05;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+        line-height: 1.08;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        line-height: 1.12;
+    }
+
+    h4 {
+        font-size: 1.375rem;
+    }
+
+    h5 {
+        font-size: 1.125rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .95rem;
+        line-height: 1.7;
+    }
+
+    small {
+        font-size: .8rem;
+    }
+
+}
+
+/* =========================================================
+   HERO / GENERAL GRADIENT
+========================================================= */
+
+.hero-gradient {
+    background: linear-gradient(135deg,
+            var(--color-primary) 0%,
+            var(--color-primary-dark) 100%);
+}
+
+
+/* =========================================================
+   GLOBAL CONTAINER + SECTION SYSTEM
+========================================================= */
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section {
+    width: 100%;
+    padding-block: var(--space-section);
+}
+
+.section-alt {
+    width: 100%;
+    padding-block: var(--space-section);
+    background: var(--color-bg-soft);
+}
+
+.section-lg {
+    width: 100%;
+    padding-block: var(--space-section-lg);
+}
+
+
+/* =========================================================
+   MASTER CONTAINER
+========================================================= */
+
+.section-container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.section-header {
+    width: 100%;
+    max-width: 60rem;
+    margin-inline: auto;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 1.25rem;
+
+    font-family: var(--font-body);
+    font-size: .75rem;
+    font-weight: var(--weight-bold);
+    line-height: 1.2;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   SECTION TITLE
+   Typography inherited from global h2 system.
+   This class controls layout only.
+========================================================= */
+
+.section-title {
+    max-width: 56rem;
+    margin-inline: auto;
+
+    font-family: var(--font-heading);
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    font-weight: var(--weight-extrabold);
+    line-height: 1.08;
+    letter-spacing: -.04em;
+
+    color: var(--color-text);
+}
+
+
+/* =========================================================
+   SECTION COPY
+========================================================= */
+
+.section-copy {
+    max-width: 47.5rem;
+    margin: 1.5rem auto 0;
+}
+
+/* =========================================================
+   GLOBAL BUTTONS + LINKS
+========================================================= */
+
+
+/* =========================================================
+   BUTTON BASE
+========================================================= */
+
+button,
+.btn-primary,
+.btn-secondary {
+    position: relative;
+
+    font-family: var(--font-body);
+
+    cursor: pointer;
+
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-base),
+        background-color var(--transition-base),
+        color var(--transition-base),
+        border-color var(--transition-base);
+
+    will-change: transform;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem 2rem;
+
+    border-radius: var(--radius-button);
+
+    background: var(--color-primary);
+    color: var(--color-white);
+
+    font-size: 1rem;
+    font-weight: var(--weight-bold);
+    line-height: 1.2;
+
+    box-shadow:
+        0 18px 36px rgba(62, 103, 167, .20);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+
+    background: var(--color-primary-dark);
+
+    box-shadow:
+        0 28px 60px rgba(62, 103, 167, .28);
+}
+
+.btn-primary:active {
+    transform: scale(.98);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem 2rem;
+
+    border-radius: var(--radius-button);
+
+    background: var(--color-white);
+    color: var(--color-text);
+
+    border: 1px solid var(--color-border-strong);
+
+    font-size: 1rem;
+    font-weight: var(--weight-semibold);
+    line-height: 1.2;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-4px);
+
+    background: var(--color-bg-muted);
+
+    box-shadow:
+        0 20px 45px rgba(15, 23, 42, .08);
+}
+
+.btn-secondary:active {
+    transform: scale(.98);
+}
+
+/* =========================================================
+   GLOBAL LINK
+========================================================= */
+
+a {
+    transition:
+        color var(--transition-base),
+        opacity var(--transition-base);
+}
+
+
+/* =========================================================
+   BUTTON / LINK FOCUS
+========================================================= */
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(91, 143, 230, .45);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   SPOTLIGHT
+========================================================= */
+
+.spotlight {
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(600px circle at var(--x) var(--y),
+            rgba(62, 103, 167, .12),
+            transparent 45%);
+
+    opacity: 0;
+
+    transition: opacity .35s;
+
+    pointer-events: none;
+}
+
+.spotlight:hover::before {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   GLOBAL PILLS / BADGES
+========================================================= */
+
+
+/* =========================================================
+   PILL
+========================================================= */
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .65rem 1rem;
+
+    border-radius: var(--radius-pill);
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border-strong);
+
+    font-family: var(--font-body);
+    font-size: .9rem;
+    font-weight: var(--weight-medium);
+    line-height: 1.2;
+
+    color: var(--color-text);
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, .05);
+}
+
+
+/* =========================================================
+   PRIMARY BADGE
+========================================================= */
+
+.badge-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .45rem .75rem;
+
+    border-radius: var(--radius-pill);
+
+    background: var(--color-primary-soft);
+
+    color: var(--color-primary);
+
+    font-family: var(--font-body);
+    font-size: .75rem;
+    font-weight: var(--weight-bold);
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   SOFT BADGE
+========================================================= */
+
+.badge-soft {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .45rem .75rem;
+
+    border-radius: var(--radius-pill);
+
+    background: var(--color-bg-soft);
+
+    border: 1px solid var(--color-border);
+
+    color: var(--color-text-muted);
+
+    font-family: var(--font-body);
+    font-size: .75rem;
+    font-weight: var(--weight-semibold);
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   SMALL LABEL
+========================================================= */
+
+.ui-label {
+    display: inline-block;
+
+    font-family: var(--font-body);
+
+    font-size: .75rem;
+    font-weight: var(--weight-bold);
+
+    line-height: 1.2;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+    color: var(--color-primary);
+}
+
+/* =========================================================
+   GLOBAL CARDS + ICON SYSTEM
+========================================================= */
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.ootb-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 42px 38px;
+
+    overflow: hidden;
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+
+    text-align: center;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition-smooth),
+        box-shadow var(--transition-smooth),
+        border-color var(--transition-smooth);
+}
+
+
+.ootb-card:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(62, 103, 167, .18);
+
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* =========================================================
+   ICON BOX
+========================================================= */
+
+.icon-box {
+    width: 74px;
+    height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    margin: 0 auto 28px;
+
+    border-radius: 20px;
+
+    background: var(--color-primary-soft);
+
+    color: var(--color-primary);
+}
+
+
+.icon-box.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   MATERIAL SYMBOLS
+========================================================= */
+
+.material-symbols-outlined {
+    display: inline-block;
+
+    vertical-align: middle;
+
+    font-family: 'Material Symbols Outlined';
+
+    font-weight: normal;
+    font-style: normal;
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    letter-spacing: normal;
+    text-transform: none;
+
+    white-space: nowrap;
+
+    word-wrap: normal;
+
+    direction: ltr;
+
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   CARD TITLE
+   Uses the global H3 typography system.
+   This class controls spacing only.
+========================================================= */
+
+.card-title {
+    margin: 0 0 20px;
+
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: var(--weight-bold);
+    line-height: 1.25;
+    letter-spacing: -.025em;
+
+    color: var(--color-text);
+}
+
+
+/* =========================================================
+   CARD COPY
+========================================================= */
+
+.card-copy {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.card-number {
+    display: block;
+
+    margin: 0 0 24px;
+
+    font-family: var(--font-body);
+
+    font-size: .78rem;
+    font-weight: var(--weight-bold);
+
+    line-height: 1;
+
+    letter-spacing: .28em;
+
+    color: rgba(62, 103, 167, .35);
+}
+
+
+/* =========================================================
+   CARD GRID
+========================================================= */
+
+.card-grid {
+    margin-top: 5.5rem;
+
+    row-gap: 2.5rem;
+    column-gap: 2rem;
+}
+
+
+/* =========================================================
+   PHILOSOPHY CARD
+========================================================= */
+
+.philosophy-card {
+    min-height: 250px;
+
+    padding: 34px 32px;
+
+    justify-content: flex-start;
+}
+
+
+.philosophy-card .card-number {
+    margin-bottom: 18px;
+}
+
+
+.philosophy-card .card-title {
+    margin-bottom: 14px;
+}
+
+
+.philosophy-card .card-copy {
+    max-width: 280px;
+}
+
+/* =========================================================
+   GLOBAL IMAGE / MEDIA SYSTEM
+========================================================= */
+
+/* =========================================================
+   MEDIA COVER
+========================================================= */
+
+.media-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   MEDIA CONTAIN
+========================================================= */
+
+.media-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   ROUNDED MEDIA
+========================================================= */
+
+.media-rounded {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+}
+
+
+/* =========================================================
+   MEDIA CARD
+========================================================= */
+
+.media-card {
+    overflow: hidden;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+
+    background: var(--color-surface);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   MEDIA CARD IMAGE
+========================================================= */
+
+.media-card img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.image-hover {
+    overflow: hidden;
+}
+
+.image-hover img {
+    transition: transform var(--transition-smooth);
+}
+
+.image-hover:hover img {
+    transform: scale(1.04);
+}
+
+/* =========================================================
+   GLOBAL REVEAL / MOTION SYSTEM
+========================================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(32px);
+
+    transition:
+        opacity var(--transition-slow),
+        transform var(--transition-slow);
+
+    will-change: opacity, transform;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   REVEAL VARIANTS
+========================================================= */
+
+.reveal-up {
+    opacity: 0;
+    transform: translateY(32px);
+
+    transition:
+        opacity var(--transition-slow),
+        transform var(--transition-slow);
+}
+
+.reveal-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-32px);
+
+    transition:
+        opacity var(--transition-slow),
+        transform var(--transition-slow);
+}
+
+.reveal-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(32px);
+
+    transition:
+        opacity var(--transition-slow),
+        transform var(--transition-slow);
+}
+
+.reveal-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(.96);
+
+    transition:
+        opacity var(--transition-slow),
+        transform var(--transition-slow);
+}
+
+.reveal-scale.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* =========================================================
+   STAGGER DELAYS
+========================================================= */
+
+.reveal-delay-1 {
+    transition-delay: .08s;
+}
+
+.reveal-delay-2 {
+    transition-delay: .16s;
+}
+
+.reveal-delay-3 {
+    transition-delay: .24s;
+}
+
+.reveal-delay-4 {
+    transition-delay: .32s;
+}
+
+
+/* =========================================================
+   GLOBAL HOVER LIFT
+========================================================= */
+
+.motion-lift {
+    transition:
+        transform var(--transition-smooth),
+        box-shadow var(--transition-smooth);
+}
+
+.motion-lift:hover {
+    transform: translateY(-6px);
+}
+
+
+/* =========================================================
+   GLOBAL IMAGE MOTION
+========================================================= */
+
+.motion-image {
+    overflow: hidden;
+}
+
+.motion-image img {
+    transition: transform var(--transition-smooth);
+}
+
+.motion-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+
+    .reveal,
+    .reveal-up,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta-glow {
+    animation: ambientGlow 8s ease-in-out infinite;
+}
+
+@keyframes ambientGlow {
+    0% {
+        transform: scale(1);
+        opacity: .45;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: .8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: .45;
+    }
+}
+
+/* =========================================================
+   GLOBAL FOOTER SYSTEM
+========================================================= */
+
+.site-footer {
+    width: 100%;
+
+    background: var(--color-bg-soft);
+
+    border-top: 1px solid var(--color-border);
+}
+
+
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+    width: 100%;
+    max-width: var(--container-width);
+
+    margin-inline: auto;
+    padding: 4.5rem var(--container-padding) 2rem;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOOTER MAIN GRID
+========================================================= */
+
+.footer-main-grid {
+    display: grid !important;
+
+    grid-template-columns:
+        1.6fr 1fr 1fr 1fr !important;
+
+    gap: 3.5rem;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.footer-brand {
+    max-width: 22rem;
+}
+
+.footer-brand img {
+    width: auto;
+    max-width: 140px;
+    height: auto;
+
+    margin-bottom: 1.25rem;
+}
+
+.footer-brand-title {
+    margin: 0 0 .75rem;
+
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: var(--weight-bold);
+    line-height: 1.25;
+
+    color: var(--color-text);
+}
+
+.footer-brand-copy {
+    max-width: 20rem;
+
+    margin: 0;
+
+    font-size: .875rem;
+    line-height: 1.65;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   FOOTER COLUMN
+========================================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: .65rem;
+}
+
+.footer-column-title {
+    margin: 0 0 .5rem;
+
+    font-family: var(--font-body);
+    font-size: .7rem;
+    font-weight: var(--weight-bold);
+
+    line-height: 1.2;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+
+    color: var(--color-text-muted);
+}
+
+.footer-column a {
+    width: fit-content;
+
+    font-size: .8125rem;
+    line-height: 1.5;
+
+    color: var(--color-text-muted);
+
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
+}
+
+.footer-column a:hover {
+    color: var(--color-primary);
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   FOOTER SOCIAL LINKS
+========================================================= */
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+
+    gap: .75rem;
+
+    margin-top: 1.5rem;
+}
+
+.footer-socials a {
+    width: 30px;
+    height: 30px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: var(--color-text-muted);
+
+    transition:
+        color var(--transition-base),
+        background-color var(--transition-base),
+        transform var(--transition-fast);
+}
+
+.footer-socials a:hover {
+    color: var(--color-primary);
+
+    background: var(--color-primary-soft);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+
+    border-top: 1px solid var(--color-border);
+
+    font-size: .75rem;
+    line-height: 1.5;
+
+    color: var(--color-text-muted);
+}
+
+.footer-bottom-links {
+    display: flex;
+    align-items: center;
+
+    gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+    color: inherit;
+
+    transition:
+        color var(--transition-base),
+        opacity var(--transition-base);
+}
+
+.footer-bottom-links a:hover {
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   FOOTER RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .footer-container {
+        padding-inline: 2rem;
+    }
+
+    .footer-main-grid {
+        grid-template-columns: 1fr 1fr !important;
+
+        gap: 2.5rem;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        padding:
+            3.5rem 1.25rem 1.5rem;
+    }
+
+    .footer-main-grid {
+        grid-template-columns: 1fr 1fr !important;
+
+        gap: 2.5rem 2rem;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin-top: 3rem;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .footer-main-grid {
+        grid-template-columns: 1fr !important;
+
+        gap: 2rem;
+    }
+
+    .footer-bottom-links {
+        flex-wrap: wrap;
+
+        gap: .75rem 1.25rem;
+    }
+
+}
+
+/* =========================================================
+   GLOBAL NAVIGATION / HEADER SYSTEM
+========================================================= */
+
+.site-header {
+    position: relative;
+    z-index: var(--z-dropdown);
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, .96);
+
+    border-bottom: 1px solid var(--color-border);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* =========================================================
+   NAVIGATION CONTAINER
+========================================================= */
+
+.site-nav {
+    width: 100%;
+    max-width: var(--container-width);
+
+    min-height: 72px;
+
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.site-nav a {
+    position: relative;
+
+    font-family: var(--font-body);
+    font-size: .875rem;
+    font-weight: var(--weight-medium);
+
+    color: var(--color-text);
+
+    transition:
+        color var(--transition-base),
+        opacity var(--transition-base);
+}
+
+.site-nav a:hover {
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION LINK
+========================================================= */
+
+.site-nav a[aria-current="page"],
+.site-nav a.active {
+    color: var(--color-primary);
+    font-weight: var(--weight-semibold);
+}
+
+.site-nav a[aria-current="page"]::after,
+.site-nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -.55rem;
+
+    height: 2px;
+
+    border-radius: var(--radius-pill);
+
+    background: var(--color-primary);
+}
+
+
+/* =========================================================
+   NAVIGATION CTA
+========================================================= */
+
+.site-nav .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .75rem 1.25rem;
+
+    border-radius: 10px;
+
+    background: var(--color-primary);
+    color: var(--color-white);
+
+    font-size: .875rem;
+    font-weight: var(--weight-semibold);
+
+    box-shadow:
+        0 10px 24px rgba(62, 103, 167, .18);
+
+    transition:
+        transform var(--transition-fast),
+        background-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.site-nav .nav-cta:hover {
+    color: var(--color-white);
+
+    background: var(--color-primary-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 16px 32px rgba(62, 103, 167, .24);
+}
+
+
+/* =========================================================
+   NAVIGATION LOGO
+========================================================= */
+
+.site-nav .nav-logo {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.site-nav .nav-logo img {
+    width: auto;
+    height: auto;
+    max-height: 48px;
+}
+
+
+/* =========================================================
+   NAVIGATION DROPDOWN INDICATOR
+========================================================= */
+
+.nav-dropdown-indicator {
+    display: inline-flex;
+    align-items: center;
+
+    margin-left: .25rem;
+
+    font-size: .9em;
+
+    transition:
+        transform var(--transition-base);
+}
+
+.nav-dropdown:hover .nav-dropdown-indicator {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .site-nav {
+        min-height: 64px;
+        padding-inline: 1.25rem;
+    }
+
+    .site-nav a {
+        font-size: .8125rem;
+    }
+
+    .site-nav .nav-cta {
+        padding: .65rem 1rem;
+        font-size: .8125rem;
+    }
+
+    .site-nav .nav-logo img {
+        max-height: 42px;
+    }
+
+}
+
+/* =========================================================
+   GLOBAL FORM / INPUT SYSTEM
+========================================================= */
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: .5rem;
+}
+
+
+/* =========================================================
+   FORM LABEL
+========================================================= */
+
+.form-label {
+    font-family: var(--font-body);
+    font-size: .875rem;
+    font-weight: var(--weight-semibold);
+    line-height: 1.4;
+
+    color: var(--color-text);
+}
+
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+========================================================= */
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: .9rem 1rem;
+
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-button);
+
+    background: var(--color-white);
+    color: var(--color-text);
+
+    font-family: var(--font-body);
+    font-size: .95rem;
+    font-weight: var(--weight-regular);
+    line-height: 1.5;
+
+    outline: none;
+
+    transition:
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        background-color var(--transition-base);
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+textarea {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(93, 104, 122, .65);
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--color-primary-light);
+
+    box-shadow:
+        0 0 0 4px rgba(91, 143, 230, .12);
+}
+
+
+/* =========================================================
+   DISABLED
+========================================================= */
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+    cursor: not-allowed;
+
+    background: var(--color-bg-muted);
+
+    opacity: .65;
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1.5rem;
+}
+
+
+/* =========================================================
+   FORM FULL WIDTH
+========================================================= */
+
+.form-full {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   FORM ERROR
+========================================================= */
+
+.form-error {
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: .8125rem;
+    line-height: 1.4;
+
+    color: #B42318;
+}
+
+
+/* =========================================================
+   FORM SUCCESS
+========================================================= */
+
+.form-success {
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: .8125rem;
+    line-height: 1.4;
+
+    color: #16794A;
+}
+
+
+/* =========================================================
+   FORM RESPONSIVE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-full {
+        grid-column: auto;
+    }
+
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1280px) {
+
+    .section-container {
+        padding-inline: 3rem;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .section {
+        padding: 5rem 0;
+    }
+
+    .section-alt {
+        padding: 5rem 0;
+    }
+
+    .section-lg {
+        padding: 6rem 0;
+    }
+
+    .section-container {
+        padding-inline: 2rem;
+    }
+
+    .footer-main-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2.5rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    .section-alt {
+        padding: 4rem 0;
+    }
+
+    .section-lg {
+        padding: 4.5rem 0;
+    }
+
+    .section-container {
+        padding-inline: 1.25rem;
+    }
+
+    .section-header {
+        margin-bottom: 3rem;
+    }
+
+    .ootb-card {
+        padding: 30px 24px;
+        border-radius: 24px;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .footer-main-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+
+}

@@ -1,0 +1,151 @@
+<!-- SHARED OOTB NAVIGATION -->
+
+<nav
+  id="mainNav"
+  class="fixed top-0 left-0 right-0 z-50
+  bg-white/85
+  backdrop-blur-xl
+  border-b border-slate-200/70
+  transition-all duration-300">
+
+  <div class="max-w-7xl mx-auto h-20 px-8 flex items-center justify-between">
+
+    <!-- LOGO -->
+    <a href="index.html" class="flex items-center gap-2">
+      <img
+        src="assets/logo.png"
+        class="h-14 w-auto transition-all duration-500 hover:scale-110"
+        alt="Out Of The Blue">
+    </a>
+
+    <!-- MENU -->
+    <div class="hidden xl:flex items-center gap-10">
+
+      <!-- About -->
+      <a
+        href="about.html"
+        data-nav="about"
+        class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+        About Us
+      </a>
+
+      <!-- Ventures Dropdown -->
+      <div class="relative group">
+
+        <!-- Parent Link -->
+        <a
+          href="ventures.html"
+          data-nav="ventures"
+          class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+
+          Ventures
+
+          <span class="material-symbols-outlined text-sm">
+            expand_more
+          </span>
+
+        </a>
+
+        <!-- Dropdown -->
+        <div
+          class="absolute left-0 top-full mt-3 w-64 bg-white shadow-[0_24px_60px_rgba(15,23,42,0.18)] rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100 overflow-hidden">
+
+          <!-- Indian Doctors Network -->
+          <a
+            href="indiandoctorsnetwork.html"
+            class="block px-4 py-3 hover:bg-gray-100 text-slate-700">
+            Indian Doctors Network
+          </a>
+
+          <!-- Indian Dental Network -->
+          <a
+            href="indiandentalnetwork.html"
+            class="block px-4 py-3 hover:bg-gray-100 text-slate-700">
+            Indian Dental Network
+          </a>
+
+          <!-- Orators Society -->
+          <a
+            href="oratorssociety.html"
+            class="block px-4 py-3 hover:bg-gray-100 text-slate-700">
+            Orators Society
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Services -->
+      <a
+        href="services.html"
+        data-nav="services"
+        class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+        Services
+      </a>
+
+      <!-- Studio -->
+      <a
+        href="studio.html"
+        data-nav="studio"
+        class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+        Studio
+      </a>
+
+      <!-- Community -->
+      <a
+        href="community.html"
+        data-nav="community"
+        class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+        Community
+      </a>
+
+      <!-- Investors -->
+      <a
+        href="investors.html"
+        data-nav="investors"
+        class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+        Investors
+      </a>
+
+      <!-- Careers -->
+      <a
+        href="careers.html"
+        data-nav="careers"
+        class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+        Careers
+      </a>
+
+      <!-- Contact -->
+      <a
+        href="contact.html"
+        data-nav="contact"
+        class="relative text-[15px] font-medium text-slate-600 hover:text-primary transition-all duration-300 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+        Contact Us
+      </a>
+
+    </div>
+
+    <!-- CTA BUTTON -->
+    <a href="contact.html" target="_blank">
+      <button
+        class="group spotlight
+        bg-primary
+        text-white
+        px-7
+        py-3
+        rounded-xl
+        font-semibold
+        shadow-[0_12px_28px_rgba(59,96,165,.28)]
+        hover:-translate-y-1
+        hover:scale-[1.02]
+        hover:shadow-[0_18px_40px_rgba(59,96,165,.40)]
+        transition-all duration-300">
+
+        Work with us
+
+      </button>
+    </a>
+
+  </div>
+
+</nav>

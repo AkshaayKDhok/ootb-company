@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 100 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v323/kJEPBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzBwG-RpA6RzaxHMPdY40KH8nGzv3fzfVJO1USv9ls.woff2) format('woff2');
+  src: url('https://fonts.gstatic.com/s/materialsymbolsoutlined/v323/kJEPBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzBwG-RpA6RzaxHMPdY40KH8nGzv3fzfVJO1USv9ls.woff2') format('woff2');
 }
 
 .material-symbols-outlined {
@@ -19,6 +19,12 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
+
+  /* Standard property */
+  font-feature-settings: 'liga';
+
+  /* WebKit fallback */
   -webkit-font-feature-settings: 'liga';
+
   -webkit-font-smoothing: antialiased;
 }

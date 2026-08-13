@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OOTB • Interactive How To Reach</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/howtoreach-v2.css">
+
+</head>
+
+<body>
+
+    <section id="how-to-reach">
+
+        <div class="container">
+
+            <div class="heading">
+
+                <p class="eyebrow">
+                    VISIT OUT OF THE BLUE
+                </p>
+
+                <h2>
+                    How To Reach Us
+                </h2>
+
+                <p class="subtitle">
+                    Choose your route and we'll guide you to our office with an interactive navigation experience.
+                </p>
+
+            </div>
+
+            <div class="route-selector">
+
+                <button class="route-btn active" id="balewadiBtn">
+                    From Balewadi
+                </button>
+
+                <button class="route-btn" id="universityBtn">
+                    From University Circle
+                </button>
+
+            </div>
+
+            <div class="map-wrapper">
+
+    <!-- MAP ONLY -->
+    <div class="map-container">
+
+        <div class="map-stage">
+
+            <img
+                id="ootbMap"
+                src="assets/ootb-map-v2.svg"
+                alt="Out Of The Blue Route Map"
+            >
+
+            <svg
+                id="routeSVG"
+                viewBox="0 0 1200 675"
+                preserveAspectRatio="none"
+            >
+
+                <path
+                    id="routeGlow"
+                    fill="none"
+                    stroke="#5AA8FF"
+                    stroke-width="18"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    opacity="0.22"
+                ></path>
+
+                <path
+                    id="routePath"
+                    fill="none"
+                    stroke="#0A66FF"
+                    stroke-width="8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                ></path>
+
+                <circle
+                    id="destinationDot"
+                    cx="445"
+                    cy="540"
+                    r="9"
+                    fill="#0A66FF"
+                    filter="drop-shadow(0 0 10px rgba(10,102,255,.45))"
+                ></circle>
+
+                <g id="routeVehicle">
+
+                    <g id="vehicleBody">
+
+                        <circle
+                            cx="0"
+                            cy="0"
+                            r="10"
+                            fill="#0A66FF"
+                        ></circle>
+
+                        <path
+                            d="M-4 -3 L5 0 L-4 3 Z"
+                            fill="white"
+                        ></path>
+
+                    </g>
+
+                </g>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <div class="nav-instruction" id="navInstruction">
+
+        <div class="nav-icon" id="navIcon">
+            ↑
+        </div>
+
+        <div class="nav-text">
+
+            <span class="nav-label">
+                NAVIGATION
+            </span>
+
+            <strong id="navTitle">
+                Head towards Baner Road
+            </strong>
+
+            <small id="navSubtext">
+                Follow the highlighted route
+            </small>
+
+        </div>
+
+    </div>
+
+</div>
+
+            <div class="bottom-actions">
+
+                <button class="google-btn">
+
+                    Open in Google Maps
+
+                </button>
+
+            </div>
+
+            <h3 class="arrival-title">
+                WELCOME TO OUT OF THE BLUE
+            </h3>
+
+            <div class="destination-card" id="destinationCard">
+
+                <button class="close-card" id="closeCard">
+                    ✕
+                </button>
+
+                <img src="assets/ootb-building.jpg" alt="Out Of The Blue Building">
+
+                <div class="destination-content">
+
+                    <span class="destination-badge">
+                        YOU'VE ARRIVED
+                    </span>
+
+                    <h3>
+                        Out Of The Blue
+                    </h3>
+
+                    <p>
+                        SV Greenhills<br>
+                        3rd, 4th & 5th Floor<br>
+                        Near Achalare Realtors<br>
+                        Baner Road, Pune – 411045
+                    </p>
+                    <a class="destination-map-btn" href="https://maps.app.goo.gl/ufDmuWpCiTEo99Xw5" target="_blank">
+
+                        Open in Google Maps →
+
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="js/howtoreach-v2.js"></script>
+
+</body>
+
+</html>
