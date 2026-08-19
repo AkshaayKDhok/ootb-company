@@ -21,12 +21,10 @@
     padding-block: 6rem;
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             #ffffff 0%,
             #f8fbff 72%,
-            #eef4fb 100%
-        );
+            #eef4fb 100%);
 }
 
 
@@ -41,8 +39,7 @@
     display: grid;
 
     grid-template-columns:
-        minmax(0, .92fr)
-        minmax(0, 1.08fr);
+        minmax(0, .92fr) minmax(0, 1.08fr);
 
     align-items: center;
 
@@ -105,10 +102,10 @@
     margin: 0;
 
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-size: clamp(3rem, 5vw, 4rem);
     font-weight: var(--weight-extrabold);
     line-height: 1.05;
-    letter-spacing: -.045em;
+    letter-spacing: -.055em;
 
     color: var(--color-text);
 }
@@ -426,21 +423,7 @@
 ========================================================= */
 
 .ootb-why-section {
-    position: relative;
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            circle at 78% 22%,
-            rgba(62, 103, 167, .07),
-            transparent 30%
-        ),
-        linear-gradient(
-            180deg,
-            #ffffff 0%,
-            #f7faff 100%
-        );
+    background: var(--color-bg);
 }
 
 
@@ -452,285 +435,177 @@
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.2fr)
-        minmax(20rem, .8fr);
+        minmax(0, 1.1fr) minmax(0, .9fr);
 
-    align-items: end;
+    gap: 7rem;
 
-    column-gap: 6rem;
-    row-gap: 1.5rem;
+    align-items: start;
 
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
+.ootb-why-header .section-copy {
+    max-width: 36rem;
 
-.ootb-why-header .section-label {
-    grid-column: 1 / -1;
-
-    margin-bottom: 0;
-}
-
-
-.ootb-why-title {
-    max-width: 56rem;
-
-    margin: 0;
-
-    font-family: var(--font-heading);
-    font-size: clamp(2.25rem, 4vw, 3.5rem);
-    font-weight: var(--weight-extrabold);
-
-    line-height: 1.08;
-    letter-spacing: -.04em;
-
-    color: var(--color-text);
-}
-
-
-.ootb-why-title span {
-    display: block;
-
-    color: var(--color-primary);
-}
-
-
-.ootb-why-copy {
-    max-width: 47.5rem;
-
-    margin: 1.5rem 0 0;
-
-    color: var(--color-text-muted);
-
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    font-weight: var(--weight-regular);
-
-    line-height: 1.9;
+    margin-left: auto;
 }
 
 
 /* =========================================================
-   SYSTEM STATEMENT
+   FOUR-STEP FLOW
 ========================================================= */
 
-.ootb-why-system {
+.ootb-why-flow {
     position: relative;
 
-    padding: 3rem 0;
-
-    border-top: 1px solid rgba(15, 23, 42, .10);
-    border-bottom: 1px solid rgba(15, 23, 42, .10);
+    border-top: 1px solid var(--color-border-strong);
 }
 
 
-.ootb-why-system-label {
-    margin-bottom: 1.75rem;
+/* =========================================================
+   STEP
+========================================================= */
 
-    color: rgba(62, 103, 167, .58);
+.ootb-why-step {
+    display: grid;
 
-    font-family: var(--font-body);
+    grid-template-columns:
+        5rem minmax(0, 1fr) 11rem;
 
-    font-size: .65rem;
+    gap: 2rem;
+
+    align-items: center;
+
+    min-height: 10.5rem;
+
+    padding-block: 2.25rem;
+
+    border-bottom: 1px solid var(--color-border-strong);
+
+    transition:
+        background-color var(--transition-base),
+        padding var(--transition-base);
+}
+
+.ootb-why-step:hover {
+    padding-inline: 1.5rem;
+
+    background: var(--color-primary-soft);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.ootb-why-index {
+    font-family: var(--font-heading);
+
+    font-size: 3.5rem;
+    line-height: 1;
 
     font-weight: var(--weight-bold);
 
+    letter-spacing: -.06em;
+
+    color: rgba(62, 103, 167, .14);
+
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
+}
+
+.ootb-why-step:hover .ootb-why-index {
+    color: rgba(62, 103, 167, .32);
+
+    transform: translateX(.25rem);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.ootb-why-main {
+    max-width: 42rem;
+}
+
+.ootb-why-kicker {
+    margin: 0 0 .55rem;
+
+    font-size: .7rem;
     line-height: 1.2;
+
+    font-weight: var(--weight-bold);
 
     letter-spacing: .22em;
 
-    text-transform: uppercase;
-}
-
-
-.ootb-why-system-flow {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 1rem;
-}
-
-
-.ootb-why-system-flow > span:not(.ootb-why-arrow) {
-    color: var(--color-text);
-
-    font-family: var(--font-heading);
-
-    font-size: clamp(
-        1.25rem,
-        2vw,
-        2rem
-    );
-
-    font-weight: var(--weight-bold);
-
-    line-height: 1.1;
-
-    letter-spacing: -.035em;
-}
-
-
-.ootb-why-system-flow .ootb-why-highlight {
     color: var(--color-primary);
 }
 
+.ootb-why-main h3 {
+    margin: 0;
+    color: var(--color-text);
+}
 
-.ootb-why-arrow {
-    color: rgba(62, 103, 167, .45);
+.ootb-why-main>p:last-child {
+    max-width: 38rem;
 
-    font-size: 1.4rem;
-
-    font-weight: 400;
-
-    flex: 0 0 auto;
+    color: var(--color-text-muted);
 }
 
 
-.ootb-why-system-copy {
-    max-width: 47.5rem;
+/* =========================================================
+   SIGNAL
+========================================================= */
 
-    margin: 1.5rem 0 0;
+.ootb-why-signal {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: .65rem;
+
+    width: fit-content;
+
+    padding: .7rem .9rem;
+
+    border: 1px solid var(--color-border-strong);
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .72);
+
+    font-size: .75rem;
+
+    font-weight: var(--weight-semibold);
 
     color: var(--color-text-muted);
 
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    font-weight: var(--weight-regular);
-
-    line-height: 1.9;
-}
-
-/* =========================================================
-   ECOSYSTEM SIGNALS
-========================================================= */
-
-.ootb-why-ecosystem {
-    display: grid;
-
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-
-    border-bottom: 1px solid rgba(15, 23, 42, .10);
-}
-
-
-.ootb-why-ecosystem span {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-
-    min-height: 5rem;
-
-    padding: 0 1.5rem;
-
-    color: rgba(62, 103, 167, .62);
-
-    font-family: var(--font-body);
-    font-size: .65rem;
-    font-weight: var(--weight-bold);
-
-    line-height: 1.4;
-
-    letter-spacing: .18em;
-    text-transform: uppercase;
-
-    border-right: 1px solid rgba(15, 23, 42, .08);
-
     transition:
-        color .3s ease,
-        background-color .3s ease,
-        padding-left .3s ease;
+        border-color var(--transition-base),
+        color var(--transition-base),
+        background-color var(--transition-base),
+        transform var(--transition-base);
 }
 
+.ootb-why-signal .material-symbols-outlined {
+    font-size: 1rem;
 
-.ootb-why-ecosystem span:first-child {
-    padding-left: 0;
+    color: var(--color-primary);
 }
 
-
-.ootb-why-ecosystem span:last-child {
-    border-right: 0;
-}
-
-
-/* Small active signal */
-
-.ootb-why-ecosystem span::before {
-    content: "";
-
-    width: .4rem;
-    height: .4rem;
-
-    margin-right: .75rem;
-
-    flex: 0 0 auto;
-
-    border-radius: 50%;
-
-    background: rgba(62, 103, 167, .35);
-
-    box-shadow: 0 0 0 0 rgba(62, 103, 167, .18);
-
-    transition:
-        background-color .3s ease,
-        box-shadow .3s ease,
-        transform .3s ease;
-}
-
-
-/* Subtle interaction */
-
-.ootb-why-ecosystem span:hover {
+.ootb-why-step:hover .ootb-why-signal {
     color: var(--color-primary);
 
-    background: rgba(62, 103, 167, .035);
+    border-color: rgba(62, 103, 167, .25);
 
-    padding-left: 1.75rem;
+    background: white;
+
+    transform: translateX(-.25rem);
 }
 
-
-.ootb-why-ecosystem span:hover::before {
-    background: var(--color-primary);
-
-    box-shadow:
-        0 0 0 5px rgba(62, 103, 167, .10);
-
-    transform: scale(1.08);
-}
-
-@keyframes ootbEcosystemPulse {
-
-    0%,
-    100% {
-        box-shadow: 0 0 0 0 rgba(62, 103, 167, .12);
-    }
-
-    50% {
-        box-shadow: 0 0 0 5px rgba(62, 103, 167, .04);
-    }
-}
-
-
-.ootb-why-ecosystem span::before {
-    animation:
-        ootbEcosystemPulse 4s ease-in-out infinite;
-}
-
-
-.ootb-why-ecosystem span:nth-child(2)::before {
-    animation-delay: .8s;
-}
-
-
-.ootb-why-ecosystem span:nth-child(3)::before {
-    animation-delay: 1.6s;
-}
-
-
-.ootb-why-ecosystem span:nth-child(4)::before {
-    animation-delay: 2.4s;
-}
 
 /* =========================================================
    FOOTER
@@ -741,37 +616,27 @@
 
     align-items: center;
 
-    gap: .9rem;
+    gap: 1rem;
 
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 
-    color: rgba(62, 103, 167, .58);
-
-    font-family: var(--font-body);
-
-    font-size: .67rem;
+    font-size: .7rem;
+    line-height: 1.3;
 
     font-weight: var(--weight-bold);
 
-    line-height: 1.4;
-
     letter-spacing: .2em;
 
-    text-transform: uppercase;
+    color: var(--color-primary);
 }
 
-
 .ootb-why-footer-line {
-    display: block;
-
-    width: 3rem;
+    width: 3.25rem;
     height: 1px;
 
-    flex: 0 0 auto;
+    flex-shrink: 0;
 
     background: var(--color-primary);
-
-    opacity: .7;
 }
 
 
@@ -779,105 +644,65 @@
    RESPONSIVE
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
 
     .ootb-why-header {
-        grid-template-columns: 1fr;
-
-        gap: 1.75rem;
-
-        margin-bottom: 4rem;
+        gap: 4rem;
     }
 
+    .ootb-why-step {
+        grid-template-columns:
+            4rem minmax(0, 1fr) 9rem;
 
-    .ootb-why-copy {
-        max-width: 42rem;
-    }
-
-
-    .ootb-why-system-flow {
-        flex-wrap: wrap;
-
-        justify-content: flex-start;
-
-        gap: 1.25rem;
-    }
-
-
-    .ootb-why-ecosystem {
-        flex-wrap: wrap;
-
-        justify-content: flex-start;
+        gap: 1.5rem;
     }
 
 }
 
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
 
     .ootb-why-header {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
         margin-bottom: 3rem;
     }
 
-
-    .ootb-why-title {
-        font-size: 2.25rem;
-        line-height: 1.08;
+    .ootb-why-header .section-copy {
+        margin-left: 0;
     }
 
-
-    .ootb-why-copy {
-        font-size: .95rem;
-        line-height: 1.7;
-    }
-
-
-    .ootb-why-system {
-        padding: 2.25rem 0;
-    }
-
-
-    .ootb-why-system-flow {
-        display: grid;
-
-        grid-template-columns: 1fr auto 1fr;
+    .ootb-why-step {
+        grid-template-columns:
+            3.5rem minmax(0, 1fr);
 
         gap: 1rem;
+
+        min-height: auto;
+
+        padding-block: 2rem;
     }
 
-
-    .ootb-why-system-flow > span:not(.ootb-why-arrow) {
-        font-size: 1.1rem;
+    .ootb-why-step:hover {
+        padding-inline: .75rem;
     }
 
-
-    .ootb-why-arrow {
-        font-size: 1rem;
+    .ootb-why-index {
+        font-size: 2.75rem;
     }
 
+    .ootb-why-signal {
+        grid-column: 2;
 
-    .ootb-why-system-copy {
-        font-size: .86rem;
+        margin-top: .25rem;
     }
-
-
-    .ootb-why-ecosystem {
-        align-items: flex-start;
-
-        flex-direction: column;
-
-        gap: .9rem;
-    }
-
 
     .ootb-why-footer {
-        align-items: flex-start;
+        margin-top: 1.5rem;
 
-        font-size: .58rem;
-
-        line-height: 1.6;
-
-        letter-spacing: .16em;
+        font-size: .62rem;
     }
 
 }
@@ -891,17 +716,13 @@
     overflow: hidden;
 
     background:
-        radial-gradient(
-            circle at 20% 20%,
+        radial-gradient(circle at 20% 20%,
             rgba(71, 114, 181, .055),
-            transparent 32%
-        ),
-        linear-gradient(
-            180deg,
+            transparent 32%),
+        linear-gradient(180deg,
             #f7f9fd 0%,
             #ffffff 55%,
-            #f3f7fc 100%
-        );
+            #f3f7fc 100%);
 }
 
 
@@ -913,8 +734,7 @@
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.15fr)
-        minmax(20rem, .65fr);
+        minmax(0, 1.15fr) minmax(20rem, .65fr);
 
     align-items: end;
 
@@ -997,35 +817,6 @@
         border-color .45s ease;
 }
 
-
-/* ---------------------------------------------------------
-   REMOVE OLD FEATURED CARD DIFFERENCE
---------------------------------------------------------- */
-
-.venture-featured {
-    min-height: 34rem;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 18px 45px rgba(15, 23, 42, .055);
-}
-
-
-/* ---------------------------------------------------------
-   SECONDARY CARDS
---------------------------------------------------------- */
-
-.venture-secondary-card {
-    min-height: 28rem;
-
-    display: flex;
-    flex-direction: column;
-
-    padding: 2.5rem;
-}
-
-
 /* ---------------------------------------------------------
    HOVER — ANY VENTURE BECOMES BLUE
 --------------------------------------------------------- */
@@ -1036,59 +827,16 @@
     color: white;
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             #4772b5 0%,
             #345b91 48%,
-            #27476f 100%
-        );
+            #27476f 100%);
 
     border-color: transparent;
 
     box-shadow:
         0 30px 75px rgba(15, 23, 42, .18);
 }
-
-
-/* =========================================================
-   BACKGROUND NUMBER
-========================================================= */
-
-.venture-featured-bg {
-    position: absolute;
-
-    right: -1rem;
-    bottom: -2rem;
-
-    pointer-events: none;
-
-    z-index: 0;
-}
-
-.venture-featured-bg span {
-    color: rgba(62, 103, 167, .055);
-
-    font-family: var(--font-heading);
-
-    font-size: clamp(13rem, 18vw, 18rem);
-
-    font-weight: var(--weight-extrabold);
-
-    line-height: .75;
-
-    letter-spacing: -.1em;
-
-    transition:
-        color .45s ease,
-        transform .6s cubic-bezier(.22, 1, .36, 1);
-}
-
-.venture-featured:hover .venture-featured-bg span {
-    color: rgba(255, 255, 255, .07);
-
-    transform: translateX(-.5rem);
-}
-
 
 /* ---------------------------------------------------------
    SECONDARY BACKGROUND NUMBERS
@@ -1157,21 +905,7 @@
 ========================================================= */
 
 .venture-secondary-content h3 {
-    margin: 0;
-
     min-height: 4.8rem;
-
-    color: var(--color-text);
-
-    font-family: var(--font-heading);
-
-    font-size: clamp(2.4rem, 3.2vw, 4rem);
-
-    font-weight: var(--weight-extrabold);
-
-    line-height: .95;
-
-    letter-spacing: -.045em;
 
     transition: color .4s ease;
 }
@@ -1188,19 +922,10 @@
 .venture-secondary-content p {
     max-width: 30rem;
 
-    margin: .9rem 0 0;
-
     color: var(--color-text-muted);
-
-    font-family: var(--font-body);
-
-    font-size: .92rem;
-
-    line-height: 1.7;
 
     transition: color .4s ease;
 }
-
 
 .venture-secondary-card:hover .venture-secondary-content p {
     color: rgba(255, 255, 255, .78);
@@ -1225,7 +950,7 @@
    SECONDARY CARD ARROW POSITION
 ========================================================= */
 
-.venture-secondary-card > .venture-portfolio-arrow {
+.venture-secondary-card>.venture-portfolio-arrow {
     position: relative;
 
     z-index: 2;
@@ -1255,7 +980,7 @@
         transform .45s cubic-bezier(.22, 1, .36, 1);
 }
 
-.venture-secondary-card:hover > .venture-portfolio-arrow {
+.venture-secondary-card:hover>.venture-portfolio-arrow {
     background: rgba(255, 255, 255, .16);
 
     border-color: rgba(255, 255, 255, .35);
@@ -1277,12 +1002,10 @@
 .venture-secondary-dental:hover,
 .venture-secondary-orators:hover {
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             #4772b5 0%,
             #345b91 48%,
-            #27476f 100%
-        );
+            #27476f 100%);
 }
 
 /* =========================================================
@@ -1333,29 +1056,8 @@
         gap: 1rem;
     }
 
-    .venture-featured,
     .venture-secondary-card {
         padding: 2.25rem;
-    }
-
-    .venture-featured-title {
-    margin: 0;
-
-    font-size: clamp(2.4rem, 3.2vw, 4rem);
-
-    font-weight: var(--weight-extrabold);
-
-    line-height: .95;
-
-    letter-spacing: -.045em;
-
-    color: var(--color-heading);
-
-    transition: color .35s ease;
-}
-
-    .venture-secondary-content h3 {
-        font-size: 2.35rem;
     }
 
 }
@@ -1382,90 +1084,11 @@
         display: contents;
     }
 
-    .venture-featured,
     .venture-secondary-card {
         min-height: 30rem;
     }
 
-    .venture-featured-content {
-        min-height: 24rem;
-    }
-
 }
-
-@media (max-width: 640px) {
-
-    .ventures-portfolio-header {
-        margin-bottom: 2.5rem;
-    }
-
-    .ventures-portfolio-intro {
-        font-size: .95rem;
-        line-height: 1.7;
-    }
-
-    .ventures-portfolio-grid {
-        gap: 1rem;
-    }
-
-    .venture-featured,
-    .venture-secondary-card {
-        min-height: 28rem;
-
-        padding: 2rem;
-
-        border-radius: 1.5rem;
-    }
-
-    .venture-featured-content {
-        min-height: 24rem;
-    }
-
-    .venture-featured-title {
-    margin: 0;
-
-    font-size: clamp(2.4rem, 3.2vw, 4rem);
-
-    font-weight: var(--weight-extrabold);
-
-    line-height: .95;
-
-    letter-spacing: -.045em;
-
-    color: var(--color-heading);
-
-    transition: color .35s ease;
-}
-
-    .venture-featured-copy,
-    .venture-secondary-content p {
-        font-size: .9rem;
-    }
-
-    .venture-featured-bg span {
-        font-size: 13rem;
-    }
-
-    .ventures-secondary {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-    }
-
-    .venture-secondary-content h3 {
-        font-size: 2.5rem;
-    }
-
-    .venture-secondary-number {
-        font-size: 8rem;
-    }
-
-    .ventures-portfolio-footer {
-        font-size: .58rem;
-        letter-spacing: .16em;
-    }
-
-}
-
 
 /* =========================================================
    MOBILE
@@ -1491,7 +1114,6 @@
         display: contents;
     }
 
-    .venture-featured,
     .venture-secondary-card {
         min-height: 28rem;
 
@@ -1500,37 +1122,8 @@
         border-radius: 1.5rem;
     }
 
-    .venture-featured-content {
-        min-height: 24rem;
-    }
-
-    .venture-featured-title {
-    margin: 0;
-
-    font-size: clamp(2.4rem, 3.2vw, 4rem);
-
-    font-weight: var(--weight-extrabold);
-
-    line-height: .95;
-
-    letter-spacing: -.045em;
-
-    color: var(--color-heading);
-
-    transition: color .35s ease;
-}
-
-    .venture-featured-copy,
     .venture-secondary-content p {
         font-size: .9rem;
-    }
-
-    .venture-featured-bg span {
-        font-size: 13rem;
-    }
-
-    .venture-secondary-content h3 {
-        font-size: 2.5rem;
     }
 
     .venture-secondary-number {
@@ -1763,6 +1356,7 @@
     }
 
 }
+
 /* =========================================================
    SECTION 5 — COMMUNITY
 ========================================================= */
@@ -1785,16 +1379,12 @@
     border-radius: 40px;
 
     background:
-        radial-gradient(
-            circle at 85% 15%,
+        radial-gradient(circle at 85% 15%,
             rgba(62, 103, 167, .16),
-            transparent 34%
-        ),
-        radial-gradient(
-            circle at 10% 90%,
+            transparent 34%),
+        radial-gradient(circle at 10% 90%,
             rgba(62, 103, 167, .08),
-            transparent 32%
-        ),
+            transparent 32%),
         #0c1118;
 
     box-shadow:
@@ -1837,17 +1427,8 @@
 }
 
 .community-title {
-    margin: 0;
-
     max-width: 52rem;
-
     color: #ffffff;
-
-    font-family: var(--font-heading);
-    font-size: clamp(2.8rem, 4.5vw, 3.8rem);
-    font-weight: var(--weight-extrabold);
-    line-height: 1.05;
-    letter-spacing: -.045em;
 }
 
 .community-copy {
@@ -1856,10 +1437,6 @@
     margin: 1.5rem 0 0;
 
     color: #b7c2d3;
-
-    font-family: var(--font-body);
-    font-size: 1rem;
-    line-height: 1.7;
 }
 
 
@@ -2018,11 +1595,9 @@
     justify-content: center;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #4d7fc9,
-            #315f9e
-        );
+            #315f9e);
 
     color: #ffffff;
 
@@ -2178,12 +1753,10 @@
     transform-origin: left center;
 
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             transparent,
             rgba(111, 158, 234, .20),
-            transparent
-        );
+            transparent);
 
     animation: communityLinePulse 5s ease-in-out infinite;
 }
@@ -2342,6 +1915,7 @@
     }
 
 }
+
 /* =========================================================
    HOW WE WORK / OPERATING SYSTEM
    ========================================================= */
@@ -2387,11 +1961,9 @@
     width: 0;
     height: 100%;
 
-    background: linear-gradient(
-        90deg,
-        #4772b5,
-        #6f9eea
-    );
+    background: linear-gradient(90deg,
+            #4772b5,
+            #6f9eea);
 
     border-radius: inherit;
 
@@ -2508,36 +2080,16 @@
 
 .workflow-content h3 {
     margin: 0 0 .8rem;
-
     color: var(--text);
-
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: var(--weight-bold);
-
-    line-height: 1.2;
-
-    letter-spacing: -.025em;
-
-    transition:
-        color .3s ease,
-        transform .3s ease;
 }
 
-
 .workflow-content p {
-    margin: 0;
-
     max-width: 18rem;
 
     color: var(--muted);
 
-    font-family: var(--font-body);
-    font-size: .98rem;
-
-    line-height: 1.7;
+    margin: 0;
 }
-
 
 .workflow-step:hover .workflow-node {
     transform: translate(-50%, -50%) translateY(-5px) scale(1.05);
@@ -2659,12 +2211,6 @@
         padding-right: 0;
     }
 
-
-    .workflow-content h3 {
-        font-size: 1.35rem;
-    }
-
-
     .workflow-footer {
         margin-top: 3.5rem;
 
@@ -2672,6 +2218,7 @@
     }
 
 }
+
 /* =========================================================
    CAREERS / HIRING
 ========================================================= */
@@ -2717,7 +2264,7 @@
 .careers-open-count span {
     color: var(--text);
     font-family: var(--font-heading);
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: var(--weight-extrabold);
     line-height: 1;
     letter-spacing: -.06em;
@@ -2872,13 +2419,6 @@
 .career-explorer-title {
     color: var(--text);
 
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: var(--weight-bold);
-
-    line-height: 1.25;
-    letter-spacing: -.025em;
-
     transition: color .3s ease;
 }
 
@@ -2946,11 +2486,9 @@
     overflow: hidden;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #f8fafc 0%,
-            #f1f5fb 100%
-        );
+            #f1f5fb 100%);
 
     border-left: 1px solid #dfe6ef;
 }
@@ -3023,16 +2561,7 @@
 }
 
 .career-preview-content h3 {
-    margin: 0 0 1.25rem;
-
     color: var(--text);
-
-    font-family: var(--font-heading);
-    font-size: 2.3rem;
-    font-weight: var(--weight-extrabold);
-
-    line-height: 1.08;
-    letter-spacing: -.045em;
 }
 
 .career-preview-description {
@@ -3143,10 +2672,6 @@ CAREERS / CLOSING STATEMENT
         padding-left: 1.25rem;
     }
 
-    .career-explorer-title {
-        font-size: 1.05rem;
-    }
-
     .career-explorer-meta {
         font-size: .78rem;
     }
@@ -3171,6 +2696,7 @@ CAREERS / CLOSING STATEMENT
     }
 
 }
+
 /* ---------------------------------------------------------
    ROLE PREVIEW TRANSITION
 --------------------------------------------------------- */
@@ -3185,6 +2711,7 @@ CAREERS / CLOSING STATEMENT
     opacity: 0;
     transform: translateY(8px);
 }
+
 /* =========================================================
    WHO WE WORK WITH — EDITORIAL POSITIONING SECTION
 ========================================================= */
@@ -3234,7 +2761,7 @@ CAREERS / CLOSING STATEMENT
     user-select: none;
 }
 
-.who-build-left > * {
+.who-build-left>* {
     position: relative;
     z-index: 1;
 }
@@ -3313,15 +2840,7 @@ CAREERS / CLOSING STATEMENT
 
 .who-build-item-content h3 {
     margin: 0 0 .4rem;
-
     color: var(--text);
-
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: var(--weight-bold);
-
-    line-height: 1.25;
-    letter-spacing: -.025em;
 
     transition:
         color .3s ease,
@@ -3378,16 +2897,12 @@ CAREERS / CLOSING STATEMENT
     overflow: hidden;
 
     background:
-        radial-gradient(
-            circle at 85% 15%,
+        radial-gradient(circle at 85% 15%,
             rgba(111, 158, 234, .20),
-            transparent 30%
-        ),
-        linear-gradient(
-            145deg,
+            transparent 30%),
+        linear-gradient(145deg,
             #315b91 0%,
-            #243f68 100%
-        );
+            #243f68 100%);
 
     border-radius: 2rem;
 
@@ -3457,8 +2972,6 @@ CAREERS / CLOSING STATEMENT
 
 .why-ootb-content .section-title {
     max-width: 100%;
-    font-size: clamp(2.7rem, 3.4vw, 3.4rem);
-    white-space: nowrap;
 }
 
 
@@ -3661,40 +3174,48 @@ CAREERS / CLOSING STATEMENT
     }
 
 }
+
 /* =========================================================
 FINAL CTA
 ========================================================= */
 
 .final-cta-section {
     position: relative;
+
     overflow: hidden;
-    background: #f7faff;
+
+    background:
+        radial-gradient(circle at 15% 50%,
+            rgba(62, 103, 167, .08),
+            transparent 32%),
+        radial-gradient(circle at 88% 35%,
+            rgba(120, 180, 255, .10),
+            transparent 30%),
+        #f7faff;
 }
 
 
-/* ---------------------------------------------------------
-ATMOSPHERIC BACKGROUND
---------------------------------------------------------- */
+/* =========================================================
+   BACKGROUND
+========================================================= */
 
 .final-cta-bg {
     position: absolute;
+
     inset: 0;
 
     background:
-        radial-gradient(
-            circle at 50% 45%,
-            rgba(71, 114, 181, .12) 0%,
-            rgba(71, 114, 181, .045) 28%,
-            rgba(247, 250, 255, 0) 62%
-        );
+        radial-gradient(circle at 50% 50%,
+            rgba(62, 103, 167, .035),
+            transparent 60%);
 
     pointer-events: none;
 }
 
 
-/* ---------------------------------------------------------
-OVERSIZED BACKGROUND WORD
---------------------------------------------------------- */
+/* =========================================================
+   OVERSIZED BACKGROUND WORD
+========================================================= */
 
 .final-cta-word {
     position: absolute;
@@ -3702,148 +3223,744 @@ OVERSIZED BACKGROUND WORD
     left: 50%;
     top: 50%;
 
-    transform: translate(-50%, -50%);
-
-    color: rgba(71, 114, 181, .035);
+    transform:
+        translate(-50%, -50%);
 
     font-family: var(--font-heading);
-    font-size: clamp(12rem, 28vw, 30rem);
-    font-weight: var(--weight-extrabold);
+
+    font-size: clamp(12rem,
+            28vw,
+            30rem);
 
     line-height: .8;
+
+    font-weight: var(--weight-extrabold);
+
     letter-spacing: -.09em;
 
     white-space: nowrap;
 
+    color: rgba(62, 103, 167, .035);
+
     pointer-events: none;
+
     user-select: none;
 }
 
 
-/* ---------------------------------------------------------
-CONTENT
---------------------------------------------------------- */
+/* =========================================================
+   CTA CARD
+========================================================= */
 
-.final-cta-content {
+.final-cta-card {
     position: relative;
 
-    max-width: 62rem;
+    display: grid;
 
-    margin: 0 auto;
+    grid-template-columns:
+        minmax(0, 1.35fr) minmax(19rem, .65fr);
 
-    text-align: center;
-
-    padding:
-        5rem 2rem
-        5.5rem;
-}
-
-
-/* ---------------------------------------------------------
-LABEL
---------------------------------------------------------- */
-
-.final-cta-label {
-    margin-bottom: 1.5rem;
-
-    text-align: center;
-}
-
-
-/* ---------------------------------------------------------
-HEADING
---------------------------------------------------------- */
-
-.final-cta-title {
-    margin: 0 auto;
-
-    max-width: 58rem;
-
-    color: var(--text);
-
-    font-family: var(--font-heading);
-    font-size: clamp(3.2rem, 6vw, 5.5rem);
-    font-weight: var(--weight-extrabold);
-
-    line-height: .98;
-    letter-spacing: -.055em;
-}
-
-
-/* ---------------------------------------------------------
-COPY
---------------------------------------------------------- */
-
-.final-cta-copy {
-    max-width: 48rem;
-
-    margin: 2rem auto 0;
-
-    color: var(--muted);
-
-    font-family: var(--font-body);
-    font-size: 1.05rem;
-
-    line-height: 1.75;
-
-    text-align: center;
-}
-
-
-/* ---------------------------------------------------------
-ACTIONS
---------------------------------------------------------- */
-
-.final-cta-actions {
-    display: flex;
+    gap: 5rem;
 
     align-items: center;
-    justify-content: center;
 
-    gap: 1rem;
+    padding: 4.5rem 5rem;
 
-    margin-top: 2.75rem;
+    border:
+        1px solid rgba(62, 103, 167, .14);
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, .96),
+            rgba(247, 250, 255, .92));
+
+    box-shadow:
+        0 35px 90px rgba(15, 23, 42, .08);
+
+    overflow: hidden;
 }
 
 
 /* =========================================================
-FINAL CTA RESPONSIVE
+   CARD LIGHT
 ========================================================= */
 
-@media (max-width: 640px) {
+.final-cta-card::before {
+    content: "";
 
-    .final-cta-content {
-        padding:
-            4rem 1.25rem
-            4.5rem;
+    position: absolute;
+
+    width: 26rem;
+    height: 26rem;
+
+    top: -14rem;
+    right: -8rem;
+
+    border-radius: 999px;
+
+    background:
+        rgba(91, 143, 230, .10);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+}
+
+.final-cta-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 20rem;
+    height: 20rem;
+
+    bottom: -13rem;
+    left: 25%;
+
+    border-radius: 999px;
+
+    background:
+        rgba(120, 180, 255, .08);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.final-cta-main {
+    position: relative;
+
+    z-index: 2;
+}
+
+.final-cta-label {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.final-cta-title {
+    margin: 1rem 0 0;
+    max-width: 52rem;
+    color: var(--color-text);
+}
+
+.final-cta-title span {
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   COPY
+========================================================= */
+
+.final-cta-copy {
+    max-width: 42rem;
+
+    margin: 1.5rem 0 0;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   ACTION AREA
+========================================================= */
+
+.final-cta-action {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding-left: 3rem;
+
+    border-left:
+        1px solid rgba(62, 103, 167, .15);
+}
+
+.final-cta-action-label {
+    margin-bottom: 1.25rem;
+
+    font-size: .65rem;
+
+    line-height: 1.2;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .2em;
+
+    color: rgba(62, 103, 167, .62);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.final-cta-action .btn-primary,
+.final-cta-action .btn-secondary {
+    width: 100%;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.final-cta-action .btn-secondary {
+    margin-top: .75rem;
+}
+
+
+/* =========================================================
+   ACTION FOOTER
+========================================================= */
+
+.final-cta-action-line {
+    width: 3rem;
+
+    height: 1px;
+
+    margin-top: 2rem;
+
+    background: var(--color-primary);
+
+    opacity: .55;
+}
+
+.final-cta-action>p {
+    margin: 1rem 0 0;
+
+    max-width: 18rem;
+
+    font-size: .8rem;
+
+    line-height: 1.65;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .final-cta-card {
+        grid-template-columns:
+            minmax(0, 1.15fr) minmax(18rem, .85fr);
+
+        gap: 3rem;
+
+        padding: 3.5rem;
     }
 
-
-    .final-cta-title {
-        font-size: clamp(2.7rem, 12vw, 4rem);
+    .final-cta-action {
+        padding-left: 2.5rem;
     }
 
+}
+
+
+@media (max-width: 768px) {
+
+    .final-cta-card {
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+
+        padding: 3rem 2rem;
+
+        border-radius: 26px;
+    }
+
+    .final-cta-action {
+        padding-left: 0;
+
+        padding-top: 2.5rem;
+
+        border-left: 0;
+
+        border-top:
+            1px solid rgba(62, 103, 167, .15);
+    }
+
+    .final-cta-action .btn-primary,
+    .final-cta-action .btn-secondary {
+        width: auto;
+
+        min-width: 12rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .final-cta-card {
+        padding: 2.5rem 1.5rem;
+    }
 
     .final-cta-copy {
         font-size: .95rem;
     }
 
-
-    .final-cta-actions {
-        flex-direction: column;
-
+    .final-cta-action .btn-primary,
+    .final-cta-action .btn-secondary {
         width: 100%;
     }
-
-
-    .final-cta-actions a {
-        width: 100%;
-        justify-content: center;
-    }
-
 
     .final-cta-word {
         font-size: 10rem;
     }
 
+}
+
+/* =========================================================
+WHY OOTB — TYPOGRAPHY
+========================================================= */
+
+.ootb-why-header .section-title {
+    max-width: 42rem;
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+
+/* WHY OOTB — STEP HEADINGS */
+
+.ootb-why-main h3 {
+    margin: 0.35rem 0 0.75rem;
+
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: var(--weight-semibold);
+
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+
+/* WHY OOTB — STEP DESCRIPTION */
+
+.ootb-why-main>p:last-child {
+    max-width: 38rem;
+
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+/* =========================================================
+OUR VENTURES — TYPOGRAPHY
+========================================================= */
+
+.ventures-portfolio-heading .section-title {
+    max-width: 42rem;
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+
+/* VENTURE CARD TITLES */
+
+.venture-secondary-content h3 {
+    margin: 0.5rem 0 0.75rem;
+
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: var(--weight-bold);
+
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+
+/* VENTURE CARD DESCRIPTIONS */
+
+.venture-secondary-content p {
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+/* =========================================================
+OUR CAPABILITIES — TYPOGRAPHY
+========================================================= */
+
+.capabilities-header .section-title {
+    max-width: 42rem;
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+
+/* CAPABILITIES INTRO */
+
+.capabilities-header .section-copy {
+    max-width: 56rem;
+
+    margin-top: 1.25rem;
+}
+
+
+/* CAPABILITY TITLES */
+
+.capability-content .card-title {
+    margin: 0.5rem 0 0.75rem;
+
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: var(--weight-bold);
+
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+
+/* CAPABILITY DESCRIPTIONS */
+
+.capability-content .card-copy {
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+/* =========================================================
+COMMUNITY — TYPOGRAPHY
+========================================================= */
+
+.community-title {
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+
+/* COMMUNITY INTRO */
+
+.community-copy {
+    max-width: 40rem;
+
+    margin-top: 1.5rem;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+
+    line-height: 1.75;
+}
+
+
+/* COMMUNITY STAT NUMBERS */
+
+.community-stat-number {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+/* =========================================================
+OUR OPERATING SYSTEM — TYPOGRAPHY
+========================================================= */
+
+.workflow-header .section-title {
+    max-width: 42rem;
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+
+/* WORKFLOW STEP TITLES */
+
+.workflow-content h3 {
+    margin: 0.4rem 0 0.75rem;
+
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: var(--weight-bold);
+
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+
+/* WORKFLOW STEP DESCRIPTIONS */
+
+.workflow-content p {
+    max-width: 18rem;
+
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+/* =========================================================
+CAREERS — TYPOGRAPHY
+========================================================= */
+
+.careers-heading .section-title {
+    max-width: 42rem;
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+
+/* CAREERS INTRO */
+
+.careers-heading .section-copy {
+    max-width: 42rem;
+
+    margin-top: 1.5rem;
+}
+
+/* CAREER ROLE TITLES */
+
+.career-explorer-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: var(--weight-bold);
+
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+
+/* ACTIVE ROLE PREVIEW */
+
+.career-preview-content h3 {
+    margin: 0.5rem 0 0.75rem;
+
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: var(--weight-bold);
+
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+
+.career-preview-description {
+    max-width: 34rem;
+
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+/* =========================================================
+WHO WE WORK WITH — TYPOGRAPHY
+========================================================= */
+
+.who-build-left .section-title {
+    max-width: 42rem;
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+
+.who-build-intro {
+    max-width: 42rem;
+    margin-top: 1.5rem;
+}
+
+
+/* AUDIENCE TITLES */
+
+.who-build-item-content h3 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: var(--weight-bold);
+
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+
+.who-build-item-content p {
+    margin: 0.4rem 0 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+WHY OOTB PANEL
+========================================================= */
+
+.why-ootb-content .section-title {
+    max-width: 42rem;
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+
+/* DIFFERENCE TITLES */
+
+.why-ootb-item h3 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: var(--weight-bold);
+
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+
+.why-ootb-item p {
+    margin: 0.5rem 0 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+
+    line-height: 1.65;
+}
+
+/* =========================================================
+FINAL CTA — TYPOGRAPHY
+========================================================= */
+
+.final-cta-main .final-cta-title {
+    max-width: 42rem;
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+
+/* CTA COPY */
+
+.final-cta-main .final-cta-copy {
+    max-width: 42rem;
+
+    margin-top: 1.5rem;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+
+    line-height: 1.75;
+}
+
+
+/* RIGHT SIDE LABEL */
+
+.final-cta-action-label {
+    font-family: var(--font-body);
+    font-size: .7rem;
+    font-weight: var(--weight-bold);
+
+    line-height: 1.3;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+
+/* RIGHT SIDE DESCRIPTION */
+
+.final-cta-action>p {
+    margin: 1.25rem 0 0;
+
+    font-family: var(--font-body);
+    font-size: .95rem;
+
+    line-height: 1.65;
 }

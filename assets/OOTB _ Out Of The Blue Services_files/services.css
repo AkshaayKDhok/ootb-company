@@ -1,0 +1,1106 @@
+/* =========================================================
+   SERVICES — HERO
+========================================================= */
+
+.services-hero {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fbff 72%,
+            #eef4fb 100%
+        );
+
+    padding-block: 5.5rem 7rem;
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.services-hero-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, .92fr)
+        minmax(0, 1.08fr);
+
+    gap: 5.5rem;
+
+    align-items: center;
+}
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.services-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 44rem;
+}
+
+.services-hero-label {
+    display: block;
+
+    margin-bottom: 1.5rem;
+}
+
+
+.services-hero-title {
+    max-width: 42rem;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        3rem,
+        5vw,
+        5rem
+    );
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: .98;
+
+    letter-spacing: -.055em;
+}
+
+.services-hero-title span {
+    color: var(--color-primary);
+}
+
+
+.services-hero-copy {
+    max-width: 38rem;
+
+    margin: 2rem 0 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.services-hero-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: .85rem;
+
+    margin-top: 2.25rem;
+}
+
+
+/* =========================================================
+   BOTTOM NOTE
+========================================================= */
+
+.services-hero-note {
+    display: flex;
+
+    align-items: center;
+
+    gap: .9rem;
+
+    margin-top: 2.5rem;
+
+    color:
+        rgba(62, 103, 167, .62);
+
+    font-size: .62rem;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .2em;
+}
+
+.services-hero-note-line {
+    width: 3rem;
+
+    height: 1px;
+
+    flex: 0 0 auto;
+
+    background: var(--color-primary);
+
+    opacity: .7;
+}
+
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.services-hero-visual {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 1rem 2.5rem 3rem 0;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.services-hero-image-wrap {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1.08 / 1;
+
+    overflow: visible;
+}
+
+.services-hero-image-wrap img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 2rem;
+
+    filter:
+        saturate(.82)
+        contrast(.98);
+
+    box-shadow:
+        0 30px 70px rgba(15, 23, 42, .12);
+
+    transition:
+        transform var(--transition-slow),
+        filter var(--transition-base);
+}
+
+.services-hero-image-wrap:hover img {
+    transform: scale(1.015);
+
+    filter:
+        saturate(1)
+        contrast(1);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.services-hero-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 2rem;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 55%,
+            rgba(15, 23, 42, .16)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   VERTICAL LABEL
+========================================================= */
+
+.services-hero-vertical-label {
+    position: absolute;
+
+    top: -1rem;
+
+    right: -2.5rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: .65rem;
+
+    color:
+        rgba(62, 103, 167, .48);
+
+    font-size: .55rem;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .18em;
+
+    writing-mode: vertical-rl;
+}
+
+
+/* =========================================================
+   FLOATING CARD
+========================================================= */
+
+.services-hero-float-card {
+    position: absolute;
+
+    left: -2.25rem;
+
+    bottom: 0;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    width: min(24rem, 72%);
+
+    padding: 1.35rem 1.5rem;
+
+    border:
+        1px solid rgba(62, 103, 167, .12);
+
+    border-radius: 1.25rem;
+
+    background:
+        rgba(255, 255, 255, .96);
+
+    box-shadow:
+        0 22px 55px rgba(15, 23, 42, .14);
+
+    backdrop-filter: blur(14px);
+}
+
+
+/* =========================================================
+   FLOAT ICON
+========================================================= */
+
+.services-hero-float-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 2.75rem;
+    height: 2.75rem;
+
+    flex: 0 0 auto;
+
+    border-radius: .8rem;
+
+    background:
+        rgba(62, 103, 167, .09);
+
+    color: var(--color-primary);
+}
+
+.services-hero-float-icon
+.material-symbols-outlined {
+    font-size: 1.25rem;
+}
+
+
+/* =========================================================
+   FLOAT CONTENT
+========================================================= */
+
+.services-hero-float-content {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.services-hero-float-content > span {
+    margin-bottom: .3rem;
+
+    color:
+        rgba(62, 103, 167, .7);
+
+    font-size: .55rem;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .18em;
+}
+
+.services-hero-float-content strong {
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: 1rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.2;
+}
+
+.services-hero-float-content p {
+    margin: .45rem 0 0;
+
+    color: var(--color-text-muted);
+
+    font-size: .78rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .services-hero-grid {
+    grid-template-columns:
+        minmax(0, .92fr)
+        minmax(0, 1.08fr);
+
+    gap: 3.5rem;
+}
+
+    .services-hero-title {
+        font-size: clamp(
+            3rem,
+            5vw,
+            4.5rem
+        );
+    }
+
+    .services-hero-float-card {
+        left: -1rem;
+    }
+
+    .services-hero-vertical-label {
+        right: -1.5rem;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .services-hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 3.5rem;
+    }
+
+    .services-hero-content {
+        max-width: 48rem;
+    }
+
+    .services-hero-visual {
+        width: min(100%, 42rem);
+
+        margin: 0 auto;
+
+        padding: 0 1rem 3rem 0;
+    }
+
+    .services-hero-float-card {
+        left: 1.5rem;
+
+        width: min(24rem, 70%);
+    }
+
+    .services-hero-vertical-label {
+        right: -.75rem;
+    }
+}
+
+
+@media (max-width: 640px) {
+
+    .services-hero-grid {
+        gap: 3rem;
+    }
+
+    .services-hero-title {
+        font-size: clamp(
+            2.75rem,
+            11vw,
+            4rem
+        );
+
+        line-height: .98;
+    }
+
+    .services-hero-copy {
+        margin-top: 1.5rem;
+
+        font-size: 1rem;
+    }
+
+    .services-hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        margin-top: 1.75rem;
+    }
+
+    .services-hero-actions .btn-primary,
+    .services-hero-actions .btn-secondary {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .services-hero-note {
+        margin-top: 2rem;
+
+        font-size: .55rem;
+
+        letter-spacing: .15em;
+    }
+
+    .services-hero-image-wrap {
+        aspect-ratio: 1 / 1;
+    }
+
+    .services-hero-image-wrap img,
+    .services-hero-image-overlay {
+        border-radius: 1.35rem;
+    }
+
+    .services-hero-float-card {
+        left: .75rem;
+
+        bottom: 0;
+
+        width: calc(100% - 1.5rem);
+
+        padding: 1rem;
+    }
+
+    .services-hero-float-content p {
+        font-size: .74rem;
+    }
+
+    .services-hero-vertical-label {
+        top: -.5rem;
+
+        right: -.5rem;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .services-hero-float-card {
+        gap: .75rem;
+    }
+
+    .services-hero-float-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .services-hero-float-content strong {
+        font-size: .9rem;
+    }
+
+    .services-hero-float-content p {
+        font-size: .7rem;
+    }
+
+}
+
+/* =========================================================
+   SERVICES — CAPABILITY ARCHITECTURE
+========================================================= */
+
+.services-capabilities {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--color-bg);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.services-capabilities-intro {
+    max-width: 58rem;
+
+    margin-bottom: 4.5rem;
+}
+
+.services-capabilities-intro-label {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 1.5rem;
+}
+
+.services-capabilities-index {
+    color:
+        rgba(62, 103, 167, .22);
+
+    font-family: var(--font-heading);
+
+    font-size: .75rem;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .08em;
+}
+
+.services-capabilities-title {
+    max-width: 50rem;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2.8rem,
+        5vw,
+        5rem
+    );
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: .98;
+
+    letter-spacing: -.055em;
+}
+
+.services-capabilities-title span {
+    display: block;
+
+    color: var(--color-primary);
+}
+
+.services-capabilities-copy {
+    max-width: 34rem;
+
+    margin: 1.75rem 0 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   STAGE
+========================================================= */
+
+.services-capabilities-stage {
+    position: relative;
+
+    min-height: 39rem;
+
+    border-top: 1px solid var(--color-border);
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+
+/* =========================================================
+   CENTRAL STATEMENT
+========================================================= */
+
+.services-capabilities-statement {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    z-index: 1;
+
+    width: 22rem;
+
+    transform:
+        translate(-50%, -50%);
+
+    text-align: center;
+}
+
+.services-capabilities-statement::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 27rem;
+    height: 27rem;
+
+    transform:
+        translate(-50%, -50%);
+
+    border:
+        1px solid rgba(62, 103, 167, .08);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.services-capabilities-statement-label {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    color:
+        rgba(62, 103, 167, .58);
+
+    font-size: .58rem;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .2em;
+}
+
+.services-capabilities-statement strong {
+    display: block;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: 1.65rem;
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.15;
+
+    letter-spacing: -.04em;
+}
+
+.services-capabilities-statement strong span {
+    color: var(--color-primary);
+
+    padding: 0 .15rem;
+}
+
+.services-capabilities-statement p {
+    margin: .8rem 0 0;
+
+    color: var(--color-text-muted);
+
+    font-size: .75rem;
+
+    letter-spacing: .08em;
+}
+
+
+/* =========================================================
+   CAPABILITY
+========================================================= */
+
+.services-capability {
+    position: absolute;
+
+    z-index: 3;
+
+    width: 18rem;
+
+    padding-left: 1.25rem;
+
+    border-left:
+        2px solid rgba(62, 103, 167, .16);
+
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.services-capability:hover {
+    transform: translateY(-.3rem);
+
+    border-left-color: var(--color-primary);
+}
+
+
+/* =========================================================
+   POSITIONS
+========================================================= */
+
+.services-capability-01 {
+    top: 3.5rem;
+
+    left: 4%;
+}
+
+.services-capability-02 {
+    top: 5rem;
+
+    right: 5%;
+}
+
+.services-capability-03 {
+    bottom: 4rem;
+
+    left: 9%;
+}
+
+.services-capability-04 {
+    bottom: 3rem;
+
+    right: 13%;
+}
+
+.services-capability-05 {
+    top: 50%;
+
+    left: 3%;
+
+    transform:
+        translateY(-50%);
+}
+
+.services-capability-05:hover {
+    transform:
+        translateY(calc(-50% - .3rem));
+}
+
+
+/* =========================================================
+   CAPABILITY NUMBER
+========================================================= */
+
+.services-capability-number {
+    display: block;
+
+    margin-bottom: .65rem;
+
+    color:
+        rgba(62, 103, 167, .22);
+
+    font-family: var(--font-heading);
+
+    font-size: .68rem;
+
+    font-weight: var(--weight-extrabold);
+
+    letter-spacing: .04em;
+}
+
+
+/* =========================================================
+   CAPABILITY LABEL
+========================================================= */
+
+.services-capability-label {
+    display: block;
+
+    margin-bottom: .45rem;
+
+    color: var(--color-primary);
+
+    font-size: .58rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.2;
+
+    letter-spacing: .2em;
+}
+
+
+/* =========================================================
+   CAPABILITY CONTENT
+========================================================= */
+
+.services-capability h3 {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: 1.35rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.15;
+
+    letter-spacing: -.03em;
+}
+
+.services-capability p {
+    max-width: 17rem;
+
+    margin: .55rem 0 0;
+
+    color: var(--color-text-muted);
+
+    font-size: .78rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CONNECTING DETAIL
+========================================================= */
+
+.services-capabilities-stage::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 15%;
+    right: 15%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(62, 103, 167, .1),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+.services-capabilities-stage::after {
+    content: "";
+
+    position: absolute;
+
+    top: 18%;
+    bottom: 18%;
+
+    left: 50%;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(62, 103, 167, .08),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.services-capabilities-footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: .9rem;
+
+    margin-top: 1.75rem;
+
+    color:
+        rgba(62, 103, 167, .58);
+
+    font-size: .62rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.4;
+
+    letter-spacing: .2em;
+}
+
+.services-capabilities-footer-line {
+    width: 3rem;
+
+    height: 1px;
+
+    flex: 0 0 auto;
+
+    background: var(--color-primary);
+
+    opacity: .7;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .services-capabilities-stage {
+        min-height: 42rem;
+    }
+
+    .services-capability {
+        width: 15rem;
+    }
+
+    .services-capability-01 {
+        left: 2%;
+    }
+
+    .services-capability-02 {
+        right: 2%;
+    }
+
+    .services-capability-03 {
+        left: 4%;
+    }
+
+    .services-capability-04 {
+        right: 5%;
+    }
+
+    .services-capability-05 {
+        left: 2%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .services-capabilities-intro {
+        margin-bottom: 3rem;
+    }
+
+    .services-capabilities-title {
+        font-size: clamp(
+            2.6rem,
+            10vw,
+            4rem
+        );
+    }
+
+    .services-capabilities-stage {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+        min-height: auto;
+
+        padding: 0;
+
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .services-capabilities-stage::before,
+    .services-capabilities-stage::after,
+    .services-capabilities-statement::before {
+        display: none;
+    }
+
+    .services-capabilities-statement {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        width: auto;
+
+        padding: 2.5rem 0;
+
+        transform: none;
+
+        text-align: left;
+
+        border-bottom:
+            1px solid var(--color-border);
+    }
+
+    .services-capabilities-statement strong {
+        max-width: 18rem;
+
+        font-size: 1.5rem;
+    }
+
+    .services-capability,
+    .services-capability-01,
+    .services-capability-02,
+    .services-capability-03,
+    .services-capability-04,
+    .services-capability-05 {
+        position: relative;
+
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+
+        width: 100%;
+
+        padding: 2rem 0;
+
+        transform: none !important;
+
+        border-left: 0;
+
+        border-bottom:
+            1px solid var(--color-border);
+    }
+
+    .services-capability:last-child {
+        border-bottom: 0;
+    }
+
+    .services-capability:hover {
+        transform: none !important;
+    }
+
+    .services-capability p {
+        max-width: 30rem;
+    }
+
+    .services-capabilities-footer {
+        font-size: .55rem;
+
+        letter-spacing: .15em;
+    }
+
+}

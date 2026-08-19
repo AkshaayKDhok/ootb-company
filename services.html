@@ -3,16 +3,30 @@
 <html class="scroll-smooth" lang="en">
 
 <head>
+
   <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <meta
+    content="width=device-width, initial-scale=1.0"
+    name="viewport"
+  />
+
   <title>OOTB | Out Of The Blue Services</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- FONTS -->
+
   <link
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
-    rel="stylesheet" />
+    rel="stylesheet"
+  />
+
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
+    rel="stylesheet"
+  />
+
+  <!-- GLOBAL DESIGN SYSTEM -->
   <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
@@ -87,7 +101,16 @@
     }
   </script>
 
-  <link rel="stylesheet" href="css/global.css">
+  <link
+    rel="stylesheet" href="css/global.css"
+  />
+
+  <!-- SERVICES PAGE STYLES -->
+
+  <link
+    rel="stylesheet" href="css/services.css"
+  />
+
 </head>
 
 <body
@@ -96,347 +119,1391 @@
   <!-- SHARED OOTB NAV -->
   <div id="site-nav"></div>
 
-  <main class="pt-28 md:pt-32">
-    <!-- Hero Section -->
-    <section class="hero px-8 max-w-7xl mx-auto py-16 md:py-24 flex flex-col md:flex-row items-center gap-16">
-      <div class="w-full md:w-3/5 text-center md:text-left">
-        <h1 class="font-[Manrope] text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1]">
-          AI-Powered Execution for <span class="text-primary">Businesses</span>, <span
-            class="text-primary">Creators</span>, and <span class="text-primary">Builders</span>
-        </h1>
-        <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed mx-auto md:mx-0">
-          We don’t offer isolated services. We design and execute end-to-end systems using AI, content, and technology.
-        </p>
-        <div class="flex flex-wrap justify-center md:justify-start gap-4">
+  <main>
 
-          <a href="contact.html"
-            class="bg-gradient-to-br from-primary to-primary-dim text-on-primary inline-flex items-center justify-center px-8 py-4 rounded-lg font-headline font-bold text-lg hover:translate-y-[-2px] transition-all duration-300 shadow-lg">
+<!-- =========================================================
+     SERVICES — HERO
+========================================================= -->
+
+<section class="services-hero">
+
+  <div class="section-container">
+
+    <div class="services-hero-grid">
+
+      <!-- LEFT CONTENT -->
+
+      <div class="services-hero-content">
+
+        <span class="section-label services-hero-label">
+          OUR SERVICES
+        </span>
+
+        <h1 class="services-hero-title">
+          Building the systems
+          behind <span>better execution.</span>
+        </h1>
+
+        <p class="services-hero-copy">
+          We don't offer isolated services. We combine strategy,
+          AI, content, technology and execution to build systems
+          that help businesses move faster and operate smarter.
+        </p>
+
+        <div class="services-hero-actions">
+
+          <a href="contact.html" class="btn-primary spotlight">
             Work With Us
           </a>
-          <a href="studio.html"
-            class="bg-surface-container-high text-on-surface-variant inline-flex items-center justify-center px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-surface-container-highest transition-all duration-300">
+
+          <a href="studio.html" class="btn-secondary spotlight">
             Start a Project
           </a>
-        </div>
-      </div>
-      <div class="w-full md:w-2/5 aspect-square bg-surface-container rounded-3xl overflow-hidden relative group">
-        <img alt="AI execution visual"
-          class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_ZV7tzrRr0chsgCEiNz8wmhpnUbNnNdg906ugCPIQBXeRQO7N2U6H7IJeyjXCEDLFvEqG17l38O4I3kYD-ifBsiFKS9i3OpA7GOrxxZOfrSzeEfsILQh-_tli_SeeokAEjaIgHMcr5QJgjKIw3HjXSvVgp398E5AZlq0K1n8d_Vot1K3gUrs5RndI7juNzO3B-vUbYo4XX0-F9GGw2mr2_qrSylkEFnxcY1ojh_srtYlA6n4bG4nJ86k9bjdQYijNZxkWZeFtf-gw" />
-        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
-      </div>
-    </section>
-    <!-- WHAT WE DO -->
-    <section class="relative py-32 overflow-hidden bg-slate-900 text-white atmospheric-grid">
-      <div
-        class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none">
-      </div>
-      <div class="px-8 max-w-7xl mx-auto relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div>
-            <span
-              class="inline-block px-4 py-1.5 bg-primary/20 text-primary-fixed rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/30 backdrop-blur-md">What
-              We Do</span>
-            <h2 class="font-headline text-4xl md:text-6xl font-bold leading-tight mb-8">
-              Most service providers execute tasks. <span class="text-primary-fixed">We build systems that deliver
-                outcomes.</span>
-            </h2>
-          </div>
-          <div class="space-y-10">
-            <p class="text-2xl text-slate-300 leading-relaxed font-light">
-              At Out Of The Blue, we combine specialized expertise into a unified execution engine, bridging the gap
-              between strategy and scale.
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <span
-                class="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl text-white font-bold text-sm backdrop-blur-xl hover:bg-white/10 transition-colors">Strategy</span>
-              <span
-                class="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl text-white font-bold text-sm backdrop-blur-xl hover:bg-white/10 transition-colors">Content</span>
-              <span
-                class="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl text-white font-bold text-sm backdrop-blur-xl hover:bg-white/10 transition-colors">Design</span>
-              <span
-                class="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl text-white font-bold text-sm backdrop-blur-xl hover:bg-white/10 transition-colors">Technology</span>
-              <span
-                class="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl text-white font-bold text-sm backdrop-blur-xl hover:bg-white/10 transition-colors">AI</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- OUR CORE SERVICES -->
-    <section class="py-32 px-8 bg-surface">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-20">
-          <h2 class="font-headline text-4xl font-extrabold tracking-tight">Our Core Services</h2>
-          <p class="mt-4 text-on-surface-variant text-lg">Integrated solutions for modern execution</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Card 1 -->
-          <div
-            class="bg-surface-container-low p-10 rounded-3xl group hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-1 border border-outline-variant/10">
-            <div
-              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors">
-              <span class="material-symbols-outlined text-3xl text-primary" data-icon="hub">hub</span>
-            </div>
-            <h3 class="font-headline text-2xl font-bold mb-4">Digital Growth Systems</h3>
-            <p class="text-on-surface-variant leading-relaxed">Social media strategy &amp; execution, Content planning
-              and distribution, Performance-driven marketing.</p>
-          </div>
-          <!-- Card 2 -->
-          <div
-            class="bg-surface-container-low p-10 rounded-3xl group hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-1 border border-outline-variant/10">
-            <div
-              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors">
-              <span class="material-symbols-outlined text-3xl text-primary"
-                data-icon="video_library">video_library</span>
-            </div>
-            <h3 class="font-headline text-2xl font-bold mb-4">Content &amp; Production</h3>
-            <p class="text-on-surface-variant leading-relaxed">High-fidelity video production, Podcast setup &amp;
-              end-to-end execution, Professional post-editing.</p>
-          </div>
-          <!-- Card 3 -->
-          <div
-            class="bg-surface-container-low p-10 rounded-3xl group hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-1 border border-outline-variant/10">
-            <div
-              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors">
-              <span class="material-symbols-outlined text-3xl text-primary" data-icon="brush">brush</span>
-            </div>
-            <h3 class="font-headline text-2xl font-bold mb-4">Design &amp; Creative</h3>
-            <p class="text-on-surface-variant leading-relaxed">Brand design systems, High-impact social media creatives,
-              and cohesive visual identity frameworks.</p>
-          </div>
-          <!-- Card 4 -->
-          <div
-            class="bg-surface-container-low p-10 rounded-3xl group hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-1 border border-outline-variant/10">
-            <div
-              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors">
-              <span class="material-symbols-outlined text-3xl text-primary" data-icon="robot_2">robot_2</span>
-            </div>
-            <h3 class="font-headline text-2xl font-bold mb-4">AI &amp; Automation</h3>
-            <p class="text-on-surface-variant leading-relaxed">Custom workflow automation, AI tool integration, and
-              enterprise-grade process optimization.</p>
-          </div>
-          <!-- Card 5 -->
-          <div
-            class="bg-surface-container-low p-10 rounded-3xl group hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-1 border border-outline-variant/10">
-            <div
-              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors">
-              <span class="material-symbols-outlined text-3xl text-primary"
-                data-icon="rocket_launch">rocket_launch</span>
-            </div>
-            <h3 class="font-headline text-2xl font-bold mb-4">Incubation Support</h3>
-            <p class="text-on-surface-variant leading-relaxed">Idea validation, MVP execution support, and foundational
-              technical system setup for founders.</p>
-          </div>
-          <!-- Card 6 -->
-          <div
-            class="bg-surface-container-low p-10 rounded-3xl group hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-1 border border-outline-variant/10">
-            <div
-              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors">
-              <span class="material-symbols-outlined text-3xl text-primary"
-                data-icon="data_exploration">data_exploration</span>
-            </div>
-            <h3 class="font-headline text-2xl font-bold mb-4">Strategic Advisory</h3>
-            <p class="text-on-surface-variant leading-relaxed">Fractional COO services, technology roadmapping, and
-              operational scale-up consulting.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- HOW WE WORK -->
-    <section class="bg-surface-container-low py-32 px-8">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="font-headline text-4xl font-extrabold mb-20 text-center">How We Work</h2>
-        <div class="relative">
-          <div class="hidden md:block absolute top-1/2 left-0 w-full h-[2px] bg-outline-variant/20 -translate-y-1/2">
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-            <!-- Step 1 -->
-            <div class="relative z-10 text-center">
-              <div
-                class="w-16 h-16 bg-surface-container-lowest border-4 border-surface-container rounded-full flex items-center justify-center mx-auto mb-8 shadow-sm">
-                <span class="font-headline font-black text-xl text-primary">01</span>
-              </div>
-              <h4 class="font-headline text-xl font-bold mb-4">Understand</h4>
-              <p class="text-on-surface-variant text-sm px-4">Identifying real bottlenecks and growth constraints before
-                planning.</p>
-            </div>
-            <!-- Step 2 -->
-            <div class="relative z-10 text-center">
-              <div
-                class="w-16 h-16 bg-surface-container-lowest border-4 border-surface-container rounded-full flex items-center justify-center mx-auto mb-8 shadow-sm">
-                <span class="font-headline font-black text-xl text-primary">02</span>
-              </div>
-              <h4 class="font-headline text-xl font-bold mb-4">Design</h4>
-              <p class="text-on-surface-variant text-sm px-4">Creating a custom strategy + execution plan tailored to
-                your scale.</p>
-            </div>
-            <!-- Step 3 -->
-            <div class="relative z-10 text-center">
-              <div
-                class="w-16 h-16 bg-surface-container-lowest border-4 border-surface-container rounded-full flex items-center justify-center mx-auto mb-8 shadow-sm">
-                <span class="font-headline font-black text-xl text-primary">03</span>
-              </div>
-              <h4 class="font-headline text-xl font-bold mb-4">Execute</h4>
-              <p class="text-on-surface-variant text-sm px-4">Leveraging in-house teams + AI workflows for maximum
-                speed.</p>
-            </div>
-            <!-- Step 4 -->
-            <div class="relative z-10 text-center">
-              <div
-                class="w-16 h-16 bg-surface-container-lowest border-4 border-surface-container rounded-full flex items-center justify-center mx-auto mb-8 shadow-sm">
-                <span class="font-headline font-black text-xl text-primary">04</span>
-              </div>
-              <h4 class="font-headline text-xl font-bold mb-4">Iterate</h4>
-              <p class="text-on-surface-variant text-sm px-4">Continuous optimization based on real performance data.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- WHO THIS IS FOR -->
-    <section class="py-32 px-8 bg-surface-container-lowest overflow-hidden">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-20">
-          <span class="text-primary font-bold tracking-widest uppercase text-xs">Ecosystem Partners</span>
-          <h2 class="font-headline text-4xl md:text-5xl font-extrabold mt-4">Who This Is For</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Businesses -->
-          <div
-            class="group relative bg-slate-900 rounded-[2rem] p-10 overflow-hidden min-h-[400px] flex flex-col justify-end">
-            <div class="absolute inset-0 opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img alt="Businesses" class="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4sLwo075B6E_7bF8epBEg1nX-2rX3jERHkObmmKfg5Yt0iLCZUHzvv5wHI19z2oFgOTI0mKOg0fpIZfCmrllF4ygKQ_XTS3L6-bRzTWVohAWnExyxNsrHYBWAzaLXVQBbX-xXYSPLLhjTdT_5navGQj_RsjMbEcZTtr7308Zoi0Tf7efNDiPMeXycOkxCvgQVsIrFvXix5nSk9IjpG91BKm6_4mxN1pBliiQUoJhNghu4MyXYZKdn2BJwJF96bLxSk8LR0xPV0qyt" />
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
-            <div class="relative z-10">
-              <span class="material-symbols-outlined text-primary text-4xl mb-4 block"
-                data-icon="corporate_fare">corporate_fare</span>
-              <h3 class="text-3xl font-headline font-extrabold text-white mb-2">Businesses</h3>
-              <p class="text-slate-300 text-sm">Scale operations with integrated AI systems.</p>
-            </div>
-          </div>
-          <!-- Founders -->
-          <div
-            class="group relative bg-slate-900 rounded-[2rem] p-10 overflow-hidden min-h-[400px] flex flex-col justify-end">
-            <div class="absolute inset-0 opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img alt="Founders" class="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF47sSvoPcyyLpGNzifpr0ZG_EhrpJZ_3DzdAeVOJWiYItiGAiadPsrdd7oPRLwFHTsRe2_XTOmVHNNDtZfDxJB7Bm0pied-jJG4wE9xfLw522GKYQ49tZYYDBvY72ZIyZD-vVPOGJ70F7qwDfKdV1WB8lxisajd1km9z5ppupfLEM0KxFzRg7my4bcJ1HgTj2jQusDvmLvtex5kFCNPTgrn4PAB5RtO_PkhpgolsWir0RUwW2EmEPmbkHXiZwJSy9Cb81vjZq-ggz" />
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
-            <div class="relative z-10">
-              <span class="material-symbols-outlined text-primary text-4xl mb-4 block"
-                data-icon="lightbulb">lightbulb</span>
-              <h3 class="text-3xl font-headline font-extrabold text-white mb-2">Founders</h3>
-              <p class="text-slate-300 text-sm">From idea to execution at lightning speed.</p>
-            </div>
-          </div>
-          <!-- Creators -->
-          <div
-            class="group relative bg-slate-900 rounded-[2rem] p-10 overflow-hidden min-h-[400px] flex flex-col justify-end">
-            <div class="absolute inset-0 opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img alt="Creators" class="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuALbvAftoiqkrklDSQcrbiy1m3IppF5ULYifsOAKUb8wSnkqcH5ro8_BCBxYnOnZlboDP47h3kWdIijuEN5FH10hfy49p_3lLv9mxDWICWs8fOCXoI75cCziJVqrBAF0TRYdpH3Wf1squHAWMfvaGUPqaDR6hIqoAYpZ6YmrUj-9RuoVSvzPZg2GzqVNWVgcRL88TN2hK1omYtaZcX9iDi4YKQN2eKWo7PDGLPCEMQx4tKRA-jja5wcoAS5LLFbj2XlqLCigvb6XtBc" />
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
-            <div class="relative z-10">
-              <span class="material-symbols-outlined text-primary text-4xl mb-4 block"
-                data-icon="auto_awesome">auto_awesome</span>
-              <h3 class="text-3xl font-headline font-extrabold text-white mb-2">Creators</h3>
-              <p class="text-slate-300 text-sm">Turn content into a scalable business engine.</p>
-            </div>
-          </div>
-          <!-- Entrepreneurs -->
-          <div
-            class="group relative bg-slate-900 rounded-[2rem] p-10 overflow-hidden min-h-[400px] flex flex-col justify-end">
-            <div class="absolute inset-0 opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img alt="Entrepreneurs" class="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdP8EH-rM7LlldQsb0jOw3CcXVIZh-Iu6IOxF3TOJAYgzOhGIpG9jr71zeEulKyVzFE5JURmJmxJZewx0uSMmNNhKA3gTIxoztycrxdmZnIaK-v-NO7IjGA_IOleyGzflAwK8LFzCNrtV1oHWqGrjPxXcRMbokED4j_Ga4zaZO56JQs3jlldQXgGGaXc6gvtSplxklzCuzSLbc6uvfS5fb9Mo2fXH7HFN-NVIRgsVkwtA0oKOD60rOudkapwlT4d9w7Xm79DtieQJw" />
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
-            <div class="relative z-10">
-              <span class="material-symbols-outlined text-primary text-4xl mb-4 block"
-                data-icon="trending_up">trending_up</span>
-              <h3 class="text-3xl font-headline font-extrabold text-white mb-2">Builders</h3>
-              <p class="text-slate-300 text-sm">Build the infrastructure for the next big thing.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- WHY OUT OF THE BLUE (Comparison) -->
-    <section class="py-32 px-8 bg-surface-container">
-      <div class="max-w-7xl mx-auto">
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20 rounded-3xl overflow-hidden border border-outline-variant/10 shadow-2xl">
-          <div class="bg-surface-container-low p-16">
-            <h4 class="font-headline text-xl text-on-surface-variant font-bold mb-12 uppercase tracking-widest">Most
-              agencies</h4>
-            <ul class="space-y-8">
-              <li class="flex gap-4 items-start opacity-60">
-                <span class="material-symbols-outlined text-error" data-icon="close">close</span>
-                <p class="text-lg">Fragmented service silos</p>
-              </li>
-              <li class="flex gap-4 items-start opacity-60">
-                <span class="material-symbols-outlined text-error" data-icon="close">close</span>
-                <p class="text-lg">Slow turnaround times</p>
-              </li>
-              <li class="flex gap-4 items-start opacity-60">
-                <span class="material-symbols-outlined text-error" data-icon="close">close</span>
-                <p class="text-lg">Manual, outdated workflows</p>
-              </li>
-            </ul>
-          </div>
-          <div class="bg-slate-900 p-16">
-            <h4 class="font-headline text-xl text-primary font-bold mb-12 uppercase tracking-widest">Out of the Blue
-            </h4>
-            <ul class="space-y-8">
-              <li class="flex gap-4 items-start">
-                <span class="material-symbols-outlined text-primary font-bold"
-                  data-icon="check_circle">check_circle</span>
-                <p class="text-lg font-bold text-white">End-to-end execution systems</p>
-              </li>
-              <li class="flex gap-4 items-start">
-                <span class="material-symbols-outlined text-primary font-bold"
-                  data-icon="check_circle">check_circle</span>
-                <p class="text-lg font-bold text-white">Rapid, AI-enhanced scaling</p>
-              </li>
-              <li class="flex gap-4 items-start">
-                <span class="material-symbols-outlined text-primary font-bold"
-                  data-icon="check_circle">check_circle</span>
-                <p class="text-lg font-bold text-white">Outcome-driven partnerships</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- FINAL CTA -->
-    <section class="py-32 px-8">
-      <div class="max-w-7xl mx-auto">
-        <div
-          class="bg-primary-container text-on-primary-container rounded-[2.5rem] p-16 md:p-24 text-center relative overflow-hidden">
-          <div
-            class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
-          </div>
-          <h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tight mb-8 relative z-10">Have something
-            to build? Let’s execute.</h2>
-          <div class="flex flex-wrap justify-center gap-6 relative z-10">
 
-            <a href="contact.html"
-              class="bg-on-primary-container text-surface inline-flex items-center justify-center px-10 py-5 rounded-xl font-headline font-bold text-xl hover:opacity-90 transition-all">
-              Start a Project
-            </a>
-            <a href="studio.html"
-              class="bg-surface-container-lowest/20 backdrop-blur-md text-on-primary-container inline-flex items-center justify-center px-10 py-5 rounded-xl font-headline font-bold text-xl hover:bg-surface-container-lowest/30 transition-all">
-              Talk to Us
-            </a>
-          </div>
         </div>
+
+        <div class="services-hero-note">
+
+          <span class="services-hero-note-line"></span>
+
+          <span>
+            STRATEGY • AI • CONTENT • TECHNOLOGY
+          </span>
+
+        </div>
+
       </div>
-    </section>
+
+
+      <!-- RIGHT VISUAL -->
+
+      <div class="services-hero-visual">
+
+        <div class="services-hero-image-wrap">
+
+          <img
+            src="assets/services.png"
+            alt="AI-powered business execution"
+          />
+
+          <div class="services-hero-image-overlay"></div>
+
+          <div class="services-hero-vertical-label">
+            <span>01</span>
+            <span>SERVICES</span>
+          </div>
+
+        </div>
+
+
+        <!-- FLOATING CARD -->
+
+        <div class="services-hero-float-card">
+
+          <div class="services-hero-float-icon">
+
+            <span class="material-symbols-outlined">
+              auto_awesome
+            </span>
+
+          </div>
+
+          <div class="services-hero-float-content">
+
+            <span>
+              EXECUTION SYSTEM
+            </span>
+
+            <strong>
+              Built to Move Things Forward.
+            </strong>
+
+            <p>
+              From strategy to execution, we bring the right
+              capabilities together around the problem.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     SERVICES — WHAT WE DO
+========================================================= -->
+
+<section class="section services-what-do">
+
+  <div class="section-container">
+
+    <div class="services-what-header">
+
+      <div class="services-what-heading">
+
+        <span class="section-label">
+          WHAT WE DO
+        </span>
+
+        <h2 class="section-title services-what-title">
+          We don't just execute tasks.
+          <span class="text-primary">We build the system behind them.</span>
+        </h2>
+
+      </div>
+
+      <div class="services-what-intro">
+
+        <p class="section-copy !mx-0">
+          Strategy, content, design, technology and AI come together
+          as one execution system — built around the outcome, not
+          the service.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="services-what-flow">
+
+      <div class="services-what-flow-line"></div>
+
+      <div class="services-what-item">
+
+        <span class="services-what-number">01</span>
+
+        <div>
+          <span class="services-what-kicker">STRATEGY</span>
+
+          <h3>
+            Find the direction.
+          </h3>
+
+          <p>
+            Define the problem, opportunity and path forward.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="services-what-item">
+
+        <span class="services-what-number">02</span>
+
+        <div>
+          <span class="services-what-kicker">CREATIVE</span>
+
+          <h3>
+            Shape the message.
+          </h3>
+
+          <p>
+            Turn ideas into content, design and experiences people notice.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="services-what-item">
+
+        <span class="services-what-number">03</span>
+
+        <div>
+          <span class="services-what-kicker">TECHNOLOGY</span>
+
+          <h3>
+            Build the infrastructure.
+          </h3>
+
+          <p>
+            Connect products, platforms and workflows into one system.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="services-what-item">
+
+        <span class="services-what-number">04</span>
+
+        <div>
+          <span class="services-what-kicker">AI + EXECUTION</span>
+
+          <h3>
+            Make it compound.
+          </h3>
+
+          <p>
+            Automate, measure and continuously improve what works.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="services-what-footer">
+
+      <span class="services-what-footer-line"></span>
+
+      <span>
+        ONE EXECUTION ENGINE. MULTIPLE CAPABILITIES.
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     SERVICES — CORE CAPABILITIES
+========================================================= -->
+
+<section class="section services-core">
+
+  <div class="section-container">
+
+    <!-- HEADER -->
+
+    <div class="services-core-header">
+
+      <div>
+
+        <span class="section-label">
+          CORE CAPABILITIES
+        </span>
+
+        <h2 class="section-title services-core-title">
+          Everything needed to
+          <span class="text-primary">move an idea forward.</span>
+        </h2>
+
+      </div>
+
+      <p class="section-copy services-core-intro !mx-0">
+        Strategy, creative, technology and execution come together
+        across the system — giving every capability an equal role
+        in moving the work forward.
+      </p>
+
+    </div>
+
+
+    <!-- CAPABILITIES -->
+
+    <div class="services-core-grid">
+
+
+      <!-- 01 -->
+
+      <article class="services-core-item">
+
+        <div class="services-core-item-top">
+
+          <span class="services-core-number">
+            01
+          </span>
+
+          <span class="material-symbols-outlined services-core-icon">
+            hub
+          </span>
+
+        </div>
+
+        <div class="services-core-content">
+
+          <span class="services-core-kicker">
+            GROWTH
+          </span>
+
+          <h3>
+            Digital Growth Systems
+          </h3>
+
+          <p>
+            Strategy, content distribution and performance systems
+            designed to turn attention into sustainable growth.
+          </p>
+
+        </div>
+
+        <span class="services-core-arrow">
+          ↗
+        </span>
+
+      </article>
+
+
+      <!-- 02 -->
+
+      <article class="services-core-item">
+
+        <div class="services-core-item-top">
+
+          <span class="services-core-number">
+            02
+          </span>
+
+          <span class="material-symbols-outlined services-core-icon">
+            video_library
+          </span>
+
+        </div>
+
+        <div class="services-core-content">
+
+          <span class="services-core-kicker">
+            PRODUCTION
+          </span>
+
+          <h3>
+            Content &amp; Production
+          </h3>
+
+          <p>
+            Video, audio and post-production systems built for
+            consistent high-quality output.
+          </p>
+
+        </div>
+
+        <span class="services-core-arrow">
+          ↗
+        </span>
+
+      </article>
+
+
+      <!-- 03 -->
+
+      <article class="services-core-item">
+
+        <div class="services-core-item-top">
+
+          <span class="services-core-number">
+            03
+          </span>
+
+          <span class="material-symbols-outlined services-core-icon">
+            brush
+          </span>
+
+        </div>
+
+        <div class="services-core-content">
+
+          <span class="services-core-kicker">
+            CREATIVE
+          </span>
+
+          <h3>
+            Design &amp; Creative
+          </h3>
+
+          <p>
+            Brand systems, visual identities and creative assets
+            that make the work recognizable and coherent.
+          </p>
+
+        </div>
+
+        <span class="services-core-arrow">
+          ↗
+        </span>
+
+      </article>
+
+
+      <!-- 04 -->
+
+      <article class="services-core-item">
+
+        <div class="services-core-item-top">
+
+          <span class="services-core-number">
+            04
+          </span>
+
+          <span class="material-symbols-outlined services-core-icon">
+            smart_toy
+          </span>
+
+        </div>
+
+        <div class="services-core-content">
+
+          <span class="services-core-kicker">
+            INTELLIGENCE
+          </span>
+
+          <h3>
+            AI &amp; Automation
+          </h3>
+
+          <p>
+            AI integrations and automated workflows that reduce
+            friction and make execution more scalable.
+          </p>
+
+        </div>
+
+        <span class="services-core-arrow">
+          ↗
+        </span>
+
+      </article>
+
+
+      <!-- 05 -->
+
+      <article class="services-core-item">
+
+        <div class="services-core-item-top">
+
+          <span class="services-core-number">
+            05
+          </span>
+
+          <span class="material-symbols-outlined services-core-icon">
+            rocket_launch
+          </span>
+
+        </div>
+
+        <div class="services-core-content">
+
+          <span class="services-core-kicker">
+            VENTURE BUILDING
+          </span>
+
+          <h3>
+            Incubation Support
+          </h3>
+
+          <p>
+            From idea validation to MVP execution and foundational
+            systems for new ventures.
+          </p>
+
+        </div>
+
+        <span class="services-core-arrow">
+          ↗
+        </span>
+
+      </article>
+
+
+      <!-- 06 -->
+
+      <article class="services-core-item">
+
+        <div class="services-core-item-top">
+
+          <span class="services-core-number">
+            06
+          </span>
+
+          <span class="material-symbols-outlined services-core-icon">
+            data_exploration
+          </span>
+
+        </div>
+
+        <div class="services-core-content">
+
+          <span class="services-core-kicker">
+            ADVISORY
+          </span>
+
+          <h3>
+            Strategic Advisory
+          </h3>
+
+          <p>
+            Operating strategy, technology roadmaps and systems
+            designed for the next stage of growth.
+          </p>
+
+        </div>
+
+        <span class="services-core-arrow">
+          ↗
+        </span>
+
+      </article>
+
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="services-core-footer">
+
+      <span class="services-core-footer-line"></span>
+
+      <span>
+        STRATEGY • CREATIVE • TECHNOLOGY • AI • EXECUTION
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     SERVICES — HOW WE WORK
+========================================================= -->
+
+<section class="section services-work">
+
+  <div class="section-container">
+
+    <!-- HEADER -->
+
+    <div class="services-work-header">
+
+      <div>
+
+        <span class="section-label">
+          HOW WE WORK
+        </span>
+
+        <h2 class="section-title services-work-title">
+          From uncertainty
+          <span class="text-primary">to execution.</span>
+        </h2>
+
+      </div>
+
+      <div class="services-work-intro">
+
+        <span class="services-work-intro-label">
+          THE OPERATING LOOP
+        </span>
+
+        <p class="section-copy !mx-0">
+          We move through four connected stages — understanding
+          the problem, designing the system, executing the work
+          and improving what happens next.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- OPERATING LOOP -->
+
+    <div class="services-work-loop">
+
+      <!-- CONNECTING ORBIT -->
+
+      <div class="services-work-orbit"></div>
+
+
+      <!-- CENTRE -->
+
+      <div class="services-work-center">
+
+        <span class="services-work-center-kicker">
+          OOTB SYSTEM
+        </span>
+
+        <strong>
+          Execution
+          <span>Engine</span>
+        </strong>
+
+        <p>
+          Built to learn,
+          adapt and compound.
+        </p>
+
+      </div>
+
+
+      <!-- 01 -->
+
+      <article class="services-work-node services-work-node-01">
+
+        <span class="services-work-node-number">
+          01
+        </span>
+
+        <div class="services-work-node-content">
+
+          <span class="services-work-node-kicker">
+            UNDERSTAND
+          </span>
+
+          <h3>
+            Find the real constraint.
+          </h3>
+
+          <p>
+            Understand the business, workflow, audience and
+            bottleneck before deciding what to build.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 02 -->
+
+      <article class="services-work-node services-work-node-02">
+
+        <span class="services-work-node-number">
+          02
+        </span>
+
+        <div class="services-work-node-content">
+
+          <span class="services-work-node-kicker">
+            DESIGN
+          </span>
+
+          <h3>
+            Shape the right system.
+          </h3>
+
+          <p>
+            Bring strategy, creative, technology and AI together
+            around what the problem actually requires.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 03 -->
+
+      <article class="services-work-node services-work-node-03">
+
+        <span class="services-work-node-number">
+          03
+        </span>
+
+        <div class="services-work-node-content">
+
+          <span class="services-work-node-kicker">
+            EXECUTE
+          </span>
+
+          <h3>
+            Make it work in the real world.
+          </h3>
+
+          <p>
+            Build, launch and operate with speed, ownership
+            and a bias toward measurable progress.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 04 -->
+
+      <article class="services-work-node services-work-node-04">
+
+        <span class="services-work-node-number">
+          04
+        </span>
+
+        <div class="services-work-node-content">
+
+          <span class="services-work-node-kicker">
+            IMPROVE
+          </span>
+
+          <h3>
+            Make the next cycle stronger.
+          </h3>
+
+          <p>
+            Measure performance, remove friction, automate
+            repetitive work and continuously improve.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- LOOP LABELS -->
+
+      <span class="services-work-loop-label services-work-loop-label-top">
+        DISCOVER
+      </span>
+
+      <span class="services-work-loop-label services-work-loop-label-right">
+        BUILD
+      </span>
+
+      <span class="services-work-loop-label services-work-loop-label-bottom">
+        COMPOUND
+      </span>
+
+      <span class="services-work-loop-label services-work-loop-label-left">
+        ADAPT
+      </span>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="services-work-footer">
+
+      <span class="services-work-footer-line"></span>
+
+      <span>
+        UNDERSTAND → DESIGN → EXECUTE → IMPROVE
+      </span>
+
+      <strong>
+        THE LOOP NEVER STOPS.
+      </strong>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     SERVICES — WHO THIS IS FOR
+========================================================= -->
+
+<section class="section services-audience">
+
+  <div class="section-container">
+
+    <!-- HEADER -->
+
+    <div class="services-audience-header">
+
+      <div class="services-audience-heading">
+
+        <span class="section-label">
+          ECOSYSTEM PARTNERS
+        </span>
+
+        <h2 class="services-audience-title">
+          Built for people
+          <span class="text-primary">building what matters.</span>
+        </h2>
+
+      </div>
+
+      <p class="section-copy services-audience-intro !mx-0">
+        Different ambitions need different kinds of support.
+        We bring the right combination of strategy, execution,
+        technology and AI around the people building the next thing.
+      </p>
+
+    </div>
+
+
+    <!-- AUDIENCE RAILS -->
+
+    <div class="services-audience-list">
+
+
+      <!-- 01 — BUSINESSES -->
+
+      <article class="services-audience-row">
+
+        <div class="services-audience-number">
+          01
+        </div>
+
+        <div class="services-audience-icon">
+
+          <span class="material-symbols-outlined">
+            corporate_fare
+          </span>
+
+        </div>
+
+        <div class="services-audience-copy">
+
+          <span class="services-audience-kicker">
+            BUSINESSES
+          </span>
+
+          <h3>
+            Scale what already works.
+          </h3>
+
+          <p>
+            Strengthen operations, growth systems and execution
+            with integrated AI and technology.
+          </p>
+
+        </div>
+
+        <div class="services-audience-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85"
+            alt="Modern business team environment"
+          />
+
+        </div>
+
+        <span class="services-audience-arrow">
+          ↗
+        </span>
+
+      </article>
+
+
+      <!-- 02 — FOUNDERS -->
+
+      <article class="services-audience-row">
+
+        <div class="services-audience-number">
+          02
+        </div>
+
+        <div class="services-audience-icon">
+
+          <span class="material-symbols-outlined">
+            lightbulb
+          </span>
+
+        </div>
+
+        <div class="services-audience-copy">
+
+          <span class="services-audience-kicker">
+            FOUNDERS
+          </span>
+
+          <h3>
+            Turn an idea into momentum.
+          </h3>
+
+          <p>
+            Move from uncertainty to a working product, operating
+            system and path toward scale.
+          </p>
+
+        </div>
+
+        <div class="services-audience-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"
+            alt="Founders working together"
+          />
+
+        </div>
+
+        <span class="services-audience-arrow">
+          ↗
+        </span>
+
+      </article>
+
+
+      <!-- 03 — CREATORS -->
+
+      <article class="services-audience-row">
+
+        <div class="services-audience-number">
+          03
+        </div>
+
+        <div class="services-audience-icon">
+
+          <span class="material-symbols-outlined">
+            auto_awesome
+          </span>
+
+        </div>
+
+        <div class="services-audience-copy">
+
+          <span class="services-audience-kicker">
+            CREATORS
+          </span>
+
+          <h3>
+            Turn attention into an engine.
+          </h3>
+
+          <p>
+            Build content, distribution and systems that turn
+            creative output into sustainable growth.
+          </p>
+
+        </div>
+
+        <div class="services-audience-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"
+            alt="Creative team collaborating"
+          />
+
+        </div>
+
+        <span class="services-audience-arrow">
+          ↗
+        </span>
+
+      </article>
+
+
+      <!-- 04 — BUILDERS -->
+
+      <article class="services-audience-row">
+
+        <div class="services-audience-number">
+          04
+        </div>
+
+        <div class="services-audience-icon">
+
+          <span class="material-symbols-outlined">
+            trending_up
+          </span>
+
+        </div>
+
+        <div class="services-audience-copy">
+
+          <span class="services-audience-kicker">
+            BUILDERS
+          </span>
+
+          <h3>
+            Build the infrastructure for what comes next.
+          </h3>
+
+          <p>
+            Connect technology, workflows and intelligent systems
+            around ambitious new products and ventures.
+          </p>
+
+        </div>
+
+        <div class="services-audience-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=85"
+            alt="Team building technology systems"
+          />
+
+        </div>
+
+        <span class="services-audience-arrow">
+          ↗
+        </span>
+
+      </article>
+
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="services-audience-footer">
+
+      <span class="services-audience-footer-line"></span>
+
+      <span>
+        DIFFERENT PEOPLE. DIFFERENT PROBLEMS. ONE EXECUTION PARTNER.
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     SERVICES — WHY OUT OF THE BLUE
+========================================================= -->
+
+<section class="section services-why">
+
+  <div class="section-container">
+
+    <!-- HEADER -->
+
+    <div class="services-why-header">
+
+      <div class="services-why-heading">
+
+        <span class="section-label">
+          WHY OUT OF THE BLUE
+        </span>
+
+        <h2 class="services-why-title">
+          Not another agency.
+          <span class="text-primary">A different way to build.</span>
+        </h2>
+
+      </div>
+
+      <p class="section-copy services-why-intro !mx-0">
+        The difference is not in the number of services we offer.
+        It is in how those capabilities work together around the
+        outcome.
+      </p>
+
+    </div>
+
+
+    <!-- TRANSFORMATION -->
+
+    <div class="services-why-shift">
+
+      <!-- HEADER ROW -->
+
+      <div class="services-why-shift-head">
+
+        <span>
+          THE OLD MODEL
+        </span>
+
+        <span>
+          THE OOTB MODEL
+        </span>
+
+      </div>
+
+
+      <!-- 01 -->
+
+      <article class="services-why-shift-item">
+
+        <div class="services-why-shift-number">
+          01
+        </div>
+
+        <div class="services-why-shift-old">
+
+          <span class="material-symbols-outlined">
+            close
+          </span>
+
+          <div>
+            <small>
+              TYPICAL AGENCY
+            </small>
+
+            <p>
+              Fragmented service silos
+            </p>
+          </div>
+
+        </div>
+
+        <div class="services-why-shift-arrow">
+          →
+        </div>
+
+        <div class="services-why-shift-new">
+
+          <span class="material-symbols-outlined">
+            check
+          </span>
+
+          <div>
+            <small>
+              OUT OF THE BLUE
+            </small>
+
+            <p>
+              One connected execution system
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 02 -->
+
+      <article class="services-why-shift-item">
+
+        <div class="services-why-shift-number">
+          02
+        </div>
+
+        <div class="services-why-shift-old">
+
+          <span class="material-symbols-outlined">
+            close
+          </span>
+
+          <div>
+            <small>
+              TYPICAL AGENCY
+            </small>
+
+            <p>
+              Slow handoffs between teams
+            </p>
+          </div>
+
+        </div>
+
+        <div class="services-why-shift-arrow">
+          →
+        </div>
+
+        <div class="services-why-shift-new">
+
+          <span class="material-symbols-outlined">
+            check
+          </span>
+
+          <div>
+            <small>
+              OUT OF THE BLUE
+            </small>
+
+            <p>
+              Teams built to move together
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 03 -->
+
+      <article class="services-why-shift-item">
+
+        <div class="services-why-shift-number">
+          03
+        </div>
+
+        <div class="services-why-shift-old">
+
+          <span class="material-symbols-outlined">
+            close
+          </span>
+
+          <div>
+            <small>
+              TYPICAL AGENCY
+            </small>
+
+            <p>
+              Manual processes that don't scale
+            </p>
+          </div>
+
+        </div>
+
+        <div class="services-why-shift-arrow">
+          →
+        </div>
+
+        <div class="services-why-shift-new">
+
+          <span class="material-symbols-outlined">
+            check
+          </span>
+
+          <div>
+            <small>
+              OUT OF THE BLUE
+            </small>
+
+            <p>
+              AI-enhanced systems built to compound
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 04 -->
+
+      <article class="services-why-shift-item">
+
+        <div class="services-why-shift-number">
+          04
+        </div>
+
+        <div class="services-why-shift-old">
+
+          <span class="material-symbols-outlined">
+            close
+          </span>
+
+          <div>
+            <small>
+              TYPICAL AGENCY
+            </small>
+
+            <p>
+              Deliverables as the finish line
+            </p>
+          </div>
+
+        </div>
+
+        <div class="services-why-shift-arrow">
+          →
+        </div>
+
+        <div class="services-why-shift-new">
+
+          <span class="material-symbols-outlined">
+            check
+          </span>
+
+          <div>
+            <small>
+              OUT OF THE BLUE
+            </small>
+
+            <p>
+              Outcomes as the starting point
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <!-- BOTTOM STATEMENT -->
+
+    <div class="services-why-bottom">
+
+      <div class="services-why-bottom-mark">
+        04
+      </div>
+
+      <div class="services-why-bottom-copy">
+
+        <span>
+          THE DIFFERENCE
+        </span>
+
+        <p>
+          The work doesn't end when something is delivered.
+        </p>
+
+      </div>
+
+      <div class="services-why-bottom-result">
+
+        <strong>
+          It gets better.
+        </strong>
+
+        <span>
+          EVERY CYCLE BUILDS THE NEXT.
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     SERVICES — FINAL CTA
+========================================================= -->
+
+<section class="section services-final-cta">
+
+  <div class="section-container">
+
+    <div class="services-final-cta-box">
+
+      <!-- LEFT -->
+
+      <div class="services-final-cta-main">
+
+        <span class="section-label">
+          BUILD WITH US
+        </span>
+
+        <h2 class="section-title services-final-cta-title !mx-0">
+          Have something
+          <span class="text-primary">worth building?</span>
+        </h2>
+
+        <p class="section-copy services-final-cta-copy !mx-0">
+          Whether you need to solve a growth problem, build a new
+          system or make your existing execution work better, let's
+          bring the right capabilities together and move it forward.
+        </p>
+
+      </div>
+
+
+      <!-- RIGHT -->
+
+      <div class="services-final-cta-action">
+
+        <div class="services-final-cta-action-label">
+          START A CONVERSATION
+        </div>
+
+        <a href="contact.html" class="btn-primary spotlight">
+          Work With Us
+        </a>
+
+        <a href="studio.html" class="btn-secondary spotlight">
+          Start a Project
+        </a>
+
+        <div class="services-final-cta-line"></div>
+
+        <p>
+          Strategy, technology, AI and execution —
+          brought together around the problem that matters.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
   </main>
   <!-- SHARED OOTB FOOTER -->
   <div id="site-footer"></div>

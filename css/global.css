@@ -475,8 +475,8 @@ b {
     }
 
     h3 {
-        font-size: 1.75rem;
-        line-height: 1.12;
+    font-size: 1.35rem;
+    line-height: 1.25;
     }
 
     h4 {
@@ -594,14 +594,6 @@ b {
 .section-title {
     max-width: 56rem;
     margin-inline: auto;
-
-    font-family: var(--font-heading);
-    font-size: clamp(2.25rem, 4vw, 3.5rem);
-    font-weight: var(--weight-extrabold);
-    line-height: 1.08;
-    letter-spacing: -.04em;
-
-    color: var(--color-text);
 }
 
 
@@ -1001,16 +993,7 @@ a:focus-visible {
 
 .card-title {
     margin: 0 0 20px;
-
-    font-family: var(--font-heading);
-    font-size: 1.35rem;
-    font-weight: var(--weight-bold);
-    line-height: 1.25;
-    letter-spacing: -.025em;
-
-    color: var(--color-text);
 }
-
 
 /* =========================================================
    CARD COPY

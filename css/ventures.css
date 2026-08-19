@@ -1,0 +1,5243 @@
+/* =========================================================
+   VENTURES — HERO
+========================================================= */
+
+.ventures-hero {
+    position: relative;
+
+    overflow: hidden;
+
+    padding-block: 5.5rem 7rem;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fbff 72%,
+            #eef4fb 100%
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND ATMOSPHERE
+========================================================= */
+
+.ventures-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 38rem;
+    height: 38rem;
+
+    top: -18rem;
+    right: -10rem;
+
+    border-radius: 50%;
+
+    background: rgba(62, 103, 167, .07);
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+.ventures-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 28rem;
+    height: 28rem;
+
+    bottom: -18rem;
+    left: 18%;
+
+    border-radius: 50%;
+
+    background: rgba(91, 143, 230, .08);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.ventures-hero-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, .92fr)
+        minmax(0, 1.08fr);
+
+    gap: 5.5rem;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.ventures-hero-content {
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 43rem;
+}
+
+.ventures-hero-label {
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.ventures-hero-title {
+    max-width: 42rem;
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        3rem,
+        5vw,
+        4rem
+    );
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.05;
+
+    letter-spacing: -.045em;
+
+    color: var(--color-text);
+}
+
+.ventures-hero-title span {
+    display: block;
+
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   COPY
+========================================================= */
+
+.ventures-hero-copy {
+    max-width: 39rem;
+
+    margin: 1.75rem 0 0;
+
+    font-family: var(--font-body);
+
+    font-size: 1.05rem;
+
+    line-height: 1.75;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.ventures-hero-actions {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: .9rem;
+
+    margin-top: 2rem;
+}
+
+
+/* =========================================================
+   BOTTOM NOTE
+========================================================= */
+
+.ventures-hero-note {
+    display: flex;
+
+    align-items: center;
+
+    gap: .8rem;
+
+    margin-top: 2.75rem;
+
+    color: rgba(62, 103, 167, .62);
+
+    font-family: var(--font-body);
+
+    font-size: .64rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.2;
+
+    letter-spacing: .2em;
+}
+
+.ventures-hero-note-line {
+    width: 3rem;
+
+    height: 1px;
+
+    flex-shrink: 0;
+
+    background: var(--color-primary);
+
+    opacity: .6;
+}
+
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.ventures-hero-visual {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 1rem 2.5rem 3rem 0;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.ventures-hero-image-wrap {
+    position: relative;
+
+    width: 100%;
+
+    height: clamp(
+        480px,
+        42vw,
+        600px
+    );
+
+    overflow: hidden;
+
+    border-radius: 2rem;
+
+    background: var(--color-bg-muted);
+
+    border: 1px solid rgba(62, 103, 167, .12);
+
+    box-shadow:
+        0 35px 80px rgba(15, 23, 42, .13);
+}
+
+.ventures-hero-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform .8s cubic-bezier(.2, .65, .2, 1);
+}
+
+.ventures-hero-image-wrap:hover .ventures-hero-image {
+    transform: scale(1.035);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.ventures-hero-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(15, 23, 42, .38) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE LABEL
+========================================================= */
+
+.ventures-hero-image-label {
+    position: absolute;
+
+    left: 1.5rem;
+    bottom: 1.5rem;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: .55rem;
+
+    padding: .7rem 1rem;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+
+    border-radius: 999px;
+
+    background: rgba(15, 23, 42, .45);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    color: white;
+
+    font-size: .63rem;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .17em;
+}
+
+.ventures-hero-image-dot {
+    width: .4rem;
+    height: .4rem;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #8db7f5;
+
+    box-shadow:
+        0 0 0 4px rgba(141, 183, 245, .14);
+}
+
+
+/* =========================================================
+   SYSTEM CARD
+========================================================= */
+
+.ventures-hero-system-card {
+    position: absolute;
+
+    left: -2rem;
+    bottom: 0;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: .9rem;
+
+    width: min(
+        21rem,
+        72%
+    );
+
+    padding: 1.15rem 1.25rem;
+
+    border: 1px solid rgba(255, 255, 255, .75);
+
+    border-radius: 1rem;
+
+    background: rgba(255, 255, 255, .92);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 45px rgba(15, 23, 42, .14);
+
+    animation:
+        venturesHeroFloat 6s ease-in-out infinite;
+}
+
+.ventures-hero-system-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    flex-shrink: 0;
+
+    border-radius: .75rem;
+
+    background: var(--color-primary-soft);
+
+    color: var(--color-primary);
+}
+
+.ventures-hero-system-icon .material-symbols-outlined {
+    font-size: 1.2rem;
+}
+
+.ventures-hero-system-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .25rem;
+}
+
+.ventures-hero-system-label {
+    color: var(--color-primary);
+
+    font-size: .58rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.2;
+
+    letter-spacing: .18em;
+}
+
+.ventures-hero-system-content strong {
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: .95rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.25;
+}
+
+.ventures-hero-system-content p {
+    margin: .15rem 0 0;
+
+    color: var(--color-text-muted);
+
+    font-size: .72rem;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   SIDE MARKER
+========================================================= */
+
+.ventures-hero-marker {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: .45rem;
+
+    color: rgba(62, 103, 167, .48);
+
+    font-size: .58rem;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .18em;
+
+    writing-mode: vertical-rl;
+}
+
+.ventures-hero-marker span:first-child {
+    color: var(--color-primary);
+
+    font-family: var(--font-heading);
+
+    font-size: .75rem;
+
+    letter-spacing: 0;
+}
+
+
+/* =========================================================
+   MOTION
+========================================================= */
+
+@keyframes venturesHeroFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .ventures-hero {
+        padding-block: 4.5rem 6rem;
+    }
+
+    .ventures-hero-grid {
+        gap: 3.5rem;
+    }
+
+    .ventures-hero-title {
+        font-size: clamp(
+            2.8rem,
+            5vw,
+            4rem
+        );
+    }
+
+    .ventures-hero-visual {
+        padding-right: 1.5rem;
+    }
+
+    .ventures-hero-system-card {
+        left: -1rem;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .ventures-hero {
+        padding-block: 4rem 5rem;
+    }
+
+    .ventures-hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 3.5rem;
+    }
+
+    .ventures-hero-content {
+        max-width: 100%;
+    }
+
+    .ventures-hero-title {
+        max-width: 38rem;
+
+        font-size: 2.9rem;
+    }
+
+    .ventures-hero-copy {
+        max-width: 36rem;
+    }
+
+    .ventures-hero-visual {
+        padding: 0 1rem 3rem 0;
+    }
+
+    .ventures-hero-image-wrap {
+        height: 460px;
+
+        border-radius: 1.5rem;
+    }
+
+    .ventures-hero-system-card {
+        left: 0;
+
+        width: min(
+            20rem,
+            78%
+        );
+    }
+
+    .ventures-hero-marker {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .ventures-hero {
+        padding-block: 3.5rem 4.5rem;
+    }
+
+    .ventures-hero-title {
+        font-size: 2.55rem;
+
+        letter-spacing: -.045em;
+    }
+
+    .ventures-hero-copy {
+        font-size: .95rem;
+
+        line-height: 1.7;
+    }
+
+    .ventures-hero-actions {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .ventures-hero-actions .btn-primary,
+    .ventures-hero-actions .btn-secondary {
+        width: 100%;
+    }
+
+    .ventures-hero-note {
+        margin-top: 2rem;
+
+        font-size: .56rem;
+
+        letter-spacing: .14em;
+    }
+
+    .ventures-hero-visual {
+        padding-right: 0;
+
+        padding-bottom: 4rem;
+    }
+
+    .ventures-hero-image-wrap {
+        height: 380px;
+
+        border-radius: 1.35rem;
+    }
+
+    .ventures-hero-image-label {
+        left: 1rem;
+        bottom: 1rem;
+
+        padding: .6rem .75rem;
+
+        font-size: .55rem;
+    }
+
+    .ventures-hero-system-card {
+        bottom: 0;
+
+        width: calc(100% - 1rem);
+
+        padding: 1rem;
+    }
+
+}
+
+/* =========================================================
+   VENTURES — WHAT VENTURES MEAN
+========================================================= */
+
+.ventures-meaning {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--color-bg);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ventures-meaning-header {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(0, .9fr);
+
+    gap: 7rem;
+
+    align-items: end;
+
+    margin-bottom: 5rem;
+}
+
+.ventures-meaning-heading {
+    max-width: 48rem;
+}
+
+.ventures-meaning-heading .section-label {
+    margin-bottom: 1.5rem;
+}
+
+.ventures-meaning-heading .section-title {
+    max-width: 42rem;
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.02;
+    letter-spacing: -.045em;
+    font-weight: var(--weight-extrabold);
+}
+
+.ventures-meaning-intro {
+    max-width: 38rem;
+
+    padding-bottom: .35rem;
+}
+
+.ventures-meaning-intro .section-copy {
+    margin-top: 0;
+
+    font-size: 1.2rem;
+    line-height: 1.65;
+
+    font-weight: var(--weight-medium);
+
+    color: var(--color-text);
+}
+
+.ventures-meaning-description {
+    max-width: 36rem;
+
+    margin: 1.5rem 0 0;
+
+    font-size: 1rem;
+    line-height: 1.75;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   PRINCIPLES
+========================================================= */
+
+.ventures-meaning-principles {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    border-top: 1px solid var(--color-border-strong);
+    border-bottom: 1px solid var(--color-border-strong);
+}
+
+
+/* =========================================================
+   PRINCIPLE ITEM
+========================================================= */
+
+.ventures-meaning-item {
+    position: relative;
+
+    min-height: 18rem;
+
+    padding: 2.25rem 2.5rem;
+
+    border-right: 1px solid var(--color-border-strong);
+
+    transition:
+        background-color var(--transition-base),
+        transform var(--transition-base);
+}
+
+.ventures-meaning-item:first-child {
+    padding-left: 0;
+}
+
+.ventures-meaning-item:last-child {
+    padding-right: 0;
+
+    border-right: 0;
+}
+
+.ventures-meaning-item:hover {
+    background: var(--color-primary-soft);
+}
+
+
+/* =========================================================
+   ITEM TOP
+========================================================= */
+
+.ventures-meaning-item-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 4rem;
+}
+
+.ventures-meaning-number {
+    font-family: var(--font-heading);
+
+    font-size: 2.5rem;
+    line-height: 1;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: -.06em;
+
+    color: rgba(62, 103, 167, .16);
+}
+
+.ventures-meaning-kicker {
+    font-size: .68rem;
+    line-height: 1.2;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .2em;
+
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   ITEM CONTENT
+========================================================= */
+
+.ventures-meaning-item-content h3 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+
+    font-size: 1.25rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.025em;
+
+    color: var(--color-text);
+}
+
+.ventures-meaning-item-content p {
+    max-width: 22rem;
+
+    margin: .8rem 0 0;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   FOOTER STATEMENT
+========================================================= */
+
+.ventures-meaning-footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: .9rem;
+
+    margin-top: 2rem;
+
+    font-size: .67rem;
+    line-height: 1.4;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .2em;
+
+    color: rgba(62, 103, 167, .58);
+}
+
+.ventures-meaning-footer-line {
+    width: 3rem;
+    height: 1px;
+
+    flex: 0 0 auto;
+
+    background: var(--color-primary);
+
+    opacity: .7;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .ventures-meaning-header {
+        gap: 4rem;
+    }
+
+    .ventures-meaning-item {
+        padding: 2rem 1.75rem;
+    }
+
+    .ventures-meaning-item:first-child {
+        padding-left: 0;
+    }
+
+    .ventures-meaning-item:last-child {
+        padding-right: 0;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .ventures-meaning-header {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+        margin-bottom: 3.5rem;
+    }
+
+    .ventures-meaning-intro {
+        max-width: none;
+
+        padding-bottom: 0;
+    }
+
+    .ventures-meaning-principles {
+        grid-template-columns: 1fr;
+    }
+
+    .ventures-meaning-item,
+    .ventures-meaning-item:first-child,
+    .ventures-meaning-item:last-child {
+        min-height: auto;
+
+        padding: 2rem 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--color-border-strong);
+    }
+
+    .ventures-meaning-item:last-child {
+        border-bottom: 0;
+    }
+
+    .ventures-meaning-item-top {
+        margin-bottom: 2.5rem;
+    }
+
+    .ventures-meaning-item-content p {
+        max-width: none;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .ventures-meaning-item-top {
+        margin-bottom: 2rem;
+    }
+
+    .ventures-meaning-number {
+        font-size: 2.15rem;
+    }
+
+    .ventures-meaning-footer {
+        font-size: .58rem;
+
+        line-height: 1.6;
+
+        letter-spacing: .16em;
+    }
+
+}
+
+/* =========================================================
+   VENTURES — FOCUS AREAS
+========================================================= */
+
+.ventures-focus {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--color-bg);
+}
+
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.ventures-focus-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, .9fr)
+        minmax(0, 1.1fr);
+
+    gap: 7rem;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   LEFT INTRO
+========================================================= */
+
+.ventures-focus-intro {
+    position: sticky;
+
+    top: 7rem;
+
+    max-width: 38rem;
+}
+
+
+.ventures-focus-title {
+max-width: 42rem;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2.5rem,
+        4vw,
+        4rem
+    );
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+
+    letter-spacing: -0.045em;
+
+}
+
+
+.ventures-focus-copy {
+    max-width: 34rem;
+
+    margin-top: 1.5rem;
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.ventures-focus-note {
+    display: flex;
+
+    align-items: center;
+
+    gap: .85rem;
+
+    margin-top: 2rem;
+
+    color: rgba(62, 103, 167, .58);
+
+    font-size: .67rem;
+
+    line-height: 1.4;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .2em;
+}
+
+
+.ventures-focus-note-line {
+    display: block;
+
+    width: 3rem;
+
+    height: 1px;
+
+    flex: 0 0 auto;
+
+    background: var(--color-primary);
+
+    opacity: .7;
+}
+
+
+/* =========================================================
+   RIGHT LIST
+========================================================= */
+
+.ventures-focus-list {
+    width: 100%;
+
+    border-top:
+        1px solid var(--color-border);
+}
+
+
+/* =========================================================
+   FOCUS ITEM
+========================================================= */
+
+.ventures-focus-item {
+    display: grid;
+
+    grid-template-columns:
+        5rem
+        minmax(0, 1fr)
+        10rem;
+
+    gap: 2rem;
+
+    align-items: center;
+
+    min-height: 13rem;
+
+    padding: 2.5rem 0;
+
+    border-bottom:
+        1px solid var(--color-border);
+
+    transition:
+        background-color var(--transition-base),
+        padding var(--transition-base);
+}
+
+
+.ventures-focus-item:hover {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(62, 103, 167, .035),
+            rgba(62, 103, 167, .012)
+        );
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.ventures-focus-item-number {
+    align-self: start;
+
+    font-family: var(--font-heading);
+
+    font-size: 3.5rem;
+
+    line-height: .85;
+
+    font-weight: var(--weight-extrabold);
+
+    letter-spacing: -.07em;
+
+    color:
+        rgba(62, 103, 167, .16);
+
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
+}
+
+
+.ventures-focus-item:hover
+.ventures-focus-item-number {
+    color:
+        rgba(62, 103, 167, .36);
+
+    transform:
+        translateX(.25rem);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.ventures-focus-item-main {
+    min-width: 0;
+}
+
+
+.ventures-focus-item-kicker {
+    display: block;
+
+    margin-bottom: .7rem;
+
+    color: var(--color-primary);
+
+    font-size: .67rem;
+
+    line-height: 1.2;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .22em;
+}
+
+
+.ventures-focus-item-main h3 {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: 1.55rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.15;
+
+    letter-spacing: -.03em;
+}
+
+
+.ventures-focus-item-main p {
+    max-width: 38rem;
+
+    margin: .75rem 0 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.ventures-focus-item-meta {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: .45rem;
+
+    align-self: center;
+}
+
+
+.ventures-focus-item-meta span {
+    color:
+        rgba(62, 103, 167, .42);
+
+    font-size: .6rem;
+
+    line-height: 1.3;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .18em;
+
+    text-align: right;
+
+    transition:
+        color var(--transition-base);
+}
+
+
+.ventures-focus-item:hover
+.ventures-focus-item-meta span {
+    color:
+        var(--color-primary);
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .ventures-focus-layout {
+        grid-template-columns: 1fr;
+
+        gap: 4rem;
+    }
+
+
+    .ventures-focus-intro {
+        position: relative;
+
+        top: auto;
+
+        max-width: 46rem;
+    }
+
+
+    .ventures-focus-item {
+        grid-template-columns:
+            5rem
+            minmax(0, 1fr)
+            8rem;
+
+        gap: 1.5rem;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .ventures-focus-layout {
+        gap: 3rem;
+    }
+
+
+    .ventures-focus-item {
+        grid-template-columns:
+            3.5rem
+            minmax(0, 1fr);
+
+        gap: 1.25rem;
+
+        min-height: auto;
+
+        padding: 2rem 0;
+    }
+
+
+    .ventures-focus-item:hover {
+        padding-left: .75rem;
+        padding-right: .75rem;
+    }
+
+
+    .ventures-focus-item-number {
+        font-size: 2.6rem;
+    }
+
+
+    .ventures-focus-item-main h3 {
+        font-size: 1.3rem;
+    }
+
+
+    .ventures-focus-item-main p {
+        font-size: .93rem;
+
+        line-height: 1.65;
+    }
+
+
+    .ventures-focus-item-meta {
+        display: none;
+    }
+
+
+    .ventures-focus-note {
+        font-size: .58rem;
+
+        line-height: 1.6;
+
+        letter-spacing: .16em;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .ventures-focus-title {
+        margin-top: 1.25rem;
+    }
+
+
+    .ventures-focus-item {
+        grid-template-columns:
+            3rem
+            minmax(0, 1fr);
+
+        gap: 1rem;
+    }
+
+
+    .ventures-focus-item-number {
+        font-size: 2.25rem;
+    }
+
+
+    .ventures-focus-item-main h3 {
+        font-size: 1.2rem;
+    }
+
+
+    .ventures-focus-item-main p {
+        font-size: .9rem;
+    }
+
+}
+
+/* =========================================================
+   VENTURES — HOW WE BUILD
+   EDITORIAL BUILD RUNWAY
+========================================================= */
+
+.ventures-build {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--color-bg);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ventures-build-header {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(20rem, .9fr);
+
+    gap: 6rem;
+
+    align-items: end;
+
+    margin-bottom: 5rem;
+
+    padding-bottom: 3rem;
+
+    border-bottom:
+        1px solid var(--color-border);
+}
+
+.ventures-build-header-main {
+    max-width: 48rem;
+}
+
+.ventures-build-header .section-label {
+    display: block;
+
+    margin-bottom: 1.35rem;
+}
+
+.ventures-build-title {
+    max-width: 44rem;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2.75rem,
+        4.5vw,
+        4.5rem
+    );
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: .98;
+
+    letter-spacing: -.055em;
+}
+
+.ventures-build-copy {
+    max-width: 34rem;
+
+    margin-left: auto;
+
+    margin-bottom: .15rem;
+}
+
+
+/* =========================================================
+   RUNWAY
+========================================================= */
+
+.ventures-build-runway {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 2.5rem;
+
+    min-height: 27rem;
+
+    padding-top: 1rem;
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.ventures-build-track {
+    position: absolute;
+
+    top: 6.25rem;
+
+    left: 6%;
+
+    right: 6%;
+
+    height: 1px;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+.ventures-build-track-line {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--color-border-strong) 8%,
+            var(--color-border-strong) 92%,
+            transparent
+        );
+}
+
+.ventures-build-track-progress {
+    position: absolute;
+
+    top: -.5px;
+
+    left: 8%;
+
+    width: 84%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(62, 103, 167, .18),
+            rgba(62, 103, 167, .45),
+            rgba(62, 103, 167, .18)
+        );
+
+    opacity: .65;
+}
+
+
+/* =========================================================
+   STAGE
+========================================================= */
+
+.ventures-build-stage {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: 0 .25rem;
+
+    transition:
+        transform var(--transition-base);
+}
+
+
+/* =========================================================
+   STAGE OFFSET
+========================================================= */
+
+.ventures-build-stage-01 {
+    transform: translateY(0);
+}
+
+.ventures-build-stage-02 {
+    transform: translateY(2.5rem);
+}
+
+.ventures-build-stage-03 {
+    transform: translateY(0);
+}
+
+.ventures-build-stage-04 {
+    transform: translateY(2.5rem);
+}
+
+
+/* =========================================================
+   TOP META
+========================================================= */
+
+.ventures-build-stage-top {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    min-height: 5rem;
+}
+
+.ventures-build-stage-number {
+    display: block;
+
+    color:
+        rgba(62, 103, 167, .17);
+
+    font-family: var(--font-heading);
+
+    font-size: 3.5rem;
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: .8;
+
+    letter-spacing: -.07em;
+
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
+}
+
+.ventures-build-stage-kicker {
+    display: block;
+
+    margin-top: 1rem;
+
+    color: var(--color-primary);
+
+    font-size: .62rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.2;
+
+    letter-spacing: .22em;
+}
+
+
+/* =========================================================
+   TRACK DOT
+========================================================= */
+
+.ventures-build-stage-dot {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: .85rem;
+
+    height: .85rem;
+
+    margin-top: 1.15rem;
+
+    margin-bottom: 2.25rem;
+
+    border:
+        2px solid var(--color-primary);
+
+    border-radius: 50%;
+
+    background: var(--color-bg);
+
+    box-shadow:
+        0 0 0 .45rem var(--color-bg);
+
+    transition:
+        background-color var(--transition-base),
+        transform var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.ventures-build-stage-content {
+    max-width: 18rem;
+}
+
+.ventures-build-stage-content h3 {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: 1.45rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.12;
+
+    letter-spacing: -.035em;
+}
+
+.ventures-build-stage-content p {
+    margin: .8rem 0 0;
+
+    color: var(--color-text-muted);
+
+    font-size: .9rem;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.ventures-build-stage:hover {
+    transform: translateY(-.35rem);
+}
+
+.ventures-build-stage-02:hover,
+.ventures-build-stage-04:hover {
+    transform: translateY(2.15rem);
+}
+
+.ventures-build-stage:hover
+.ventures-build-stage-number {
+    color: rgba(62, 103, 167, .38);
+
+    transform: translateX(.15rem);
+}
+
+.ventures-build-stage:hover
+.ventures-build-stage-dot {
+    background: var(--color-primary);
+
+    transform: scale(1.18);
+
+    box-shadow:
+        0 0 0 .45rem var(--color-bg),
+        0 0 0 .7rem rgba(62, 103, 167, .08);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.ventures-build-footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: .9rem;
+
+    margin-top: 1rem;
+
+    padding-top: 1.75rem;
+
+    border-top:
+        1px solid var(--color-border);
+
+    color:
+        rgba(62, 103, 167, .58);
+
+    font-size: .62rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.4;
+
+    letter-spacing: .2em;
+}
+
+.ventures-build-footer-line {
+    display: block;
+
+    width: 3rem;
+
+    height: 1px;
+
+    flex: 0 0 auto;
+
+    background: var(--color-primary);
+
+    opacity: .7;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .ventures-build-header {
+        grid-template-columns: 1fr;
+
+        gap: 1.75rem;
+
+        margin-bottom: 4rem;
+    }
+
+    .ventures-build-copy {
+        margin-left: 0;
+
+        max-width: 42rem;
+    }
+
+    .ventures-build-runway {
+        gap: 1.5rem;
+
+        min-height: 29rem;
+    }
+
+    .ventures-build-stage-content {
+        max-width: 15rem;
+    }
+
+    .ventures-build-stage-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .ventures-build-stage-content p {
+        font-size: .85rem;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .ventures-build-header {
+        margin-bottom: 3rem;
+
+        padding-bottom: 2.5rem;
+    }
+
+    .ventures-build-title {
+        font-size: 2.6rem;
+    }
+
+    .ventures-build-copy {
+        font-size: .95rem;
+    }
+
+    .ventures-build-runway {
+        display: block;
+
+        min-height: auto;
+
+        padding: 0 0 1rem;
+    }
+
+
+    /* -----------------------------------------
+       MOBILE TRACK
+    ----------------------------------------- */
+
+    .ventures-build-track {
+        top: 0;
+
+        bottom: 0;
+
+        left: 1.25rem;
+
+        right: auto;
+
+        width: 1px;
+
+        height: auto;
+    }
+
+    .ventures-build-track-line {
+        background:
+            linear-gradient(
+                to bottom,
+                transparent,
+                var(--color-border-strong) 8%,
+                var(--color-border-strong) 92%,
+                transparent
+            );
+    }
+
+    .ventures-build-track-progress {
+        top: 8%;
+
+        left: 0;
+
+        width: 2px;
+
+        height: 84%;
+
+        background:
+            linear-gradient(
+                to bottom,
+                rgba(62, 103, 167, .18),
+                rgba(62, 103, 167, .45),
+                rgba(62, 103, 167, .18)
+            );
+    }
+
+
+    /* -----------------------------------------
+       MOBILE STAGES
+    ----------------------------------------- */
+
+    .ventures-build-stage,
+    .ventures-build-stage-01,
+    .ventures-build-stage-02,
+    .ventures-build-stage-03,
+    .ventures-build-stage-04 {
+        display: block;
+
+        padding: 1.5rem 0 2.75rem 3.5rem;
+
+        transform: none;
+    }
+
+    .ventures-build-stage:hover,
+    .ventures-build-stage-02:hover,
+    .ventures-build-stage-04:hover {
+        transform: none;
+    }
+
+    .ventures-build-stage-top {
+        min-height: auto;
+    }
+
+    .ventures-build-stage-number {
+        font-size: 2.5rem;
+    }
+
+    .ventures-build-stage-kicker {
+        margin-top: .8rem;
+    }
+
+    .ventures-build-stage-dot {
+        position: absolute;
+
+        top: 1.75rem;
+
+        left: .85rem;
+
+        width: .8rem;
+        height: .8rem;
+
+        margin: 0;
+    }
+
+    .ventures-build-stage-content {
+        max-width: 24rem;
+
+        margin-top: 1.5rem;
+    }
+
+    .ventures-build-stage-content h3 {
+        font-size: 1.35rem;
+    }
+
+    .ventures-build-stage-content p {
+        font-size: .9rem;
+    }
+
+    .ventures-build-footer {
+        margin-top: 0;
+
+        font-size: .55rem;
+
+        line-height: 1.6;
+
+        letter-spacing: .15em;
+    }
+
+}
+
+/* =========================================================
+   VENTURES SHOWCASE
+   Premium expandable venture panels
+========================================================= */
+
+.ventures-showcase-section {
+    position: relative;
+
+    overflow: hidden;
+
+    padding-top: clamp(7rem, 9vw, 9rem);
+    padding-bottom: clamp(6rem, 8vw, 8rem);
+
+    background:
+        radial-gradient(
+            circle at 88% 18%,
+            rgba(62, 103, 167, .07),
+            transparent 30%
+        ),
+        var(--color-bg);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ventures-showcase-header {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(20rem, .85fr);
+
+    gap: 7rem;
+
+    align-items: end;
+
+    margin-bottom: 4.5rem;
+}
+
+
+.ventures-showcase-title {
+    max-width: 42rem;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2.5rem,
+        4vw,
+        4rem
+    );
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+
+    letter-spacing: -.045em;
+}
+
+
+.ventures-showcase-title span {
+    color: var(--color-primary);
+}
+
+
+.ventures-showcase-header .section-copy {
+    max-width: 34rem;
+
+    margin-left: auto;
+}
+
+
+/* =========================================================
+   SHOWCASE
+========================================================= */
+
+.ventures-showcase {
+    display: flex;
+
+    width: 100%;
+    height: 38rem;
+
+    gap: .9rem;
+}
+
+
+/* =========================================================
+   PANEL — BASE
+========================================================= */
+
+.venture-panel {
+    position: relative;
+
+    display: flex;
+
+    flex: .72 1 0;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    border-radius: 1.5rem;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 18px 45px rgba(15, 23, 42, .08);
+
+    transition:
+        flex 520ms cubic-bezier(.22, .72, .18, 1),
+        box-shadow 350ms ease;
+}
+
+
+/* =========================================================
+   PANEL BACKGROUNDS
+========================================================= */
+
+.venture-panel-doctors {
+    background:
+        linear-gradient(
+            145deg,
+            #173b67 0%,
+            #0d2848 48%,
+            #061322 100%
+        );
+}
+
+
+.venture-panel-dental {
+    background:
+        linear-gradient(
+            145deg,
+            #194568 0%,
+            #0c2b47 48%,
+            #061522 100%
+        );
+}
+
+
+.venture-panel-orators {
+    background:
+        linear-gradient(
+            145deg,
+            #29303f 0%,
+            #171f30 48%,
+            #07111f 100%
+        );
+}
+
+
+/* =========================================================
+   PANEL HOVER / SELECTION
+========================================================= */
+
+/*
+   When the showcase is idle:
+   selected panel is large.
+*/
+
+.ventures-showcase:not(:hover)
+.venture-panel.is-selected {
+    flex: 1.65 1 0;
+}
+
+
+/*
+   When the user enters the showcase:
+   every panel becomes compact.
+*/
+
+.ventures-showcase:hover
+.venture-panel {
+    flex: .72 1 0;
+}
+
+
+/*
+   The panel directly under the cursor becomes large.
+*/
+
+.ventures-showcase:hover
+.venture-panel:hover {
+    flex: 1.65 1 0;
+
+    box-shadow:
+        0 28px 65px rgba(15, 23, 42, .16);
+}
+
+
+/*
+   If selected panel is also hovered,
+   it remains large.
+*/
+
+.ventures-showcase:hover
+.venture-panel.is-selected:hover {
+    flex: 1.65 1 0;
+}
+
+
+/* =========================================================
+   STATIC VISUAL SYSTEM
+========================================================= */
+
+.venture-panel-visual {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -3;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.venture-visual-grid {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .22;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.045) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        42px 42px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black 0%,
+            transparent 82%
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            black 0%,
+            transparent 82%
+        );
+}
+
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.venture-visual-glow {
+    position: absolute;
+
+    width: 24rem;
+    height: 24rem;
+
+    top: 24%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(93, 143, 218, .18) 0%,
+            rgba(93, 143, 218, .07) 34%,
+            transparent 70%
+        );
+}
+
+
+/* =========================================================
+   ORBIT RINGS — STATIC ONLY
+========================================================= */
+
+.venture-visual-ring {
+    position: absolute;
+
+    top: 43%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(147, 185, 231, .12);
+
+    border-radius: 50%;
+}
+
+
+.venture-visual-ring.ring-large {
+    width: 32rem;
+    height: 32rem;
+}
+
+
+.venture-visual-ring.ring-medium {
+    width: 20rem;
+    height: 20rem;
+}
+
+
+.venture-visual-ring.ring-small {
+    width: 9rem;
+    height: 9rem;
+}
+
+
+/* =========================================================
+   CENTRAL SYMBOL
+========================================================= */
+
+.venture-visual-symbol {
+    position: absolute;
+
+    top: 43%;
+    left: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 5.5rem;
+    height: 5.5rem;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(151, 190, 235, .22);
+
+    border-radius: 1.25rem;
+
+    background:
+        rgba(82, 128, 193, .18);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        0 20px 45px rgba(0,0,0,.12);
+
+    color: rgba(255,255,255,.78);
+}
+
+
+.venture-visual-symbol .material-symbols-outlined {
+    font-size: 2rem;
+
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 350,
+        'GRAD' 0,
+        'opsz' 32;
+}
+
+
+/* =========================================================
+   DENTAL SYMBOL
+========================================================= */
+
+.venture-panel-dental .venture-visual-symbol {
+    background:
+        rgba(74, 132, 190, .16);
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+}
+
+
+.venture-panel-dental
+.venture-visual-symbol .material-symbols-outlined {
+    transform: rotate(-45deg);
+}
+
+
+/* =========================================================
+   ORATORS VISUAL
+========================================================= */
+
+.venture-panel-orators .venture-visual-glow {
+    top: 30%;
+
+    width: 28rem;
+    height: 28rem;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(211, 171, 101, .18) 0%,
+            rgba(211, 171, 101, .06) 35%,
+            transparent 70%
+        );
+}
+
+
+.venture-orators-stage {
+    position: absolute;
+
+    left: 50%;
+    bottom: 7%;
+
+    width: 72%;
+    height: 34%;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(255,255,255,.025),
+            transparent
+        );
+
+    clip-path:
+        polygon(
+            18% 100%,
+            82% 100%,
+            62% 0,
+            38% 0
+        );
+}
+
+
+.venture-orators-light {
+    position: absolute;
+
+    top: 8%;
+    left: 50%;
+
+    width: 16rem;
+    height: 22rem;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(221,188,126,.16),
+            rgba(221,188,126,0)
+        );
+
+    clip-path:
+        polygon(
+            35% 0,
+            65% 0,
+            100% 100%,
+            0 100%
+        );
+
+    opacity: .75;
+}
+
+
+.venture-orators-person {
+    position: absolute;
+
+    left: 50%;
+    bottom: 13%;
+
+    width: 2.8rem;
+    height: 6rem;
+
+    transform: translateX(-50%);
+
+    border-radius:
+        45% 45% 15% 15%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #101724,
+            #252d3b,
+            #0c1421
+        );
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,.3);
+}
+
+
+.venture-orators-person span {
+    position: absolute;
+
+    left: 50%;
+    top: -1.4rem;
+
+    width: 1.8rem;
+    height: 1.8rem;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        #b4a999;
+}
+
+
+.venture-orators-line {
+    position: absolute;
+
+    left: 12%;
+    right: 12%;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.09);
+}
+
+
+.venture-orators-line.line-one {
+    top: 51%;
+
+    transform: rotate(-10deg);
+}
+
+
+.venture-orators-line.line-two {
+    top: 53%;
+}
+
+
+.venture-orators-line.line-three {
+    top: 55%;
+
+    transform: rotate(10deg);
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.venture-panel-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(2,10,20,.03) 0%,
+            rgba(2,10,20,.04) 35%,
+            rgba(2,10,20,.72) 78%,
+            rgba(2,10,20,.96) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.venture-panel-top {
+    position: absolute;
+
+    top: 1.5rem;
+    left: 1.75rem;
+    right: 1.5rem;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    z-index: 5;
+}
+
+
+.venture-panel-number {
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        3.5rem,
+        5vw,
+        5.5rem
+    );
+
+    line-height: .8;
+
+    font-weight: var(--weight-extrabold);
+
+    letter-spacing: -.075em;
+
+    color:
+        rgba(255,255,255,.78);
+
+    transition:
+        color 300ms ease;
+}
+
+
+/*
+   Compact cards have muted numbers.
+*/
+
+.venture-panel:not(:hover)
+.venture-panel-number {
+    color:
+        rgba(255,255,255,.26);
+}
+
+
+/*
+   Selected card outside hover state is still prominent.
+*/
+
+.ventures-showcase:not(:hover)
+.venture-panel.is-selected
+.venture-panel-number {
+    color:
+        rgba(255,255,255,.82);
+}
+
+
+/* =========================================================
+   ARROW BUTTON
+========================================================= */
+
+.venture-panel-button {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 3.25rem;
+    height: 3.25rem;
+
+    flex: 0 0 auto;
+
+    padding: 0;
+
+    border: 1px solid rgba(255,255,255,.30);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.035);
+
+    color: rgba(255,255,255,.88);
+
+    cursor: pointer;
+
+    transition:
+        background-color 250ms ease,
+        border-color 250ms ease,
+        transform 300ms cubic-bezier(.22,.72,.18,1);
+}
+
+
+.venture-panel-button:hover {
+    background:
+        rgba(255,255,255,.10);
+
+    border-color:
+        rgba(255,255,255,.48);
+}
+
+
+/*
+   Two icons occupy exactly the same position.
+*/
+
+.venture-arrow {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    font-size: 1.2rem;
+
+    transform: translate(-50%, -50%);
+
+    transition:
+        opacity 180ms ease,
+        transform 300ms cubic-bezier(.22,.72,.18,1);
+}
+
+
+.venture-arrow-diagonal {
+    opacity: 1;
+}
+
+
+.venture-arrow-right {
+    opacity: 0;
+
+    transform:
+        translate(-65%, -50%);
+}
+
+
+/*
+   ONLY the panel currently being hovered
+   changes its arrow from ↗ to →.
+*/
+
+.venture-panel:hover
+.venture-arrow-diagonal {
+    opacity: 0;
+
+    transform:
+        translate(-35%, -50%);
+}
+
+
+.venture-panel:hover
+.venture-arrow-right {
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.venture-panel-content {
+    position: absolute;
+
+    left: 2.1rem;
+    right: 2.1rem;
+    bottom: 2rem;
+
+    z-index: 4;
+
+    min-width: 0;
+}
+
+
+.venture-panel-kicker {
+    display: block;
+
+    margin-bottom: .65rem;
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size: .66rem;
+
+    line-height: 1.2;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .22em;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.venture-panel-content h3 {
+    margin: 0;
+
+    color: #fff;
+
+    font-family: var(--font-heading);
+
+    font-size: 1.45rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.1;
+
+    letter-spacing: -.025em;
+
+    white-space: nowrap;
+
+    transition:
+        font-size 350ms cubic-bezier(.22,.72,.18,1),
+        letter-spacing 350ms ease;
+}
+
+
+/*
+   Expanded card title.
+*/
+
+.venture-panel:hover
+.venture-panel-content h3,
+
+.ventures-showcase:not(:hover)
+.venture-panel.is-selected
+.venture-panel-content h3 {
+    font-size: clamp(
+        2rem,
+        3vw,
+        3rem
+    );
+
+    letter-spacing: -.04em;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.venture-panel-content p {
+    max-width: 42rem;
+
+    margin: .95rem 0 0;
+
+    color:
+        rgba(255,255,255,.70);
+
+    font-size: 1rem;
+
+    line-height: 1.65;
+
+    opacity: 0;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transform: translateY(.4rem);
+
+    transition:
+        opacity 250ms ease,
+        max-height 350ms ease,
+        transform 350ms ease;
+}
+
+
+/*
+   Description ONLY exists visually on expanded card.
+*/
+
+.venture-panel:hover
+.venture-panel-content p,
+
+.ventures-showcase:not(:hover)
+.venture-panel.is-selected
+.venture-panel-content p {
+    opacity: 1;
+
+    max-height: 8rem;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.venture-panel-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: .5rem;
+
+    margin-top: 1.25rem;
+
+    padding-bottom: .35rem;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.52);
+
+    color: #fff;
+
+    font-size: .7rem;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .1em;
+
+    opacity: 0;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transform: translateY(.4rem);
+
+    transition:
+        opacity 250ms ease,
+        max-height 350ms ease,
+        transform 350ms ease,
+        gap 200ms ease;
+}
+
+
+.venture-panel:hover
+.venture-panel-link,
+
+.ventures-showcase:not(:hover)
+.venture-panel.is-selected
+.venture-panel-link {
+    opacity: 1;
+
+    max-height: 3rem;
+
+    transform: translateY(0);
+}
+
+
+.venture-panel-link:hover {
+    gap: .8rem;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.ventures-showcase-footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: .9rem;
+
+    margin-top: 1.75rem;
+
+    color:
+        rgba(62,103,167,.62);
+
+    font-size: .67rem;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .2em;
+}
+
+
+.ventures-showcase-footer-line {
+    width: 3rem;
+
+    height: 1px;
+
+    flex: 0 0 auto;
+
+    background:
+        var(--color-primary);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .ventures-showcase-header {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+    }
+
+
+    .ventures-showcase-header
+    .section-copy {
+        margin-left: 0;
+    }
+
+
+    .ventures-showcase {
+        height: 34rem;
+    }
+
+
+    .venture-panel-content {
+        left: 1.6rem;
+        right: 1.6rem;
+        bottom: 1.7rem;
+    }
+
+
+    .venture-panel-top {
+        left: 1.35rem;
+        right: 1.35rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .ventures-showcase {
+        flex-direction: column;
+
+        height: auto;
+
+        gap: .75rem;
+    }
+
+
+    .venture-panel,
+    .ventures-showcase:hover
+    .venture-panel,
+    .ventures-showcase:hover
+    .venture-panel:hover,
+    .ventures-showcase:not(:hover)
+    .venture-panel.is-selected {
+        flex: none;
+
+        width: 100%;
+
+        min-height: 15rem;
+    }
+
+
+    /*
+       On mobile the selected / hovered card opens vertically.
+    */
+
+    .venture-panel:hover,
+    .venture-panel.is-selected {
+        min-height: 27rem;
+    }
+
+
+    .venture-panel-content h3,
+    .venture-panel:hover
+    .venture-panel-content h3,
+    .ventures-showcase:not(:hover)
+    .venture-panel.is-selected
+    .venture-panel-content h3 {
+        font-size: 1.75rem;
+    }
+
+
+    .venture-panel-content p {
+        font-size: .95rem;
+    }
+
+
+    .venture-panel-number {
+        font-size: 3.5rem;
+    }
+
+
+    .venture-visual-ring.ring-large {
+        width: 25rem;
+        height: 25rem;
+    }
+
+
+    .venture-visual-ring.ring-medium {
+        width: 16rem;
+        height: 16rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .ventures-showcase-section {
+        padding-top: 5rem;
+        padding-bottom: 4.5rem;
+    }
+
+
+    .ventures-showcase-header {
+        margin-bottom: 3rem;
+    }
+
+
+    .ventures-showcase-title {
+        font-size: 2.55rem;
+
+        letter-spacing: -.045em;
+    }
+
+
+    .ventures-showcase {
+        gap: .65rem;
+    }
+
+
+    .venture-panel-content {
+        left: 1.35rem;
+        right: 1.35rem;
+        bottom: 1.4rem;
+    }
+
+
+    .venture-panel-top {
+        top: 1.2rem;
+
+        left: 1.2rem;
+        right: 1.2rem;
+    }
+
+
+    .venture-panel-button {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+
+    .venture-panel-content h3,
+    .venture-panel:hover
+    .venture-panel-content h3,
+    .ventures-showcase:not(:hover)
+    .venture-panel.is-selected
+    .venture-panel-content h3 {
+        font-size: 1.55rem;
+    }
+
+
+    .venture-panel-content p {
+        font-size: .9rem;
+
+        line-height: 1.6;
+    }
+
+
+    .ventures-showcase-footer {
+        font-size: .58rem;
+
+        line-height: 1.6;
+
+        letter-spacing: .16em;
+    }
+
+}
+
+/* =========================================================
+   VENTURES — WHY OUR MODEL WORKS
+========================================================= */
+
+.ventures-model {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--color-bg);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ventures-model-header {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(20rem, .75fr);
+
+    gap: 6rem;
+
+    align-items: end;
+
+    margin-bottom: 5.5rem;
+
+    padding-bottom: 3rem;
+
+    border-bottom:
+        1px solid var(--color-border);
+}
+
+
+.ventures-model-heading {
+    max-width: 42rem;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.ventures-model-title {
+    max-width: 42rem;
+
+    margin: 1.5rem 0 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2.5rem,
+        4vw,
+        4rem
+    );
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+
+    letter-spacing: -.045em;
+}
+
+
+.ventures-model-title span {
+    color: var(--color-primary);
+}
+
+
+.ventures-model-intro {
+    max-width: 34rem;
+
+    margin-left: auto;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.ventures-model-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, .95fr);
+
+    gap: 6rem;
+
+    align-items: stretch;
+}
+
+/* =========================================================
+   STUDIO ENGINE
+========================================================= */
+
+.ventures-model-engine {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 2.75rem;
+
+    min-width: 0;
+
+    padding-top: 1rem;
+
+    min-height: 32rem;
+}
+
+
+/* =========================================================
+   CONNECTING LINE
+========================================================= */
+
+.ventures-model-engine-line {
+    position: absolute;
+
+    top: 2.6rem;
+
+    left: 2.6rem;
+
+    right: 2.6rem;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(62,103,167,.18) 10%,
+            rgba(62,103,167,.18) 90%,
+            transparent 100%
+        );
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   PRINCIPLE
+========================================================= */
+
+.ventures-model-principle {
+    position: relative;
+
+    min-width: 0;
+
+    padding-top: 0;
+
+    margin: 0;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   PRINCIPLE POSITIONING
+========================================================= */
+
+.ventures-model-principle:nth-of-type(1) {
+    transform: translateY(0);
+}
+
+
+.ventures-model-principle:nth-of-type(2) {
+    transform: translateY(2rem);
+}
+
+
+.ventures-model-principle:nth-of-type(3) {
+    transform: translateY(4rem);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.ventures-model-principle-number {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 5.2rem;
+
+    height: 5.2rem;
+
+    margin-bottom: 2.5rem;
+
+    border:
+        1px solid var(--color-border-strong);
+
+    border-radius: 50%;
+
+    background:
+        var(--color-bg);
+
+    color:
+        rgba(62,103,167,.48);
+
+    font-family:
+        var(--font-heading);
+
+    font-size: 1rem;
+
+    line-height: 1;
+
+    font-weight:
+        var(--weight-bold);
+
+    letter-spacing: -.02em;
+
+    flex-shrink: 0;
+
+    transition:
+        color var(--transition-base),
+        border-color var(--transition-base);
+}
+
+
+.ventures-model-principle:hover
+.ventures-model-principle-number {
+
+    color:
+        var(--color-primary);
+
+    border-color:
+        rgba(62,103,167,.55);
+}
+
+
+/* =========================================================
+   PRINCIPLE BODY
+========================================================= */
+
+.ventures-model-principle-body {
+
+    max-width: 19rem;
+}
+
+
+/* =========================================================
+   KICKER
+========================================================= */
+
+.ventures-model-kicker {
+    display: block;
+
+    margin-bottom: .65rem;
+
+    color:
+        var(--color-primary);
+
+    font-size: .63rem;
+
+    line-height: 1.2;
+
+    font-weight:
+        var(--weight-bold);
+
+    letter-spacing: .2em;
+}
+
+
+/* =========================================================
+   SUB HEADINGS
+========================================================= */
+
+.ventures-model-principle-body h3 {
+
+    margin: 0;
+
+    color:
+        var(--color-text);
+
+    font-family:
+        var(--font-heading);
+
+    font-size: 1.35rem;
+
+    font-weight:
+        var(--weight-bold);
+
+    line-height: 1.18;
+
+    letter-spacing: -.025em;
+}
+
+
+.ventures-model-principle-body p {
+
+    max-width: 19rem;
+
+    margin: .75rem 0 0;
+
+    color:
+        var(--color-text-muted);
+
+    font-size: .9rem;
+
+    line-height: 1.65;
+}
+
+/* =========================================================
+   ENGINE CAPTION
+========================================================= */
+
+.ventures-model-engine-caption {
+    position: absolute;
+
+    bottom: 1.25rem;
+
+    left: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .8rem;
+
+    color:
+        rgba(62, 103, 167, .55);
+
+    font-size: .6rem;
+
+    line-height: 1.4;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .18em;
+}
+
+
+.ventures-model-engine-caption span {
+    display: block;
+
+    width: 2.5rem;
+
+    height: 1px;
+
+    background:
+        var(--color-primary);
+
+    opacity: .65;
+}
+
+
+/* =========================================================
+   RIGHT — PROOF
+========================================================= */
+
+.ventures-model-proof {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 100%;
+
+    padding:
+        2rem
+        0
+        1.5rem
+        3rem;
+
+    border-left:
+        1px solid var(--color-border);
+}
+
+
+/* =========================================================
+   PROOF TOP
+========================================================= */
+
+.ventures-model-proof-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+}
+
+
+.ventures-model-proof-label {
+    flex: 0 0 auto;
+
+    color: var(--color-primary);
+
+    font-size: .65rem;
+
+    line-height: 1.2;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .2em;
+}
+
+
+.ventures-model-proof-line {
+    display: block;
+
+    width: 4rem;
+
+    height: 1px;
+
+    background:
+        var(--color-primary);
+
+    opacity: .45;
+}
+
+
+/* =========================================================
+   STATEMENT
+========================================================= */
+
+.ventures-model-proof-statement {
+    max-width: 34rem;
+
+    margin: 3.5rem 0 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        1.8rem,
+        2.8vw,
+        2.75rem
+    );
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.08;
+
+    letter-spacing: -.035em;
+}
+
+
+.ventures-model-proof-statement span {
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   METRICS
+========================================================= */
+
+.ventures-model-metrics {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 3rem;
+
+    margin-top: auto;
+
+    padding-top: 5rem;
+
+    border-top:
+        1px solid var(--color-border);
+}
+
+
+.ventures-model-metric {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .75rem;
+}
+
+
+.ventures-model-metric-value {
+    color: var(--color-primary);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        3rem,
+        5vw,
+        5rem
+    );
+
+    line-height: .85;
+
+    font-weight: var(--weight-extrabold);
+
+    letter-spacing: -.065em;
+}
+
+
+.ventures-model-metric-label {
+    color:
+        var(--color-text-muted);
+
+    font-size: .65rem;
+
+    line-height: 1.5;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .16em;
+}
+
+
+/* =========================================================
+   PROOF FOOTER
+========================================================= */
+
+.ventures-model-proof-footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: .8rem;
+
+    margin-top: 3rem;
+}
+
+
+.ventures-model-proof-footer span {
+    display: block;
+
+    width: 2.5rem;
+
+    height: 1px;
+
+    background:
+        var(--color-primary);
+
+    opacity: .65;
+}
+
+
+.ventures-model-proof-footer p {
+    margin: 0;
+
+    color:
+        rgba(62, 103, 167, .58);
+
+    font-size: .62rem;
+
+    line-height: 1.4;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .18em;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .ventures-model-header {
+        grid-template-columns: 1fr;
+
+        gap: 1.75rem;
+    }
+
+
+    .ventures-model-intro {
+        margin-left: 0;
+
+        max-width: 42rem;
+    }
+
+
+    .ventures-model-layout {
+        grid-template-columns: 1fr;
+
+        gap: 5rem;
+    }
+
+
+    .ventures-model-proof {
+        padding:
+            3rem
+            0
+            0;
+
+        border-left: 0;
+
+        border-top:
+            1px solid var(--color-border);
+    }
+
+
+    .ventures-model-engine {
+        padding-bottom: 2rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .ventures-model-header {
+        margin-bottom: 3.5rem;
+
+        padding-bottom: 2rem;
+    }
+
+
+    .ventures-model-layout {
+        gap: 4rem;
+    }
+
+
+    .ventures-model-engine {
+        display: block;
+
+        padding-top: 0;
+    }
+
+
+    .ventures-model-engine-line {
+        top: 2.6rem;
+
+        left: 1.5rem;
+
+        right: auto;
+
+        width: 1px;
+
+        height: calc(100% - 5rem);
+
+        background:
+            linear-gradient(
+                to bottom,
+                transparent,
+                var(--color-border-strong) 8%,
+                var(--color-border-strong) 92%,
+                transparent
+            );
+    }
+
+.ventures-model-principle,
+.ventures-model-principle:nth-of-type(2),
+.ventures-model-principle:nth-of-type(3) {
+
+    display: grid;
+
+    grid-template-columns:
+        3rem
+        minmax(0, 1fr);
+
+    gap: 1.25rem;
+
+    padding-top: 0;
+
+    margin-bottom: 2.5rem;
+
+    transform: none;
+}
+
+    .ventures-model-principle-number {
+        width: 3rem;
+
+        height: 3rem;
+
+        margin-bottom: 0;
+
+        font-size: .8rem;
+    }
+
+
+    .ventures-model-principle-body {
+        max-width: none;
+
+        padding-top: .1rem;
+    }
+
+
+    .ventures-model-principle-body h3 {
+        font-size: 1.3rem;
+    }
+
+
+    .ventures-model-principle-body p {
+        font-size: .9rem;
+    }
+
+
+    .ventures-model-engine-caption {
+        position: relative;
+
+        bottom: auto;
+
+        margin-top: .5rem;
+
+        padding-left: 4.25rem;
+    }
+
+
+    .ventures-model-proof {
+        padding-top: 2.5rem;
+    }
+
+
+    .ventures-model-proof-statement {
+        margin-top: 2rem;
+
+        font-size: 1.8rem;
+    }
+
+
+    .ventures-model-metrics {
+        gap: 2rem;
+
+        margin-top: 3rem;
+
+        padding-top: 3rem;
+    }
+
+
+    .ventures-model-metric-value {
+        font-size: 3rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .ventures-model-principle-body h3 {
+        font-size: 1.2rem;
+    }
+
+
+    .ventures-model-principle-body p {
+        font-size: .88rem;
+    }
+
+
+    .ventures-model-metric-value {
+        font-size: 2.7rem;
+    }
+
+
+    .ventures-model-proof-footer p {
+        font-size: .55rem;
+    }
+
+}
+/* =========================================================
+   VENTURES — WHO THIS IS FOR
+   ECOSYSTEM COMPOSITION
+========================================================= */
+
+.ventures-audience {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--color-bg);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ventures-audience-header {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(20rem, .95fr);
+
+    gap: 6rem;
+
+    align-items: end;
+
+    margin-bottom: 5rem;
+
+    padding-bottom: 3.5rem;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.ventures-audience-title {
+    max-width: 42rem;
+
+    margin: 1.5rem 0 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2.5rem,
+        4.0vw,
+        4.0rem
+    );
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+
+    letter-spacing: -.045em;
+}
+
+.ventures-audience-title span {
+    display: block;
+
+    color: var(--color-primary);
+}
+
+.ventures-audience-copy {
+    max-width: 34rem;
+
+    margin-left: auto;
+    margin-bottom: .25rem;
+
+    color: var(--color-text-muted);
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ECOSYSTEM
+========================================================= */
+
+.ventures-audience-ecosystem {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    grid-template-rows:
+        1fr
+        1fr;
+
+    min-height: 32rem;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+
+/* =========================================================
+   CONNECTING LINES
+========================================================= */
+
+.ventures-audience-line {
+    position: absolute;
+
+    background: var(--color-border);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.ventures-audience-line-horizontal {
+    top: 50%;
+
+    left: 8%;
+    right: 8%;
+
+    height: 1px;
+}
+
+.ventures-audience-line-vertical {
+    top: 8%;
+
+    bottom: 8%;
+
+    left: 50%;
+
+    width: 1px;
+}
+
+
+/* =========================================================
+   CENTRAL CORE
+========================================================= */
+
+.ventures-audience-core {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 9.5rem;
+    height: 9.5rem;
+
+    transform:
+        translate(-50%, -50%);
+
+    border: 1px solid
+        var(--color-border-strong);
+
+    border-radius: 50%;
+
+    background:
+        var(--color-bg);
+
+    text-align: center;
+}
+
+.ventures-audience-core::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -.65rem;
+
+    border: 1px solid
+        rgba(62, 103, 167, .12);
+
+    border-radius: 50%;
+}
+
+.ventures-audience-core-label {
+    margin-bottom: .35rem;
+
+    color: var(--color-primary);
+
+    font-size: .5rem;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .2em;
+}
+
+.ventures-audience-core-title {
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: 2rem;
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1;
+
+    letter-spacing: -.06em;
+}
+
+.ventures-audience-core-copy {
+    margin-top: .35rem;
+
+    color: var(--color-text-muted);
+
+    font-size: .55rem;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   NODE
+========================================================= */
+
+.ventures-audience-node {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    max-width: 27rem;
+
+    padding: 2rem 3rem;
+
+    transition:
+        transform var(--transition-base),
+        opacity var(--transition-base);
+}
+
+
+/* =========================================================
+   NODE POSITIONS
+========================================================= */
+.ventures-audience-node-01 {
+    align-self: start;
+    justify-self: start;
+
+    padding-top: 1.5rem;
+}
+
+.ventures-audience-node-02 {
+    align-self: start;
+    justify-self: end;
+
+    padding-top: 1.5rem;
+}
+
+.ventures-audience-node-03 {
+    align-self: end;
+    justify-self: start;
+
+    padding-bottom: 1.5rem;
+}
+
+.ventures-audience-node-04 {
+    align-self: end;
+    justify-self: end;
+
+    padding-bottom: 1.5rem;
+}
+
+
+/* =========================================================
+   NODE NUMBER
+========================================================= */
+
+.ventures-audience-node-number {
+    margin-bottom: 1rem;
+
+    color:
+        rgba(62, 103, 167, .2);
+
+    font-family: var(--font-heading);
+
+    font-size: 3.75rem;
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: .8;
+
+    letter-spacing: -.07em;
+
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
+}
+
+
+/* =========================================================
+   NODE CONTENT
+========================================================= */
+
+.ventures-audience-node-content {
+    max-width: 22rem;
+}
+
+.ventures-audience-node-kicker {
+    display: block;
+
+    margin-bottom: .65rem;
+
+    color: var(--color-primary);
+
+    font-size: .62rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.2;
+
+    letter-spacing: .22em;
+}
+
+.ventures-audience-node-content h3 {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: 1.75rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.1;
+
+    letter-spacing: -.04em;
+}
+
+.ventures-audience-node-content p {
+    max-width: 21rem;
+
+    margin: .75rem 0 0;
+
+    color: var(--color-text-muted);
+
+    font-size: .9rem;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   NODE ARROW
+========================================================= */
+
+.ventures-audience-node-arrow {
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 2.75rem;
+    height: 2.75rem;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 50%;
+
+    color: var(--color-text-muted);
+
+    opacity: .8;
+
+    transition:
+        background-color var(--transition-base),
+        color var(--transition-base),
+        border-color var(--transition-base),
+        transform var(--transition-base);
+}
+
+.ventures-audience-node-arrow
+.material-symbols-outlined {
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   ARROW POSITIONS
+========================================================= */
+
+
+/* TOP-LEFT */
+
+.ventures-audience-node-01
+.ventures-audience-node-arrow {
+    top: 1.5rem;
+    right: 1rem;
+}
+
+
+/* TOP-RIGHT */
+
+.ventures-audience-node-02
+.ventures-audience-node-arrow {
+    top: 1.5rem;
+    right: 1rem;
+}
+
+
+/* BOTTOM-LEFT */
+
+.ventures-audience-node-03
+.ventures-audience-node-arrow {
+    top: 1.5rem;
+    right: 1rem;
+}
+
+
+/* BOTTOM-RIGHT */
+
+.ventures-audience-node-04
+.ventures-audience-node-arrow {
+    top: 1.5rem;
+    right: 1rem;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.ventures-audience-ecosystem:has(
+    .ventures-audience-node:hover
+)
+.ventures-audience-node:not(:hover) {
+    opacity: .42;
+}
+
+.ventures-audience-node:hover
+.ventures-audience-node-number {
+    color: var(--color-primary);
+
+    transform: translateY(-.2rem);
+}
+
+.ventures-audience-node:hover
+.ventures-audience-node-arrow {
+    color: #fff;
+
+    border-color: var(--color-primary);
+
+    background: var(--color-primary);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.ventures-audience-footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: .9rem;
+
+    margin-top: 2rem;
+
+    color:
+        rgba(62, 103, 167, .55);
+
+    font-size: .62rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.4;
+
+    letter-spacing: .2em;
+}
+
+.ventures-audience-footer-line {
+    display: block;
+
+    width: 3rem;
+    height: 1px;
+
+    flex: 0 0 auto;
+
+    background: var(--color-primary);
+
+    opacity: .7;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .ventures-audience-header {
+        grid-template-columns: 1fr;
+
+        gap: 1.75rem;
+
+        margin-bottom: 3.5rem;
+    }
+
+    .ventures-audience-copy {
+        margin-left: 0;
+    }
+
+    .ventures-audience-ecosystem {
+        min-height: 44rem;
+    }
+
+    .ventures-audience-node {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .ventures-audience-header {
+        margin-bottom: 2.5rem;
+
+        padding-bottom: 2.5rem;
+    }
+
+    .ventures-audience-title {
+        font-size: 2.6rem;
+    }
+
+    .ventures-audience-copy {
+        font-size: .95rem;
+    }
+
+    .ventures-audience-ecosystem {
+        display: block;
+
+        min-height: auto;
+
+        padding: 0;
+
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .ventures-audience-line {
+        display: none;
+    }
+
+    .ventures-audience-core {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        width: 8rem;
+        height: 8rem;
+
+        margin: 2rem auto 3rem;
+
+        transform: none;
+    }
+
+    .ventures-audience-node {
+        max-width: none;
+
+        padding: 2rem 0 !important;
+
+        border-top: 1px solid var(--color-border);
+    }
+
+    .ventures-audience-node-arrow {
+        display: none;
+    }
+
+    .ventures-audience-node-number {
+        font-size: 2.75rem;
+    }
+
+    .ventures-audience-node-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .ventures-audience-node-content p {
+        font-size: .9rem;
+    }
+
+    .ventures-audience-footer {
+        font-size: .55rem;
+
+        letter-spacing: .15em;
+    }
+
+}
+
+/* =========================================================
+   VENTURES — LONG-TERM VISION
+   COMPOUNDING STATEMENT
+========================================================= */
+
+.ventures-vision {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--color-bg);
+}
+
+
+/* =========================================================
+   INNER
+========================================================= */
+
+.ventures-vision
+.section-container {
+    position: relative;
+
+    padding-top: 4.5rem;
+    padding-bottom: 3.5rem;
+}
+
+
+/* =========================================================
+   TOP LINE
+========================================================= */
+
+.ventures-vision-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 1.5rem;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.ventures-vision-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: .85rem;
+
+    color: var(--color-primary);
+
+    font-size: .62rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.2;
+
+    letter-spacing: .24em;
+}
+
+.ventures-vision-label-line {
+    display: block;
+
+    width: 2.75rem;
+    height: 1px;
+
+    background: var(--color-primary);
+
+    opacity: .7;
+}
+
+.ventures-vision-note {
+    color: rgba(62, 103, 167, .48);
+
+    font-size: .58rem;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .18em;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.ventures-vision-main {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(18rem, .65fr);
+
+    gap: 6rem;
+
+    align-items: end;
+
+    padding:
+        4rem 0
+        3.5rem;
+}
+
+
+/* =========================================================
+   HEADLINE
+========================================================= */
+
+.ventures-vision-main h2 {
+    max-width: 42rem;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2.5rem,
+        4vw,
+        4rem
+    );
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+
+    letter-spacing: -.045em;
+}
+
+.ventures-vision-main h2 span {
+    display: block;
+
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   SUPPORTING COPY
+========================================================= */
+
+.ventures-vision-support {
+    padding-bottom: .35rem;
+}
+
+.ventures-vision-support p {
+    max-width: 27rem;
+
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PRINCIPLE
+========================================================= */
+
+.ventures-vision-principle {
+    display: flex;
+
+    align-items: center;
+
+    gap: .85rem;
+
+    margin-top: 2rem;
+
+    padding-top: 1.25rem;
+
+    border-top: 1px solid var(--color-border);
+
+    color: var(--color-text);
+
+    font-size: .7rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.5;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+}
+
+.ventures-vision-principle-number {
+    color: var(--color-primary);
+
+    font-family: var(--font-heading);
+
+    font-size: .72rem;
+
+    font-weight: var(--weight-extrabold);
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.ventures-vision-bottom {
+    display: flex;
+
+    align-items: center;
+
+    gap: .85rem;
+
+    padding-top: 1.25rem;
+
+    border-top: 1px solid var(--color-border);
+
+    color: rgba(62, 103, 167, .55);
+
+    font-size: .58rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.4;
+
+    letter-spacing: .18em;
+}
+
+.ventures-vision-bottom-label {
+    color: var(--color-primary);
+}
+
+.ventures-vision-bottom-line {
+    width: 2.5rem;
+    height: 1px;
+
+    flex: 0 0 auto;
+
+    background: var(--color-primary);
+
+    opacity: .55;
+}
+
+.ventures-vision-bottom-text {
+    letter-spacing: .2em;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .ventures-vision
+    .section-container {
+        padding-top: 3.5rem;
+        padding-bottom: 3rem;
+    }
+
+    .ventures-vision-main {
+        grid-template-columns: 1fr;
+
+        gap: 2.5rem;
+
+        padding:
+            3rem 0
+            2.75rem;
+    }
+
+    .ventures-vision-support {
+        padding-bottom: 0;
+    }
+
+    .ventures-vision-support p {
+        max-width: 38rem;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .ventures-vision
+    .section-container {
+        padding-top: 2.75rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .ventures-vision-top {
+        align-items: flex-start;
+
+        gap: 1rem;
+    }
+
+    .ventures-vision-note {
+        display: none;
+    }
+
+    .ventures-vision-main {
+        gap: 2rem;
+
+        padding:
+            2.5rem 0
+            2.25rem;
+    }
+
+    .ventures-vision-main h2 {
+        font-size: 2.8rem;
+
+        line-height: .98;
+    }
+
+    .ventures-vision-support p {
+        font-size: .95rem;
+
+        line-height: 1.7;
+    }
+
+    .ventures-vision-principle {
+        margin-top: 1.5rem;
+
+        font-size: .62rem;
+    }
+
+    .ventures-vision-bottom {
+        flex-wrap: wrap;
+
+        row-gap: .65rem;
+
+        font-size: .52rem;
+
+        letter-spacing: .14em;
+    }
+
+}
+
+/* =========================================================
+   VENTURES — FINAL CTA
+========================================================= */
+
+.ventures-final-cta {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(62, 103, 167, .08),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 88% 35%,
+            rgba(120, 180, 255, .10),
+            transparent 30%
+        ),
+        #f7faff;
+}
+
+
+/* =========================================================
+   BACKGROUND LIGHT
+========================================================= */
+
+.ventures-final-cta::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(62, 103, 167, .035),
+            transparent 60%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CTA CARD
+========================================================= */
+
+.ventures-final-cta-box {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(19rem, .65fr);
+
+    gap: 5rem;
+
+    align-items: center;
+
+    padding: 4.5rem 5rem;
+
+    border:
+        1px solid rgba(62, 103, 167, .14);
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, .96),
+            rgba(247, 250, 255, .92)
+        );
+
+    box-shadow:
+        0 35px 90px rgba(15, 23, 42, .08);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CARD LIGHT
+========================================================= */
+
+.ventures-final-cta-box::before {
+    content: "";
+
+    position: absolute;
+
+    width: 26rem;
+    height: 26rem;
+
+    top: -14rem;
+    right: -8rem;
+
+    border-radius: 999px;
+
+    background:
+        rgba(91, 143, 230, .10);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+}
+
+.ventures-final-cta-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 20rem;
+    height: 20rem;
+
+    bottom: -13rem;
+    left: 25%;
+
+    border-radius: 999px;
+
+    background:
+        rgba(120, 180, 255, .08);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.ventures-final-cta-main {
+    position: relative;
+
+    z-index: 2;
+}
+
+.ventures-final-cta-title {
+    margin: 1rem 0 0;
+
+    max-width: 42rem;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2.5rem,
+        4vw,
+        4rem
+    );
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.02;
+
+    letter-spacing: -.045em;
+}
+
+.ventures-final-cta-title span {
+    color: var(--color-primary);
+}
+
+.ventures-final-cta-copy {
+    max-width: 42rem;
+
+    margin: 1.5rem 0 0;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   ACTION AREA
+========================================================= */
+
+.ventures-final-cta-action {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding-left: 3rem;
+
+    border-left:
+        1px solid rgba(62, 103, 167, .15);
+}
+
+.ventures-final-cta-action-label {
+    margin-bottom: 1.25rem;
+
+    font-size: .65rem;
+
+    line-height: 1.2;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: .2em;
+
+    color: rgba(62, 103, 167, .62);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.ventures-final-cta-action .btn-primary,
+.ventures-final-cta-action .btn-secondary {
+    width: 100%;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.ventures-final-cta-action .btn-secondary {
+    margin-top: .75rem;
+}
+
+
+/* =========================================================
+   ACTION FOOTER
+========================================================= */
+
+.ventures-final-cta-line {
+    width: 3rem;
+
+    height: 1px;
+
+    margin-top: 2rem;
+
+    background: var(--color-primary);
+
+    opacity: .55;
+}
+
+.ventures-final-cta-action > p {
+    margin: 1.25rem 0 0;
+
+    max-width: 18rem;
+
+    font-size: .95rem;
+
+    line-height: 1.65;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .ventures-final-cta-box {
+        grid-template-columns:
+            minmax(0, 1.15fr)
+            minmax(18rem, .85fr);
+
+        gap: 3rem;
+
+        padding: 3.5rem;
+    }
+
+    .ventures-final-cta-action {
+        padding-left: 2.5rem;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .ventures-final-cta-box {
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+
+        padding: 3rem 2rem;
+
+        border-radius: 26px;
+    }
+
+    .ventures-final-cta-title {
+        font-size: clamp(
+            2.75rem,
+            8vw,
+            4.5rem
+        );
+    }
+
+    .ventures-final-cta-action {
+        padding-left: 0;
+
+        padding-top: 2.5rem;
+
+        border-left: 0;
+
+        border-top:
+            1px solid rgba(62, 103, 167, .15);
+    }
+
+    .ventures-final-cta-action .btn-primary,
+    .ventures-final-cta-action .btn-secondary {
+        width: auto;
+
+        min-width: 12rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .ventures-final-cta-box {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .ventures-final-cta-title {
+        font-size: clamp(
+            2.25rem,
+            10vw,
+            3.25rem
+        );
+
+        line-height: .98;
+    }
+
+    .ventures-final-cta-copy {
+        font-size: .95rem;
+    }
+
+    .ventures-final-cta-action .btn-primary,
+    .ventures-final-cta-action .btn-secondary {
+        width: 100%;
+    }
+
+}
