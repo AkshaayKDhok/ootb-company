@@ -1,0 +1,641 @@
+/* =========================================================
+   STUDIO — HERO
+========================================================= */
+
+.studio-hero {
+    position: relative;
+
+    overflow: hidden;
+
+    padding-block: 5.5rem 7rem;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fbff 72%,
+            #eef4fb 100%
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND ATMOSPHERE
+========================================================= */
+
+.studio-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 38rem;
+    height: 38rem;
+
+    top: -18rem;
+    right: -10rem;
+
+    border-radius: 50%;
+
+    background: rgba(62, 103, 167, .07);
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+.studio-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 28rem;
+    height: 28rem;
+
+    bottom: -18rem;
+    left: 18%;
+
+    border-radius: 50%;
+
+    background: rgba(91, 143, 230, .08);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.studio-hero-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, .92fr)
+        minmax(0, 1.08fr);
+
+    gap: 5.5rem;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.studio-hero-content {
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 43rem;
+}
+
+.studio-hero-label {
+    display: inline-block;
+
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.studio-hero-title {
+    max-width: 42rem;
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        3rem,
+        5vw,
+        4rem
+    );
+
+    font-weight: var(--weight-extrabold);
+
+    line-height: 1.05;
+
+    letter-spacing: -.045em;
+
+    color: var(--color-text);
+}
+
+.studio-hero-title span {
+    display: block;
+
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   COPY
+========================================================= */
+
+.studio-hero-copy {
+    max-width: 39rem;
+
+    margin: 1.75rem 0 0;
+
+    font-family: var(--font-body);
+
+    font-size: 1.05rem;
+
+    line-height: 1.75;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.studio-hero-actions {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: .9rem;
+
+    margin-top: 2rem;
+}
+
+
+/* =========================================================
+   BOTTOM NOTE
+========================================================= */
+
+.studio-hero-note {
+    display: flex;
+
+    align-items: center;
+
+    gap: .8rem;
+
+    margin-top: 2.75rem;
+
+    color: rgba(62, 103, 167, .62);
+
+    font-family: var(--font-body);
+
+    font-size: .64rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.2;
+
+    letter-spacing: .2em;
+}
+
+.studio-hero-note-line {
+    width: 3rem;
+
+    height: 1px;
+
+    flex-shrink: 0;
+
+    background: var(--color-primary);
+
+    opacity: .6;
+}
+
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.studio-hero-visual {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 1rem 2.5rem 3rem 0;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.studio-hero-image-wrap {
+    position: relative;
+
+    width: 100%;
+
+    height: clamp(
+        480px,
+        42vw,
+        600px
+    );
+
+    overflow: visible;
+
+    border-radius: 2rem;
+
+    background: var(--color-bg-muted);
+
+    border: 1px solid rgba(62, 103, 167, .12);
+
+    box-shadow:
+        0 35px 80px rgba(15, 23, 42, .13);
+}
+
+.studio-hero-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 2rem;
+
+    transition:
+        transform .8s cubic-bezier(.2, .65, .2, 1);
+}
+
+.studio-hero-image-wrap:hover .studio-hero-image {
+    transform: scale(1.035);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.studio-hero-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(15, 23, 42, .38) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   EXTREME SIDE MARKER
+========================================================= */
+
+.studio-hero-vertical-label {
+    position: absolute;
+
+    top: 0;
+    right: -2.5rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: .45rem;
+
+    color: rgba(62, 103, 167, .48);
+
+    font-family: var(--font-body);
+
+    font-size: .58rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.2;
+
+    letter-spacing: .18em;
+
+    writing-mode: vertical-rl;
+}
+
+.studio-hero-vertical-label span:first-child {
+    color: var(--color-primary);
+
+    font-family: var(--font-heading);
+
+    font-size: .75rem;
+
+    font-weight: var(--weight-bold);
+
+    letter-spacing: 0;
+}
+
+
+/* =========================================================
+   FLOATING SYSTEM CARD
+========================================================= */
+
+.studio-hero-system-card {
+    position: absolute;
+
+    left: -2rem;
+    bottom: 0;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: .9rem;
+
+    width: min(
+        21rem,
+        72%
+    );
+
+    padding: 1.15rem 1.25rem;
+
+    border: 1px solid rgba(255, 255, 255, .75);
+
+    border-radius: 1rem;
+
+    background: rgba(255, 255, 255, .92);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 45px rgba(15, 23, 42, .14);
+
+    animation:
+        studioHeroFloat 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   FLOAT ICON
+========================================================= */
+
+.studio-hero-system-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    flex-shrink: 0;
+
+    border-radius: .75rem;
+
+    background: var(--color-primary-soft);
+
+    color: var(--color-primary);
+}
+
+.studio-hero-system-icon .material-symbols-outlined {
+    font-size: 1.2rem;
+}
+
+
+/* =========================================================
+   FLOAT CONTENT
+========================================================= */
+
+.studio-hero-system-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .25rem;
+}
+
+.studio-hero-system-label {
+    color: var(--color-primary);
+
+    font-family: var(--font-body);
+
+    font-size: .58rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.2;
+
+    letter-spacing: .18em;
+}
+
+.studio-hero-system-content strong {
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: .95rem;
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.25;
+}
+
+.studio-hero-system-content p {
+    margin: .15rem 0 0;
+
+    color: var(--color-text-muted);
+
+    font-family: var(--font-body);
+
+    font-size: .72rem;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   MOTION
+========================================================= */
+
+@keyframes studioHeroFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .studio-hero {
+        padding-block: 4.5rem 6rem;
+    }
+
+    .studio-hero-grid {
+        gap: 3.5rem;
+    }
+
+    .studio-hero-title {
+        font-size: clamp(
+            2.8rem,
+            5vw,
+            4rem
+        );
+    }
+
+    .studio-hero-visual {
+        padding-right: 1.5rem;
+    }
+
+    .studio-hero-system-card {
+        left: -1rem;
+    }
+
+    .studio-hero-vertical-label {
+        right: -1.5rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .studio-hero {
+        padding-block: 4rem 5rem;
+    }
+
+    .studio-hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 3.5rem;
+    }
+
+    .studio-hero-content {
+        max-width: 100%;
+    }
+
+    .studio-hero-title {
+        max-width: 38rem;
+
+        font-size: 2.9rem;
+    }
+
+    .studio-hero-copy {
+        max-width: 36rem;
+    }
+
+    .studio-hero-visual {
+        padding: 0 1rem 3rem 0;
+    }
+
+    .studio-hero-image-wrap {
+        height: 460px;
+
+        border-radius: 1.5rem;
+    }
+
+    .studio-hero-system-card {
+        left: 0;
+
+        width: min(
+            20rem,
+            78%
+        );
+    }
+
+    .studio-hero-vertical-label {
+        right: -.75rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .studio-hero {
+        padding-block: 3.5rem 4.5rem;
+    }
+
+    .studio-hero-title {
+        font-size: 2.55rem;
+
+        letter-spacing: -.045em;
+    }
+
+    .studio-hero-copy {
+        font-size: .95rem;
+
+        line-height: 1.7;
+    }
+
+    .studio-hero-actions {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .studio-hero-actions .btn-primary,
+    .studio-hero-actions .btn-secondary {
+        width: 100%;
+    }
+
+    .studio-hero-note {
+        margin-top: 2rem;
+
+        font-size: .56rem;
+
+        letter-spacing: .14em;
+    }
+
+    .studio-hero-visual {
+        padding-right: 0;
+
+        padding-bottom: 4rem;
+    }
+
+    .studio-hero-image-wrap {
+        height: 380px;
+
+        border-radius: 1.35rem;
+    }
+
+    .studio-hero-system-card {
+        bottom: 0;
+
+        width: calc(100% - 1rem);
+
+        padding: 1rem;
+    }
+
+    .studio-hero-system-content strong {
+        font-size: .9rem;
+    }
+
+    .studio-hero-system-content p {
+        font-size: .7rem;
+    }
+
+}
